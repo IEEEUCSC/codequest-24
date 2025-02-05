@@ -1,5 +1,6 @@
 import { NAV_LINKS } from "@/libs/data";
 import NavigationTarget from "./NavigationTarget";
+import AnimatedButton from "../AnimatedButton";
 
 const Header = () => {
   return (
@@ -12,7 +13,11 @@ const Header = () => {
           ))}
         </ul>
       </div>
-      <button>Register now</button>
+      <AnimatedButton
+        text="Register Now"
+        cloneTextColor="text-primary-100"
+        textClassName=" text-base cursor-pointer"
+      />
     </header>
   );
 };

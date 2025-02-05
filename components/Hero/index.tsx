@@ -1,4 +1,4 @@
-import { SITE_TITLE } from "@/libs/data";
+import { TextHighlighter } from "../TextHighlighter";
 
 const Hero = () => {
   return (
@@ -10,7 +10,7 @@ const Hero = () => {
           PROUDLY PRESENTS
         </h3>
         <h1 className=" text-4xl lg:text-6xl xl:text-7xl 2xl:text-8xl">
-          {SITE_TITLE}
+          CodeQuest: <TextHighlighter>Vault Edition</TextHighlighter>
         </h1>
         <p className="text-balance text-center text-sm lg:max-w-[65ch] lg:text-base">
           A Capture the Flag (CTF) hackathon aimed at enhancing cybersecurity
