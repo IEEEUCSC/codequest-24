@@ -23,4 +23,12 @@
       var(--color-dark-100) 65%
     );
   }
+
+  .text-marquee {
+    @apply text-lg md:text-2xl lg:text-3xl;
+  }
+
+  .marquee-container {
+    @apply 
+  }
 }
