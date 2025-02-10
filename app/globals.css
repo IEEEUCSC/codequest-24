@@ -24,11 +24,20 @@
     );
   }
 
+  .header-bg-gradient {
+    background: var(--color-dark-100);
+    background: radial-gradient(
+      circle at 50% 50%,
+      var(--color-primary-200) 0%,
+      transparent 65%
+    );
+  }
+
   .text-marquee {
     @apply text-lg md:text-2xl lg:text-3xl;
   }
 
-  .marquee-container {
-    @apply 
-  }
+  /* .marquee-container {
+    @apply;
+  } */
 }
