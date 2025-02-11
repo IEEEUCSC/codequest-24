@@ -1,9 +1,10 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary-100: oklch(72.05% 0.1738 29.18);
-  --color-primary-200: oklch(62.31% 0.1738 29.18);
-  --color-primary-300: oklch(51.04% 0.1738 29.18);
+  --color-primary-50: oklch(73.62% 0.1438 23.72);
+  --color-primary-100: oklch(66.27% 0.197 26.15);
+  --color-primary-200: oklch(61.46% 0.2341 28.87);
+  --color-primary-300: oklch(54.1% 0.2132 29.29);
   --color-primary-400: oklch(44.56% 0.1738 29.18);
   --color-primary-500: oklch(42.08% 0.1738 29.18);
 
@@ -37,7 +38,13 @@
     @apply text-lg md:text-2xl lg:text-3xl;
   }
 
-  /* .marquee-container {
-    @apply;
-  } */
+  .nav-link {
+    @apply text-base lg:text-lg;
+  }
+
+  .glow-shadow {
+    box-shadow: 0 0 5px var(--color-primary-400),
+      0 0 10px var(--color-primary-400), 0 0 15px var(--color-primary-200);
+  }
+
 }
