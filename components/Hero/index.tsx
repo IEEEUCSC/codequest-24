@@ -1,27 +1,45 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import Image from "next/image";
+
 import MarqueeAnimation from "../MarqueeAnimation";
-import { TextHighlighter } from "../TextHighlighter";
 import StarIcon from "./StarIcon";
+import HeroHeader from "@/public/hero-header.png";
+import { CountdownTimer } from "../CountdownTimer";
 
 const Hero = () => {
+  const [targetDate, setTargetDate] = useState(new Date());
+
+  useEffect(() => {
+    const date = new Date();
+    date.setDate(date.getDate() + 7);
+    setTargetDate(date);
+  }, []);
+
   return (
-    <div className="hero container mx-auto flex-grow  flex flex-col justify-center items-center text-white  relative">
-      <div className="flex flex-col items-center gap-y-3 lg:gap-y-5">
-        <h3 className="text-center text-lg lg:text-2xl">
+    <div className="hero container mx-auto flex-grow  flex flex-col justify-center items-center text-white  relative min-h-screen">
+      <div className="flex flex-col items-center gap-y-3 lg:gap-y-6">
+        <h3 className="text-center text-base md:text-lg lg:text-2xl">
           IEEE STUDENT BRANCH OF <br />
           UNIVERSITY OF COLOMBO SCHOOL OF COMPUTING <br />
           PROUDLY PRESENTS
         </h3>
-        <h1 className=" text-4xl lg:text-6xl xl:text-7xl 2xl:text-8xl">
-          CodeQuest: <TextHighlighter>Vault Edition</TextHighlighter>
-        </h1>
-        <p className="text-balance text-center text-sm lg:max-w-[65ch] lg:text-base">
+        <Image
+          src={HeroHeader}
+          alt="CodeQuest: Vault Edition"
+          height={180}
+          className="w-auto"
+        />
+        <p className="text-balance text-center text-xs lg:max-w-[65ch] lg:text-base">
           A Capture the Flag (CTF) hackathon aimed at enhancing cybersecurity
           skills among undergraduates.
         </p>
+        <CountdownTimer targetDate={targetDate} title="Event starts in" />
       </div>
-      <div className="  absolute  bottom-10 w-[100vw]   flex flex-col items-center justify-center">
+      <div className="  absolute  bottom-0 w-[100vw]   flex flex-col items-center justify-center overflow-hidden py-4">
         <MarqueeAnimation
-          className="  w-full rotate-2 overflow-clip translate-y-6 py-2 bg-primary-100"
+          className="w-[105vw]  md:w-full md:max-w-[100vw] rotate-8 md:rotate-2 overflow-clip translate-y-[22px] md:translate-y-[26px] py-2 bg-primary-100"
           hoverStop
           itemGap="xlarge"
         >
@@ -41,7 +59,7 @@ const Hero = () => {
           </div>
         </MarqueeAnimation>
         <MarqueeAnimation
-          className="  w-full -rotate-2 -translate-y-6 py-2 bg-primary-100"
+          className=" w-[105vw] md:w-full md:max-w-[100vw] -rotate-8 md:-rotate-2 -translate-y-[22px] md:-translate-y-[26px] py-2 bg-primary-100"
           reverse
           hoverStop
           itemGap="xlarge"
