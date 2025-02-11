@@ -7,7 +7,6 @@ import { cn } from "@/libs/utils";
 import useTextSplit from "@/hooks/useTextSplit";
 import { AnimatedTextProps, CharacterVariants, PresetType } from "@/libs/types";
 
-
 const defaultCharacterVariants: Variants = {
   initial: {
     y: 0,
@@ -70,7 +69,7 @@ const AnimatedText = ({
 
   return (
     <div
-      className={cn("relative h-fit overflow-hidden text-xl", textClassName)}
+      className={cn("relative h-fit overflow-hidden ", textClassName)}
       onMouseEnter={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
     >
@@ -136,7 +135,7 @@ const CloneText = ({
 }: CloneTextProps) => {
   return (
     <motion.p
-      className={cn("out ine absolute h-full py-1 leading-[0.8]", presetClass)}
+      className={cn(" absolute h-full py-1 leading-[0.8]", presetClass)}
     >
       {splitText.map((char, index) => (
         <motion.span
