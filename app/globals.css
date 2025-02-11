@@ -43,8 +43,13 @@
   }
 
   .glow-shadow {
-    box-shadow: 0 0 5px var(--color-primary-400),
-      0 0 10px var(--color-primary-400), 0 0 15px var(--color-primary-200);
+    box-shadow:
+      0 0 5px var(--color-primary-400),
+      0 0 10px var(--color-primary-400),
+      0 0 15px var(--color-primary-200);
   }
 
+  .top-element {
+    @apply z-[20];
+  }
 }
