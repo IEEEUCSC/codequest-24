@@ -22,17 +22,17 @@ interface SocialMediaLink {
 export const socialMediaLinks: SocialMediaLink[] = [
   {
     name: "Facebook",
-    link: "https://facebook.com/IEEECSUCSC ",
+    link: "https://facebook.com/",
     icon: React.createElement(FaFacebook),
   },
   {
     name: "Instagram",
-    link: "https://www.instagram.com/ieee.cs.ucsc/ ",
+    link: "https://www.instagram.com/ ",
     icon: React.createElement(FaInstagram),
   },
   {
     name: "LinkedIn",
-    link: "https://www.linkedin.com/company/ieee-computer-society-student-branch-chapter-of-ucsc",
+    link: "https://www.linkedin.com/",
     icon: React.createElement(FaLinkedin),
   },
 ];
