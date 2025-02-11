@@ -1,5 +1,8 @@
 "use client";
 
+import { useState } from "react";
+import { motion, useMotionValueEvent, useScroll } from "motion/react";
+
 import { NAV_LINKS } from "@/libs/data";
 import NavigationTarget from "./NavigationTarget";
 import AnimatedButton from "../AnimatedButton";
@@ -11,13 +14,38 @@ const Header = () => {
   const desktop = useMediaQuery("(min-width: 1024px)");
   const [isOpen, open] = useLockingBodyScroll();
 
+  const { scrollY } = useScroll();
+  const [scrollDirection, setScrollDirection] = useState("down");
+
+  useMotionValueEvent(scrollY, "change", (current) => {
+    const previous = scrollY.getPrevious() ?? 0;
+    const diff = current - previous;
+    setScrollDirection(diff > 0 ? "down" : "up");
+  });
+
+  const variants = {
+    down: { opacity: 0, y: "-100%" },
+    up: { opacity: 1, y: 0 },
+  };
+
   return (
-    <header className="   w-full mt-2  fixed z-20">
-      <div className="flex justify-between  items-center header-bg-gradient backdrop-blur-sm p-4 text-white container mx-auto rounded-full border-2 border-primary-200">
+    <motion.header
+      className="fixed z-[999] mt-2 w-full"
+      animate={
+        scrollY.get() > 100 && !isOpen
+          ? scrollDirection === "down"
+            ? "down"
+            : "up"
+          : {}
+      }
+      variants={variants}
+      transition={{ type: "tween", ease: "easeIn", duration: 0.25 }}
+    >
+      <div className="header-bg-gradient border-primary-200 container mx-auto flex items-center justify-between rounded-full border-2 p-4 text-white backdrop-blur-sm">
         <h1>logo</h1>
         {desktop ? (
           <>
-            <div className=" px-4 py-1.5">
+            <div className="px-4 py-1.5">
               <ul className="flex space-x-4">
                 {NAV_LINKS.map((link) => (
                   <NavigationTarget key={link.href} {...link} />
@@ -35,7 +63,7 @@ const Header = () => {
           <MobileNavigation isOpen={isOpen} open={open} />
         )}
       </div>
-    </header>
+    </motion.header>
   );
 };
 
