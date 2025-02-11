@@ -2,10 +2,9 @@ import { motion, useScroll, useTransform } from "motion/react";
 import { type RefObject, useRef } from "react";
 
 import MobileNavigationTarget from "./Target";
-import AnimatedButton, {
-  AnimatedButtonText,
-} from "@/components/AnimatedButton";
+
 import { NAV_LINKS, socialMediaLinks } from "@/libs/data";
+import AnimatedButton from "@/components/AnimatedButton";
 
 type Props = {
   id: string;
@@ -53,9 +52,10 @@ export default function Sheet({ id, open }: Props) {
             />
           ))}
         </ul>
-        <AnimatedButton className="w-fit px-6 py-2 text-white" scaleAmount={50}>
-          <AnimatedButtonText text="Register Now" />
-        </AnimatedButton>
+        <AnimatedButton
+          className="w-fit px-6 py-2 text-white"
+          text="Register"
+        />
       </div>
 
       <div aria-hidden className="my-6 flex-1" />

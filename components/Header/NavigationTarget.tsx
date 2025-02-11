@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useLenis } from "lenis/react";
+import AnimatedText from "../AnimatedText";
 // import { usePathname } from "next/navigation";
 
 interface NavigationTargetProps {
@@ -19,7 +20,7 @@ export default function NavigationTarget({
 
   return (
     <li
-      className="transition-colors"
+      className="transition-colors "
       role="link"
       onClick={(e) => {
         e.preventDefault();
@@ -41,8 +42,12 @@ export default function NavigationTarget({
         }
       }}
     >
-      <Link href={href}>
-        <span>{label}</span>
+      <Link href={href} className="nav-link">
+        <AnimatedText
+          text={label}
+          cloneTextColor="text-white"
+          textClassName="nav-link"
+        />
       </Link>
     </li>
   );
