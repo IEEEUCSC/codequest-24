@@ -30,7 +30,7 @@ const Header = () => {
 
   return (
     <motion.header
-      className="fixed z-[999] mt-2 w-full"
+      className="fixed z-[999] mt-2 w-full px-2"
       animate={
         scrollY.get() > 100 && !isOpen
           ? scrollDirection === "down"

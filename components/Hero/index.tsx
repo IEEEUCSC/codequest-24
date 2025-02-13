@@ -18,7 +18,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="hero hero-bg relative min-h-screen text-white">
+    <div className="hero hero-bg relative min-h-screen text-white overflow-hidden">
       <div className="container mx-auto flex min-h-screen flex-col items-center justify-center">
         <div className="top-element flex flex-col items-center gap-y-3 lg:gap-y-6">
           <h3 className="text-center text-base md:text-lg lg:text-2xl">
