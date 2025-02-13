@@ -18,9 +18,9 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="hero hero-bg relative min-h-screen text-white overflow-hidden">
-      <div className="container mx-auto flex min-h-screen flex-col items-center justify-center">
-        <div className="top-element flex flex-col items-center gap-y-3 lg:gap-y-6">
+    <div className="hero hero-bg relative min-h-svh overflow-hidden text-white">
+      <div className="relative container mx-auto flex min-h-screen flex-col items-center justify-between">
+        <div className="top-element flex h-[calc(100%-125px)] grow flex-col items-center justify-center gap-y-3 pt-[85px] lg:gap-y-6 xl:h-auto">
           <h3 className="text-center text-base md:text-lg lg:text-2xl">
             IEEE STUDENT BRANCH OF <br />
             UNIVERSITY OF COLOMBO SCHOOL OF COMPUTING <br />
@@ -38,7 +38,7 @@ const Hero = () => {
           </p>
           <CountdownTimer targetDate={targetDate} title="Event starts in" />
         </div>
-        <div className="top-element absolute bottom-0 flex w-[100vw] flex-col items-center justify-center overflow-hidden py-4">
+        <div className="top-element relative bottom-0 flex w-[100vw] flex-col items-center justify-center overflow-hidden py-4">
           <MarqueeAnimation
             className="bg-primary-100 w-[105vw] translate-y-[22px] rotate-8 overflow-clip py-2 md:w-full md:max-w-[100vw] md:translate-y-[26px] md:rotate-2"
             hoverStop
