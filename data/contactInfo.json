@@ -1,17 +1,23 @@
 [
   {
     "name": "John Doe",
+    "title": "Vice President",
     "email": "john.doe@example.com",
-    "phone": "123-456-7890"
+    "phone": "123-456-7890",
+    "imageName": "/portraits/a.avif"
   },
   {
     "name": "Jane Smith",
+    "title": "Secretary",
     "email": "jane.smith@example.com",
-    "phone": "987-654-3210"
+    "phone": "987-654-3210",
+    "imageName": "/portraits/images.jpg"
   },
   {
     "name": "Alice Johnson",
+    "title": "Treasurer",
     "email": "alice.johnson@example.com",
-    "phone": "555-123-4567"
+    "phone": "555-123-4567",
+    "imageName": "/portraits/img.jpg"
   }
 ]

@@ -5,11 +5,11 @@ import Contacts from "@/components/Contacts";
 export default function Home() {
   return (
     <div className="">
-      <AnimatedGridWrapper />
+      {/* <AnimatedGridWrapper /> */}
       <Hero />
       <Contacts />
-      <div className="min-h-screen w-full" />
-      <div className="min-h-screen w-full" />
+      {/* <div className="min-h-screen w-full" />
+      <div className="min-h-screen w-full" /> */}
     </div>
   );
 }

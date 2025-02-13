@@ -13,6 +13,38 @@
   --color-dark-400: oklch(3.49% 0 0);
 }
 
+.cq-bg-pr-gradient-1 {
+  background: linear-gradient(
+    to right,
+    var(--color-primary-100),
+    var(--color-primary-300)
+  );
+}
+
+.cq-bg-pr-gradient-2 {
+  background: linear-gradient(
+    to bottom,
+    var(--color-primary-200),
+    var(--color-primary-400)
+  );
+}
+
+.cq-bg-pr-gradient-3 {
+  background: linear-gradient(
+    to top left,
+    var(--color-primary-50),
+    var(--color-primary-500)
+  );
+}
+
+.cq-bg-pr-gradient-4 {
+  background: linear-gradient(
+    to bottom right,
+    var(--color-primary-300),
+    var(--color-primary-200)
+  );
+}
+
 /* Background Colors */
 .cq-bg-pr-50 {
   background-color: var(--color-primary-50);
