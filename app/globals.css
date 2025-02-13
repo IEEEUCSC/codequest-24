@@ -45,76 +45,6 @@
   );
 }
 
-/* Background Colors */
-.cq-bg-pr-50 {
-  background-color: var(--color-primary-50);
-}
-.cq-bg-pr-100 {
-  background-color: var(--color-primary-100);
-}
-.cq-bg-pr-200 {
-  background-color: var(--color-primary-200);
-}
-.cq-bg-pr-300 {
-  background-color: var(--color-primary-300);
-}
-.cq-bg-pr-400 {
-  background-color: var(--color-primary-400);
-}
-.cq-bg-pr-500 {
-  background-color: var(--color-primary-500);
-}
-.cq-bg-dark-100 {
-  background-color: var(--color-dark-100);
-}
-.cq-bg-dark-200 {
-  background-color: var(--color-dark-200);
-}
-.cq-bg-dark-300 {
-  background-color: var(--color-dark-300);
-}
-.cq-bg-dark-400 {
-  background-color: var(--color-dark-400);
-}
-
-/* Text Colors */
-.cq-text-pr-50 {
-  color: var(--color-primary-50);
-}
-
-.cq-text-pr-100 {
-  color: var(--color-primary-100);
-}
-
-.cq-text-pr-200 {
-  color: var(--color-primary-200);
-}
-.cq-text-pr-300 {
-  color: var(--color-primary-300);
-}
-.cq-text-pr-400 {
-  color: var(--color-primary-400);
-}
-.cq-text-pr-500 {
-  color: var(--color-primary-500);
-}
-
-.cq-text-dark-100 {
-  color: var(--color-dark-100);
-}
-
-.cq-text-dark-200 {
-  color: var(--color-dark-200);
-}
-
-.cq-text-dark-300 {
-  color: var(--color-dark-300);
-}
-
-.cq-text-dark-400 {
-  color: var(--color-dark-400);
-}
-
 @layer components {
   .hero-bg {
     background: var(--color-dark-100);
@@ -152,6 +82,19 @@
 
   .top-element {
     @apply z-[20];
+  }
+
+  .contact-card-bg {
+    background-color: var(--color-dark-100);
+    background: radial-gradient(
+      circle at 85% 0%,
+      var(--color-primary-200) 0%,
+      var(--color-dark-100) 55%
+    );
+  }
+
+  .main-section {
+    @apply container mx-auto my-8;
   }
 }
 
