@@ -9,6 +9,7 @@ import AnimatedButton from "../AnimatedButton";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 import MobileNavigation from "./Mobile";
 import { useLockingBodyScroll } from "@/hooks/useLockingBodyScroll";
+import { BsArrowUpRightCircle } from "react-icons/bs";
 
 const Header = () => {
   const desktop = useMediaQuery("(min-width: 1024px)");
@@ -41,7 +42,7 @@ const Header = () => {
       variants={variants}
       transition={{ type: "tween", ease: "easeIn", duration: 0.25 }}
     >
-      <div className="header-bg-gradient border-primary-200 container mx-auto flex items-center justify-between rounded-full border-2 p-4 text-white backdrop-blur-sm">
+      <div className="container mx-auto flex items-center justify-between rounded-full p-4 text-white ">
         <h1>logo</h1>
         {desktop ? (
           <>
@@ -56,8 +57,10 @@ const Header = () => {
               text="Register Now"
               cloneTextColor="text-[#fff]"
               textClassName=" text-base cursor-pointer"
-              className="bg-primary-100"
-            />
+              className="flex items-center gap-x-2 px-6 py-3"
+            >
+              <BsArrowUpRightCircle className="text-[20px]" />
+            </AnimatedButton>
           </>
         ) : (
           <MobileNavigation isOpen={isOpen} open={open} />
