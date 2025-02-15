@@ -9,7 +9,12 @@ const AnimatedButton = ({
   ...props
 }: AnimatedButtonProps) => {
   return (
-    <button className={cn(" px-4 py-2 rounded-2xl", className)}>
+    <button
+      className={cn(
+        "bg-primary-400 background-glow rounded-2xl px-4 py-2",
+        className,
+      )}
+    >
       <AnimatedText text={text} {...props} />
       {children}
     </button>
