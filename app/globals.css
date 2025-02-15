@@ -4,7 +4,7 @@
   --color-primary-100: oklch(66.27% 0.197 26.15);
   --color-primary-200: oklch(61.46% 0.2341 28.87);
   --color-primary-300: oklch(54.1% 0.2132 29.29);
-  --color-primary-400: oklch(44.56% 0.1738 29.18);
+  --color-primary-400: oklch(55.42% 0.2189 28.42);
   --color-primary-500: oklch(42.08% 0.1738 29.18);
 
   --color-dark-100: oklch(11.49% 0 0);
@@ -95,6 +95,10 @@
 
   .main-section {
     @apply container mx-auto my-8;
+  }
+
+  .background-glow {
+    filter: drop-shadow(0 0 25px var(--color-primary-400));
   }
 }
 
