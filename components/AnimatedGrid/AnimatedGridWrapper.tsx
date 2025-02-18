@@ -10,10 +10,10 @@ const AnimatedGridWrapper = () => {
     <div className="fixed top-0 left-0 z-[1] min-h-screen w-full">
       {isDesktop && (
         <AnimatedGrid
-          boxSize={50}
+          boxSize={35}
           highlightColor="#9e100a"
           highlightBorderColor="#f1261e"
-          highlightRadius={75}
+          highlightRadius={55}
         />
       )}
     </div>

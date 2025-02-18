@@ -3,10 +3,11 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
-import MarqueeAnimation from "../MarqueeAnimation";
-import StarIcon from "./StarIcon";
-import HeroHeader from "@/public/hero-header.png";
+import HeroHeader from "@/assets/hero-header.svg";
 import { CountdownTimer } from "../CountdownTimer";
+import { useMediaQuery } from "@/hooks/useMediaQuery";
+import { useComponentDimensions } from "@/hooks/useComponentDimensions";
+import HeroBgImg from "@/assets/hero-bg.svg";
 
 const Hero = () => {
   const [targetDate, setTargetDate] = useState(new Date());
@@ -17,10 +18,27 @@ const Hero = () => {
     setTargetDate(date);
   }, []);
 
+  const desktop = useMediaQuery("(min-width: 1024px)");
+
+  const dimensions = useComponentDimensions("register-button");
+
+  const [heroLineRight, setHeroLineRight] = useState(0);
+  const heroLineWidth = 48;
+
+  useEffect(() => {
+    setHeroLineRight(dimensions.width / 2);
+  }, [dimensions, heroLineRight]);
+
   return (
     <div className="hero hero-bg relative min-h-svh overflow-hidden text-white">
       <div className="relative container mx-auto flex min-h-screen flex-col items-center justify-between">
-        <div className="top-element flex h-[calc(100%-125px)] grow flex-col items-center justify-center gap-y-3 pt-[85px] lg:gap-y-6 xl:h-auto">
+        {desktop && (
+          <div
+            className="bg-primary-400 background-glow top-element absolute top-8 block h-svh"
+            style={{ width: heroLineWidth, right: 280 / 2 - heroLineWidth / 2 }}
+          />
+        )}
+        <div className="top-element flex h-[calc(100%-125px)] grow flex-col items-center justify-center gap-y-3 pt-[85px] lg:gap-y-8 xl:h-auto">
           <h3 className="text-center text-base md:text-lg lg:text-2xl">
             IEEE STUDENT BRANCH OF <br />
             UNIVERSITY OF COLOMBO SCHOOL OF COMPUTING <br />
@@ -38,49 +56,14 @@ const Hero = () => {
           </p>
           <CountdownTimer targetDate={targetDate} title="Event starts in" />
         </div>
-        <div className="top-element relative bottom-0 flex w-[100vw] flex-col items-center justify-center overflow-hidden py-4">
-          <MarqueeAnimation
-            className="bg-primary-100 w-[105vw] translate-y-[22px] rotate-8 overflow-clip py-2 md:w-full md:max-w-[100vw] md:translate-y-[26px] md:rotate-2"
-            hoverStop
-            itemGap="xlarge"
-          >
-            <div className="text-marquee flex gap-8 lg:gap-x-16">
-              <p>CodeQuest: Vault Edition</p>
-              <p>IEEE Student Branch UCSC</p>
-            </div>
-            <StarIcon size={36} />
-            <div className="text-marquee flex gap-8 lg:gap-x-16">
-              <p>CodeQuest: Vault Edition</p>
-              <p>IEEE Student Branch UCSC</p>
-            </div>
-            <StarIcon size={36} />
-            <div className="text-marquee flex gap-8 lg:gap-x-16">
-              <p>CodeQuest: Vault Edition</p>
-              <p>IEEE Student Branch UCSC</p>
-            </div>
-          </MarqueeAnimation>
-          <MarqueeAnimation
-            className="bg-primary-100 w-[105vw] -translate-y-[22px] -rotate-8 py-2 md:w-full md:max-w-[100vw] md:-translate-y-[26px] md:-rotate-2"
-            reverse
-            hoverStop
-            itemGap="xlarge"
-          >
-            <div className="text-marquee flex gap-8 lg:gap-x-16">
-              <p>CodeQuest: Vault Edition</p>
-              <p>IEEE Student Branch UCSC</p>
-            </div>
-            <StarIcon size={36} />
-            <div className="text-marquee flex gap-8 lg:gap-x-16">
-              <p>CodeQuest: Vault Edition</p>
-              <p>IEEE Student Branch UCSC</p>
-            </div>
-            <StarIcon size={36} />
-            <div className="text-marquee flex gap-8 lg:gap-x-16">
-              <p>CodeQuest: Vault Edition</p>
-              <p>IEEE Student Branch UCSC</p>
-            </div>
-          </MarqueeAnimation>
-        </div>
+      </div>
+      <div className="absolute bottom-0 h-full w-full">
+        <Image
+          src={HeroBgImg}
+          alt="Hero background"
+          layout="fill"
+          objectFit="cover"
+        />
       </div>
     </div>
   );

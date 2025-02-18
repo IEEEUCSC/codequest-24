@@ -14,10 +14,24 @@ export interface AnimatedTextProps {
   variants?: CharacterVariants;
   cloneTextColor?: string;
   duration?: number;
+  style?: React.CSSProperties;
 }
 
+export interface AnimatedButtonProps
+  extends React.HTMLAttributes<HTMLButtonElement>,
+    AnimatedTextProps {
+  children?: React.ReactNode;
+  className?: string;
+  style?: React.CSSProperties;
+  id?: string;
+}
 
-export interface AnimatedButtonProps extends React.HTMLAttributes<HTMLButtonElement>, AnimatedTextProps {
-    children?: React.ReactNode;
-    className?: string;
+export interface TimelineItem {
+  date: {
+    day: string;
+    month: string;
+  };
+  header: string;
+  content: string;
+  time: string;
 }

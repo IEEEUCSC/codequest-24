@@ -1,6 +1,8 @@
 import React from "react";
+import Image from "next/image";
 
 import { cn } from "@/libs/utils";
+import SectionBg from "@/assets/sec-title-bg.svg";
 
 interface SectionHeaderProps extends React.HTMLAttributes<HTMLHeadingElement> {
   title: string;
@@ -11,12 +13,20 @@ const SectionHeader = ({ title, className, ...props }: SectionHeaderProps) => {
   return (
     <h1
       className={cn(
-        "bg-dark-100 top-element border-primary-200 relative mx-auto w-fit rounded-4xl border px-4 py-2 text-white select-none lg:text-lg",
+        "top-element section-title relative mx-auto w-fit px-4 py-2 text-white select-none lg:text-lg",
         className,
       )}
       {...props}
     >
       {title}
+      <div className="absolute -bottom-2 -left-2 h-[120%] w-[120%]">
+        <Image
+          src={SectionBg}
+          alt="section title background"
+          layout="fill"
+          objectFit="cover"
+        />
+      </div>
     </h1>
   );
 };
