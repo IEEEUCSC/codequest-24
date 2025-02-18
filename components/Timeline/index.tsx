@@ -1,4 +1,4 @@
-// import SectionTitle from "../SectionTitle";
+import SectionHeader from "../SectionHeader";
 import { TimelineComp } from "./TimelineComp";
 import { timelineItems } from "@/libs/data";
 
@@ -8,7 +8,7 @@ const TimelineSection = () => {
       className="top-element main-section flex flex-col gap-y-8 px-2"
       id="timeline"
     >
-      {/* <SectionTitle title="Timeline" /> */}
+      <SectionHeader title="Timeline" />
       <div>
         <TimelineComp items={timelineItems} />
       </div>

@@ -1,11 +1,11 @@
 @import "tailwindcss";
 @theme {
-  --color-primary-50: #FE7373;
-  --color-primary-100: #FF5C5C;
-  --color-primary-200: #FF4040;
-  --color-primary-300: #FF3232;
-  --color-primary-400: #D51414;
-  --color-primary-500: #B50000;
+  --color-primary-50: #fe7373;
+  --color-primary-100: #ff5c5c;
+  --color-primary-200: #ff4040;
+  --color-primary-300: #ff3232;
+  --color-primary-400: #d51414;
+  --color-primary-500: #b50000;
 
   --color-dark-50: #333333;
   --color-dark-100: #1a1a1a;
@@ -13,7 +13,6 @@
   --color-dark-300: #0d0d0d;
   --color-dark-400: #080808;
 }
-
 
 @layer components {
   .hero-bg {
@@ -99,5 +98,9 @@
       var(--color-primary-300) 0%,
       var(--color-dark-100) 65%
     );
+  }
+
+  .section-title {
+    background-image: url("/assets/sec-title-bg.svg");
   }
 }
