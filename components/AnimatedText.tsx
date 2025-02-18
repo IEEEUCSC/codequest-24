@@ -52,6 +52,7 @@ const AnimatedText = ({
   preset = "slideUp",
   cloneTextColor = "text-red-400",
   duration = 0.4,
+  style,
 }: AnimatedTextProps) => {
   const splitText = useTextSplit(text, {
     splitBy: type === "characters" ? "characters" : "words",
@@ -69,7 +70,7 @@ const AnimatedText = ({
 
   return (
     <div
-      className={cn("relative h-fit overflow-hidden ", textClassName)}
+      className={cn("relative h-fit overflow-hidden", textClassName)}
       onMouseEnter={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
     >
@@ -82,7 +83,10 @@ const AnimatedText = ({
           cloneTextColor={cloneTextColor}
         />
       )}
-      <motion.p className="relative h-full select-none py-1 leading-[0.8]">
+      <motion.p
+        className="relative h-full py-1 leading-[0.8] select-none"
+        style={style}
+      >
         {splitText.map((char, index) => (
           <motion.span
             key={index}
@@ -123,6 +127,7 @@ type CloneTextProps = {
   presetClass?: string;
   cloneTextColor?: string;
   duration?: number;
+  style?: React.CSSProperties;
 };
 
 const CloneText = ({
@@ -132,10 +137,12 @@ const CloneText = ({
   presetClass,
   cloneTextColor = "text-red-400",
   duration = 0.4,
+  style,
 }: CloneTextProps) => {
   return (
     <motion.p
-      className={cn(" absolute h-full py-1 leading-[0.8]", presetClass)}
+      className={cn("absolute h-full py-1 leading-[0.8]", presetClass)}
+      style={style}
     >
       {splitText.map((char, index) => (
         <motion.span
