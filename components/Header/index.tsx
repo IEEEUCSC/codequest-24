@@ -3,13 +3,16 @@
 import { useState } from "react";
 import { motion, useMotionValueEvent, useScroll } from "motion/react";
 
-import { NAV_LINKS } from "@/libs/data";
+import { HeaderLogoSrc, NAV_LINKS } from "@/libs/data";
 import NavigationTarget from "./NavigationTarget";
 import AnimatedButton from "../AnimatedButton";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 import MobileNavigation from "./Mobile";
 import { useLockingBodyScroll } from "@/hooks/useLockingBodyScroll";
 import { BsArrowUpRightCircle } from "react-icons/bs";
+import Image from "next/image";
+
+export const HeaderButtonPadding = 64;
 
 const Header = () => {
   const desktop = useMediaQuery("(min-width: 1024px)");
@@ -42,8 +45,15 @@ const Header = () => {
       variants={variants}
       transition={{ type: "tween", ease: "easeIn", duration: 0.25 }}
     >
-      <div className="container mx-auto flex items-center justify-between rounded-full p-4 text-white ">
-        <h1>logo</h1>
+      <div className="container mx-auto flex items-center justify-between rounded-full p-4 text-white">
+        <div>
+          <Image
+            src={HeaderLogoSrc}
+            alt="CodeQuest Logo"
+            width={150}
+            height={50}
+          />
+        </div>
         {desktop ? (
           <>
             <div className="px-4 py-1.5">
@@ -57,7 +67,10 @@ const Header = () => {
               text="Register Now"
               cloneTextColor="text-[#fff]"
               textClassName=" text-base cursor-pointer"
-              className="flex items-center gap-x-2 px-6 py-3"
+              className="flex items-center gap-x-2 py-3"
+              style={{ paddingInline: HeaderButtonPadding }}
+              to="/register"
+              id="register-button"
             >
               <BsArrowUpRightCircle className="text-[20px]" />
             </AnimatedButton>
