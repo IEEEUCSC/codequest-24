@@ -17,7 +17,7 @@ const FAQs = () => {
           {FAQData.map((item) => (
             <AccordionItem
               key={item.value}
-              className="faq-item-bg top-element text-white"
+              className="faq-item-bg top-element border border-gray-600 text-white"
               value={item.value}
             >
               <AccordionItemTrigger value={item.value}>
