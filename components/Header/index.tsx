@@ -11,6 +11,7 @@ import MobileNavigation from "./Mobile";
 import { useLockingBodyScroll } from "@/hooks/useLockingBodyScroll";
 import { BsArrowUpRightCircle } from "react-icons/bs";
 import Image from "next/image";
+import { cn } from "@/libs/utils";
 
 export const HeaderButtonPadding = 64;
 
@@ -45,7 +46,11 @@ const Header = () => {
       variants={variants}
       transition={{ type: "tween", ease: "easeIn", duration: 0.25 }}
     >
-      <div className="container mx-auto flex items-center justify-between rounded-full p-4 text-white">
+      <div
+        className={cn(
+          "container mx-auto flex items-center justify-between rounded-full px-6 py-4 text-white",
+        )}
+      >
         <div>
           <Image
             src={HeaderLogoSrc}
