@@ -1,5 +1,4 @@
 import { FAQData } from "@/libs/data";
-// import SectionTitle from "../SectionTitle";
 import {
   AccordionItem,
   AccordionItemContent,
@@ -7,11 +6,12 @@ import {
   AccordionItemTrigger,
   AccordionRoot,
 } from "./Accordion";
+import SectionHeader from "../SectionHeader";
 
 const FAQs = () => {
   return (
     <div className="top-element section-gap-y main-section px-2" id="faqs">
-      {/* <SectionTitle title="FAQs" /> */}
+      <SectionHeader title="FAQs" />
       <div className="section-inner-gap-y will-change-[height]">
         <AccordionRoot allowMultiple={false} className="flex flex-col gap-y-4">
           {FAQData.map((item) => (
