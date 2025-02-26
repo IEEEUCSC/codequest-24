@@ -98,14 +98,15 @@
   .section-title {
     background-image: url("/assets/sec-title-bg.svg");
   }
+
 }
 
 @layer utilities {
   .main-section {
-    @apply container mx-auto my-8 lg:my-16;
+    @apply container mx-auto py-8 lg:py-16;
   }
 
-  .inner-sec-y {
+  .sec-inner-y {
     @apply mt-4 lg:mt-8;
   }
 
