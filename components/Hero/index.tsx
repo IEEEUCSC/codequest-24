@@ -49,6 +49,8 @@ const Hero = () => {
             alt="CodeQuest: Vault Edition"
             height={180}
             className="w-auto"
+            priority={true}
+            quality={65}
           />
           <p className="text-center text-xs text-balance lg:max-w-[65ch] lg:text-base">
             A Capture the Flag (CTF) hackathon aimed at enhancing cybersecurity
@@ -58,12 +60,16 @@ const Hero = () => {
         </div>
       </div>
       <div className="absolute bottom-0 h-full w-full">
-        <Image
-          src={HeroBgImg}
-          alt="Hero background"
-          layout="fill"
-          objectFit="cover"
-        />
+        {desktop && (
+          <Image
+            src={HeroBgImg}
+            alt="Hero background"
+            layout="fill"
+            objectFit="cover"
+            priority={true}
+            quality={65}
+          />
+        )}
       </div>
     </div>
   );

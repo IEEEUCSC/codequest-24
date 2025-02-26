@@ -34,14 +34,6 @@
     );
   }
 
-  .text-marquee {
-    @apply text-lg md:text-2xl lg:text-3xl;
-  }
-
-  .nav-link {
-    @apply text-base lg:text-lg;
-  }
-
   .glow-shadow {
     box-shadow:
       0 0 5px var(--color-primary-400),
@@ -55,10 +47,6 @@
       0 0 10px var(--color-primary-300);
   }
 
-  .top-element {
-    @apply z-[20];
-  }
-
   .contact-card-bg {
     background-color: var(--color-dark-400);
     background: radial-gradient(
@@ -66,10 +54,6 @@
       var(--color-primary-400) 0%,
       var(--color-dark-300) 55%
     );
-  }
-
-  .main-section {
-    @apply container mx-auto my-8;
   }
 
   .background-glow {
@@ -80,11 +64,14 @@
     background-color: var(--color-dark-100);
     background: radial-gradient(
       circle at 85% 0%,
-      var(--color-primary-300) 0%,
-      var(--color-dark-100) 65%
+      var(--color-primary-400) 0%,
+      var(--color-primary-300) 30%,
+      var(--color-dark-100) 75%
     );
-    opacity: 0.85;
+    opacity: 0.9;
     backdrop-filter: blur(10px);
+    will-change: drop-shadow;
+    transition: drop-shadow 0.3s ease-in-out;
 
     @media screen and (min-width: 1080px) {
       drop-shadow: 0 0 10px var(--color-primary-400);
@@ -95,12 +82,43 @@
     background-color: var(--color-dark-100);
     background: radial-gradient(
       circle at 95% -100%,
-      var(--color-primary-300) 0%,
-      var(--color-dark-100) 65%
+      var(--color-primary-400) 0%,
+      var(--color-primary-300) 30%,
+      var(--color-dark-100) 75%
     );
+    will-change: box-shadow;
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  .faq-item-bg-open {
+    box-shadow:
+      0 0 5px var(--color-primary-200),
+      0 0 15px var(--color-primary-400);
   }
 
   .section-title {
     background-image: url("/assets/sec-title-bg.svg");
+  }
+
+}
+
+@layer utilities {
+  .main-section {
+    @apply container mx-auto py-8 lg:py-16;
+  }
+
+  .sec-inner-y {
+    @apply mt-4 lg:mt-8;
+  }
+
+  .top-element {
+    @apply z-[20];
+  }
+
+  .text-marquee {
+    @apply text-lg md:text-2xl lg:text-3xl;
+  }
+
+  .nav-link {
+    @apply text-base lg:text-lg;
   }
 }

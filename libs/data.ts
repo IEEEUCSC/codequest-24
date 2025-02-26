@@ -81,37 +81,37 @@ export const timelineItems: TimelineItem[] = [
   {
     date: { day: "15", month: "FEB" },
     header: "Workshop 01",
-    content: "Introduction to Machine Learning",
+    content: "Demo content for Workshop 01",
     time: "19:00 IST",
   },
   {
     date: { day: "22", month: "FEB" },
     header: "Workshop 02",
-    content: "Large Language Models",
+    content: "Demo content for Workshop 02",
     time: "19:00 IST",
   },
   {
     date: { day: "01", month: "MAR" },
     header: "Workshop 03",
-    content: "AI agents and RAG model",
+    content: "Demo content for Workshop 03",
     time: "19:00 IST",
   },
   {
     date: { day: "08", month: "MAR" },
     header: "Initial Round",
-    content: " ",
+    content: "Demo content for Initial Round",
     time: "00:00 IST",
   },
   {
     date: { day: "12", month: "MAR" },
     header: "Final Round Awareness Session",
-    content: "AI agents and RAG model ",
+    content: "Demo content for Final Round Awareness Session",
     time: "00:00 IST",
   },
   {
     date: { day: "19", month: "APR" },
     header: "Final Round",
-    content: " ",
+    content: "Demo content for Final Round",
     time: "00:00 IST",
   },
 ];
@@ -120,38 +120,33 @@ export const timelineItems: TimelineItem[] = [
 export const FAQData = [
   {
     value: "item-1",
-    question: "What is IntelliHack ?",
-    answer:
-      "IntelliHack  is a Machine Learning Hackathon organized by IEEE CS Chapter of UCSC.",
+    question: "What is CodeQuest?",
+    answer: "CodeQuest is a coding competition designed to challenge and inspire developers.",
   },
   {
     value: "item-2",
-    question: "How can I register for IntelliHack ?",
-    answer:
-      "Visit our website and navigate to the registration page. Fill in the required details for your team to register.",
+    question: "How can I register for CodeQuest?",
+    answer: "Visit our website and navigate to the registration page. Fill in the required details to register.",
   },
   {
     value: "item-3",
-    question: "Who can participate in IntelliHack ?",
-    answer: "IntelliHack is open to all university undergraduate students.",
+    question: "Who can participate in CodeQuest?",
+    answer: "CodeQuest is open to all coding enthusiasts, regardless of their experience level.",
   },
   {
     value: "item-4",
-    question: "Do I need a team to participate ?",
-    answer: "Yes, participants are required to form a team of 2 to 4 members.",
+    question: "Do I need a team to participate?",
+    answer: "No, you can participate individually or as part of a team.",
   },
   {
     value: "item-5",
-    question:
-      "Can I form a team with undergraduates from different universities ?",
-    answer:
-      "No, a team must consist of undergraduates from the same university.",
+    question: "What are the prizes for CodeQuest?",
+    answer: "Prizes include cash rewards, tech gadgets, and certificates of achievement.",
   },
   {
     value: "item-6",
-    question: "Do I need any prior knowledge in Machine Learning ?",
-    answer:
-      "Yes, Having some background knowledge in mathematics, programming, and data analysis is beneficial for understanding machine learning concepts.",
+    question: "Do I need any prior knowledge in coding?",
+    answer: "Basic knowledge of coding is recommended, but we have resources to help beginners get started.",
   },
   // Add more FAQs as needed
 ];

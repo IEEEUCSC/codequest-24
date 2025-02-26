@@ -20,20 +20,14 @@ export function TimelineComp({ items }: TimelineProps) {
       {items.map((item, index) => (
         <motion.div
           key={index}
-          className={`timeline-card-bg top-element min-h-[180px] flex-1 rounded-xl border border-slate-950 p-4 text-white transition-all duration-300 ease-in-out hover:cursor-pointer lg:min-h-[320px] lg:p-2 xl:min-h-[320px] xl:max-w-[480px] xl:min-w-[180px] xl:rounded-3xl xl:p-4 2xl:min-w-[210px] 2xl:p-6 ${expandedIndex === index ? "flex-[3]" : "flex-1"} `}
+          className={`timeline-card-bg top-element min-h-[180px] flex-1 rounded-xl border border-gray-600 p-4 text-white transition-all duration-300 ease-in-out hover:cursor-pointer lg:min-h-[320px] lg:p-2 xl:min-h-[320px] xl:max-w-[480px] xl:min-w-[180px] xl:rounded-3xl xl:p-4 2xl:min-w-[210px] 2xl:p-6 ${expandedIndex === index ? "flex-[3]" : "flex-1"}`}
           onMouseEnter={() => setExpandedIndex(index)}
           onMouseLeave={() => setExpandedIndex(0)}
-          animate={
-            desktop && {
-              filter:
-                expandedIndex === index
-                  ? "drop-shadow(0 0 25px var(--color-primary-400))"
-                  : "",
-            }
-          }
           style={
-            !desktop
-              ? { filter: "drop-shadow(0 0 10px var(--color-primary-400)" }
+            desktop
+              ? expandedIndex === index
+                ? { filter: "drop-shadow(0 0 25px var(--color-primary-400))" }
+                : undefined
               : undefined
           }
         >
@@ -75,7 +69,7 @@ export function TimelineComp({ items }: TimelineProps) {
                 ) : (
                   <>
                     <h3 className="font-semibold">{item.header}</h3>
-                    <p className="text-sm text-gray-700 lg:mb-2 xl:mb-4 xl:text-base">
+                    <p className="text-sm text-gray-600 lg:mb-2 xl:mb-4 xl:text-base">
                       {item.content}
                     </p>
                   </>
