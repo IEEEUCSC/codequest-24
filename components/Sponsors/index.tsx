@@ -7,7 +7,7 @@ const Sponsors = () => {
   return (
     <div className="main-section top-element">
       <SectionHeader title="Sponsors" />
-      <div className="mt-4 w-full">
+      <div className="sec-inner-y sponsor-bg relative w-full">
         <MarqueeAnimation
           className="bg-primary-400 top-element background-glow w-full"
           itemGap="large"
