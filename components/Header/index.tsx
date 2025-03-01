@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion, useMotionValueEvent, useScroll } from "motion/react";
 
-import { HeaderLogoSrc, NAV_LINKS } from "@/libs/data";
+import { CQLogo, NAV_LINKS } from "@/libs/data";
 import NavigationTarget from "./NavigationTarget";
 import AnimatedButton from "../AnimatedButton";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
@@ -52,12 +52,7 @@ const Header = () => {
         )}
       >
         <div>
-          <Image
-            src={HeaderLogoSrc}
-            alt="CodeQuest Logo"
-            width={150}
-            height={50}
-          />
+          <Image src={CQLogo} alt="CodeQuest Logo" width={150} height={50} />
         </div>
         {desktop ? (
           <>

@@ -12,6 +12,8 @@
   --color-dark-200: #141414;
   --color-dark-300: #0d0d0d;
   --color-dark-400: #080808;
+
+  --footer-height: 300px;
 }
 
 @layer components {
@@ -48,11 +50,12 @@
   }
 
   .contact-card-bg {
-    background-color: var(--color-dark-400);
+    background-color: var(--color-dark-100);
     background: radial-gradient(
       circle at 85% 0%,
       var(--color-primary-400) 0%,
-      var(--color-dark-300) 55%
+      var(--color-primary-300) 30%,
+      var(--color-dark-100) 75%
     );
   }
 
@@ -94,11 +97,6 @@
       0 0 5px var(--color-primary-200),
       0 0 15px var(--color-primary-400);
   }
-
-  .section-title {
-    background-image: url("/assets/sec-title-bg.svg");
-  }
-
 }
 
 @layer utilities {
