@@ -44,8 +44,8 @@ const TeamGrid: React.FC<TeamGridProps> = ({ contactData }) => {
         <ProfileCard
           key={contact.id}
           contact={contact}
-          onHover={handleHover}
-          onHoverEnd={handleHoverEnd}
+          onMouseEnter={handleHover}
+          onMouseLeave={handleHoverEnd}
           onClick={handleClick}
         />
       ))}

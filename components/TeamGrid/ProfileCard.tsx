@@ -6,15 +6,15 @@ import { ContactData } from "@/libs/contactData";
 
 interface ProfileCardProps {
   contact: ContactData;
-  onHover: (contact: ContactData) => void;
-  onHoverEnd: () => void;
+  onMouseEnter: (contact: ContactData) => void;
+  onMouseLeave: () => void;
   onClick: (contact: ContactData) => void;
 }
 
 const ProfileCard: React.FC<ProfileCardProps> = ({
   contact,
-  onHover,
-  onHoverEnd,
+  onMouseEnter,
+  onMouseLeave,
   onClick,
 }) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -22,12 +22,12 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
   // Handler functions for mouse events
   const handleMouseEnter = () => {
     setIsHovered(true);
-    onHover(contact);
+    onMouseEnter(contact);
   };
 
   const handleMouseLeave = () => {
     setIsHovered(false);
-    onHoverEnd();
+    onMouseLeave();
   };
 
   const handleClick = () => {
@@ -44,7 +44,7 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
 
   return (
     <div
-      className={`relative w-full overflow-hidden rounded bg-red-600 pt-[100%] ${contact.position.gridColumn === "3" ? "col-start-3" : ""} ${contact.position.gridRow === "2" ? "row-start-2" : ""}`}
+      className={`relative w-full overflow-hidden rounded bg-red-600 pt-[100%] ease-in-out hover:cursor-pointer ${contact.position.gridColumn === "3" ? "col-start-3" : ""} ${contact.position.gridRow === "2" ? "row-start-2" : ""}`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       onClick={handleClick}
