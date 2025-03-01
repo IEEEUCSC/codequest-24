@@ -4,7 +4,7 @@ import NojiImg from "@/assets/contacts/noji.jpg";
 import chamudiImg from "@/assets/contacts/chamudi.jpg";
 import personImg from "@/assets/contacts/person.jpg";
 
-export interface ContactData {
+export interface ContactDataProps {
   id: number;
   name: string;
   role: string;
@@ -18,7 +18,7 @@ export interface ContactData {
   };
 }
 
-const contactData: ContactData[] = [
+const contactData: ContactDataProps[] = [
   {
     id: 1,
     name: "Lakshitha",
