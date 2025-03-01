@@ -1,5 +1,5 @@
-import { StaticImageData } from "next/image";
 import React from "react";
+import { StaticImageData } from "next/image";
 
 import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa6";
 
@@ -76,7 +76,6 @@ export const contactInfo: ContactInfo[] = [
   },
 ];
 
-
 export const timelineItems: TimelineItem[] = [
   {
     date: { day: "15", month: "FEB" },
@@ -116,22 +115,24 @@ export const timelineItems: TimelineItem[] = [
   },
 ];
 
-
 export const FAQData = [
   {
     value: "item-1",
     question: "What is CodeQuest?",
-    answer: "CodeQuest is a coding competition designed to challenge and inspire developers.",
+    answer:
+      "CodeQuest is a coding competition designed to challenge and inspire developers.",
   },
   {
     value: "item-2",
     question: "How can I register for CodeQuest?",
-    answer: "Visit our website and navigate to the registration page. Fill in the required details to register.",
+    answer:
+      "Visit our website and navigate to the registration page. Fill in the required details to register.",
   },
   {
     value: "item-3",
     question: "Who can participate in CodeQuest?",
-    answer: "CodeQuest is open to all coding enthusiasts, regardless of their experience level.",
+    answer:
+      "CodeQuest is open to all coding enthusiasts, regardless of their experience level.",
   },
   {
     value: "item-4",
@@ -141,17 +142,22 @@ export const FAQData = [
   {
     value: "item-5",
     question: "What are the prizes for CodeQuest?",
-    answer: "Prizes include cash rewards, tech gadgets, and certificates of achievement.",
+    answer:
+      "Prizes include cash rewards, tech gadgets, and certificates of achievement.",
   },
   {
     value: "item-6",
     question: "Do I need any prior knowledge in coding?",
-    answer: "Basic knowledge of coding is recommended, but we have resources to help beginners get started.",
+    answer:
+      "Basic knowledge of coding is recommended, but we have resources to help beginners get started.",
   },
   // Add more FAQs as needed
 ];
 
+export const FOOTER_DESC =
+  "CodeQuest is a competition designed to challenge and inspire developers. Join us for a chance to win exciting prizes and showcase your coding skills!";
 
-import HeaderLogo from "@/assets/logos/logo-header.png"
+import IEEElogo from "@/assets/logos/sb_logo.png";
+import CQLogo from "@/assets/logos/cq_logo.png";
 
-export const HeaderLogoSrc = HeaderLogo;
+export { IEEElogo, CQLogo };
