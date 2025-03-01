@@ -1,21 +1,21 @@
-// components/ProfileCard.tsx
 "use client";
+
 import { useState } from "react";
 import Image from "next/image";
-import { ContactData } from "@/libs/contactData";
+
+import { ContactDataProps } from "@/libs/contactData";
+
 
 interface ProfileCardProps {
-  contact: ContactData;
-  onMouseEnter: (contact: ContactData) => void;
+  contact: ContactDataProps;
+  onMouseEnter: (contact: ContactDataProps) => void;
   onMouseLeave: () => void;
-  onClick: (contact: ContactData) => void;
 }
 
 const ProfileCard: React.FC<ProfileCardProps> = ({
   contact,
   onMouseEnter,
   onMouseLeave,
-  onClick,
 }) => {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -30,9 +30,7 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
     onMouseLeave();
   };
 
-  const handleClick = () => {
-    onClick(contact);
-  };
+
 
   // Skip rendering the data cell position - we'll render that separately
   if (
@@ -47,7 +45,6 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
       className={`relative w-full overflow-hidden rounded bg-red-600 pt-[100%] ease-in-out hover:cursor-pointer ${contact.position.gridColumn === "3" ? "col-start-3" : ""} ${contact.position.gridRow === "2" ? "row-start-2" : ""}`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      onClick={handleClick}
     >
       <div className="absolute inset-0">
         <div className="relative h-full w-full">
