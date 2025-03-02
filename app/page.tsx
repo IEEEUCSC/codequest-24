@@ -1,4 +1,4 @@
-import AnimatedGridWrapper from "@/components/AnimatedGrid/AnimatedGridWrapper";
+// import AnimatedGridWrapper from "@/components/AnimatedGrid/AnimatedGridWrapper";
 import Hero from "@/components/Hero";
 import FAQs from "@/components/FAQs";
 import TimelineSection from "@/components/Timeline";
@@ -7,6 +7,7 @@ import Sponsors from "@/components/Sponsors";
 import TeamGrid from "@/components/TeamGrid";
 import contactData from "@/libs/contactData";
 // import Contacts from "@/components/Contacts";
+import PrizeCards from "@/components/PrizeCards";
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
       </div>
       {/* <div className="min-h-screen w-full" /> */}
       {/* <div className="min-h-screen w-full" /> */}
+      <PrizeCards />
     </div>
   );
 }
