@@ -105,21 +105,6 @@
       0 0 5px var(--color-primary-200),
       0 0 15px var(--color-primary-400);
   }
-  .card-gold {
-    background-color: var(--color-gold);
-  }
-
-  .card-silver {
-    background-color: var(--color-silver);
-  }
-
-  .card-bronze {
-    background-color: var(--color-bronze);
-  }
-
-  .card-default {
-    background-color: var(--color-dark-300);
-  }
 
   .card-glow {
     @apply shadow-lg;
