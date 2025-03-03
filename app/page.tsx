@@ -12,12 +12,12 @@ export default function Home() {
       {/* <AnimatedGridWrapper /> */}
       <Hero />
       <TimelineSection />
+      <PrizeCards />
       <Sponsors />
       <Contacts />
       <FAQs />
       {/* <div className="min-h-screen w-full" /> */}
       {/* <div className="min-h-screen w-full" /> */}
-      <PrizeCards />
     </div>
   );
 }
