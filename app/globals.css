@@ -13,6 +13,14 @@
   --color-dark-300: #0d0d0d;
   --color-dark-400: #080808;
 
+  /* --color-gold: oklch(65.24% 0.15 85);
+  --color-silver: oklch(46.29% 0.015 270);
+  --color-bronze: oklch(39.76% 0.1 40); */
+
+  --color-gold: #d08f32;
+  --color-silver: #9b9b9b;
+  --color-bronze: #c00000;
+
   --footer-height: 300px;
 }
 
@@ -96,6 +104,30 @@
     box-shadow:
       0 0 5px var(--color-primary-200),
       0 0 15px var(--color-primary-400);
+  }
+  .card-gold {
+    background-color: var(--color-gold);
+  }
+
+  .card-silver {
+    background-color: var(--color-silver);
+  }
+
+  .card-bronze {
+    background-color: var(--color-bronze);
+  }
+
+  .card-default {
+    background-color: var(--color-dark-300);
+  }
+
+  .card-glow {
+    @apply shadow-lg;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+  }
+
+  .card-glow:hover {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
   }
 }
 
