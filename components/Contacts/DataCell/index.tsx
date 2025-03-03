@@ -1,8 +1,7 @@
-// components/DataCell.tsx
-import { ContactData } from "@/libs/contactData";
+import { ContactDataProps } from "@/libs/contactData";
 
 interface DataCellProps {
-  contact: ContactData;
+  contact: ContactDataProps;
 }
 
 const DataCell: React.FC<DataCellProps> = ({ contact }) => {

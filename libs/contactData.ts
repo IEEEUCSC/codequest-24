@@ -4,7 +4,7 @@ import NojiImg from "@/assets/contacts/noji.jpg";
 import chamudiImg from "@/assets/contacts/chamudi.jpg";
 import personImg from "@/assets/contacts/person.jpg";
 
-export interface ContactData {
+export interface ContactDataProps {
   id: number;
   name: string;
   role: string;
@@ -18,13 +18,13 @@ export interface ContactData {
   };
 }
 
-const contactData: ContactData[] = [
+const contactData: ContactDataProps[] = [
   {
     id: 1,
-    name: "Lakshitha",
-    role: "Member",
-    email: "Lakshitha@gmail.com",
-    phone: "070 777 7777",
+    name: "Likitha Chathubhashini",
+    role: "Event Co Chair",
+    email: "likithachathu@gmail.com",
+    phone: "076 698 8362",
     image: likithaImg,
     isFeature: false,
     position: {
@@ -35,9 +35,9 @@ const contactData: ContactData[] = [
   {
     id: 2,
     name: "Noji Yudara",
-    role: "Event Co Chair",
-    email: "Noji@gmail.com",
-    phone: "070 111 7777",
+    role: "Event Co - chair",
+    email: "noji.yu123@gmail.com",
+    phone: "070 351 7563",
     image: NojiImg,
     isFeature: false,
     position: {
@@ -47,10 +47,10 @@ const contactData: ContactData[] = [
   },
   {
     id: 3,
-    name: "Chamudi",
-    role: "Member",
-    email: "Chamudi@gmail.com",
-    phone: "070 222 7777",
+    name: "Chamudi Upeka",
+    role: "Event Co - chair",
+    email: "chamudiupeka21@gmail.com",
+    phone: "076 710 5536",
     image: chamudiImg,
     isFeature: false,
     position: {
@@ -60,10 +60,10 @@ const contactData: ContactData[] = [
   },
   {
     id: 4,
-    name: "Person",
-    role: "Member",
-    email: "Person@gmail.com",
-    phone: "070 333 7777",
+    name: "Dineth Theekshana",
+    role: "Program team Lead",
+    email: "dineththeekshana@gmail.com",
+    phone: "077 410 4170",
     image: personImg,
     isFeature: false,
     position: {
