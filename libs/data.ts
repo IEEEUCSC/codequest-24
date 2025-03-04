@@ -160,4 +160,7 @@ export const FOOTER_DESC =
 import IEEElogo from "@/assets/logos/sb_logo.png";
 import CQLogo from "@/assets/logos/cq_logo.png";
 
-export { IEEElogo, CQLogo };
+import SectionBg from "@/assets/sec-title-bg.svg";
+import CompetitionBg from "@/assets/competition-bg.svg";
+
+export { IEEElogo, CQLogo, SectionBg, CompetitionBg };
