@@ -30,11 +30,11 @@ const Hero = () => {
   }, [dimensions, heroLineRight]);
 
   return (
-    <div className="hero hero-bg relative min-h-svh overflow-hidden text-white">
+    <div className="hero hero-bg relative min-h-svh text-white">
       <div className="relative container mx-auto flex min-h-screen flex-col items-center justify-between">
         {desktop && (
           <div
-            className="bg-primary-400 background-glow top-element absolute top-8 block h-svh"
+            className="bg-primary-400 background-glow top-element absolute top-8 block h-[calc(100svh+108px)]"
             style={{ width: heroLineWidth, right: 280 / 2 - heroLineWidth / 2 }}
           />
         )}
