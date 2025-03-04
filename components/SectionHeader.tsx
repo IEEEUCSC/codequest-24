@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 
 import { cn } from "@/libs/utils";
-import SectionBg from "@/assets/sec-title-bg.svg";
+import { SectionBg } from "@/libs/data";
 
 interface SectionHeaderProps extends React.HTMLAttributes<HTMLHeadingElement> {
   title: string;
