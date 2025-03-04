@@ -5,7 +5,7 @@ import SponsorsCard from "./SponsorsCard";
 
 const Sponsors = () => {
   return (
-    <div className="main-section top-element">
+    <div className="main-section top-element" id="sponsors">
       <SectionHeader title="Sponsors" />
       <div className="sec-inner-y sponsor-bg relative w-full">
         <MarqueeAnimation

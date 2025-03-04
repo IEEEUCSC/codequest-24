@@ -3,7 +3,10 @@ import Card from "./Card";
 
 const PrizeCards = () => {
   return (
-    <div className="main-section top-element relative min-h-[300px] w-full px-4 py-8">
+    <div
+      className="main-section top-element relative min-h-[300px] w-full px-4 py-8"
+      id="prizes"
+    >
       <SectionHeader title="Prizes" />
       <div className="flex flex-col items-center justify-center gap-8 md:flex-row sec-inner-y">
         {/* 2nd Place - Slightly smaller */}

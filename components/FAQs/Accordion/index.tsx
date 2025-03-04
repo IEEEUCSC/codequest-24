@@ -174,7 +174,7 @@ const AccordionItemContent = ({
           type: "tween",
         }}
         variants={variants}
-        className="pb-2 text-slate-600"
+        className="pb-2 text-slate-400"
         ref={ref}
       >
         {children}
