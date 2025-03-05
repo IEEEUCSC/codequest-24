@@ -11,12 +11,14 @@ interface ProfileCardProps {
   contact: ContactDataProps;
   onMouseEnter: (contact: ContactDataProps) => void;
   onMouseLeave: () => void;
+  onMouseClick: (contact: ContactDataProps) => void;
 }
 
 const ProfileCard: React.FC<ProfileCardProps> = ({
   contact,
   onMouseEnter,
   onMouseLeave,
+  onMouseClick,
 }) => {
   const [isHovered, setIsHovered] = useState(false);
   const desktop = useMediaQuery("(min-width: 768px");
@@ -25,6 +27,10 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
   const handleMouseEnter = () => {
     setIsHovered(true);
     onMouseEnter(contact);
+  };
+
+  const handleMouseCLick = () => {
+    onMouseClick(contact);
   };
 
   const handleMouseLeave = () => {
@@ -60,6 +66,7 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
       )}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
+      onClick={handleMouseCLick}
     >
       <div className="md:absolute md:inset-0">
         <div className="xs:grid-cols-2 relative grid h-full w-full md:grid-cols-none">
