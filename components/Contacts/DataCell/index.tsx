@@ -6,7 +6,7 @@ interface DataCellProps {
 
 const DataCell: React.FC<DataCellProps> = ({ contact }) => {
   return (
-    <div className="col-span-2 row-start-2 rounded bg-black p-4">
+    <div className="col-span-2 row-start-2 rounded bg-dark-300 p-4">
       <h2 className="mb-2 text-3xl font-bold text-white">{contact.name}</h2>
       <p className="mb-4 text-white">{contact.role}</p>
 

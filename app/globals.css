@@ -22,6 +22,8 @@
   --color-bronze: #c00000;
 
   --footer-height: 300px;
+
+  --breakpoint-xs: 30rem;
 }
 
 @layer components {
@@ -113,6 +115,14 @@
 
   .card-glow:hover {
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  }
+
+  .competition-bg-glow {
+    filter: drop-shadow(0 0 10px var(--color-primary-400));
+
+    @media screen and (min-width: 1080px) {
+      filter: drop-shadow(0 0 25px var(--color-primary-400));
+    }
   }
 }
 

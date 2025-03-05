@@ -6,10 +6,13 @@ import ProfileCard from "./ProfileCard";
 import DataCell from "./DataCell";
 import contactData from "@/libs/contactData";
 import SectionHeader from "../SectionHeader";
+import { useMediaQuery } from "@/hooks/useMediaQuery";
 
 const TeamGrid: React.FC = () => {
   // State to track which contact is being hovered on
   const [hoveredContactIndex, setHoveredContactIndex] = useState<number>(1);
+
+  const desktop = useMediaQuery("(min-width: 768px");
 
   // Handler for when mouse enters a profile card
   const handleHover = (id: number) => {
@@ -29,17 +32,18 @@ const TeamGrid: React.FC = () => {
   return (
     <div className="main-section top-element">
       <SectionHeader title="Our Team" />
-      <div className="sec-inner-y mx-auto grid w-full max-w-6xl grid-cols-3 grid-rows-2 gap-2 rounded-lg border-2 border-red-600 bg-black p-2">
-        {contactData.map((contact) => (
-          <ProfileCard
-            key={contact.id}
-            contact={contact}
-            onMouseEnter={() => handleHover(contact.id)}
-            onMouseLeave={handleHoverEnd}
-          />
-        ))}
-        {/* The data cell that displays the currently hovered/selected contact's information */}
-        <DataCell contact={displayedContact} />
+      <div className="px-1.5 md:px-0">
+        <div className="sec-inner-y bg-dark-300- border-primary-400 grid w-full max-w-6xl gap-2 rounded-lg border-2 p-2 md:mx-auto md:grid-cols-3 md:grid-rows-2">
+          {contactData.map((contact) => (
+            <ProfileCard
+              key={contact.id}
+              contact={contact}
+              onMouseEnter={() => handleHover(contact.id)}
+              onMouseLeave={handleHoverEnd}
+            />
+          ))}
+          {desktop && <DataCell contact={displayedContact} />}
+        </div>
       </div>
     </div>
   );

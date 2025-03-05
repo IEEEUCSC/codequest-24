@@ -14,7 +14,7 @@ const ScrollBaseText = ({
   children,
   className,
   startOffset = 0.95,
-  endOffset = 0.7,
+  endOffset = 0.85,
 }: ScrollBaseText) => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -60,8 +60,8 @@ const Word = ({ children, range, value }: WordProps) => {
     <span className="overflow-clip">
       <motion.span
         className="relative mr-3 inline-block"
-        style={{ y, rotateX: rotate }}
-        transition={{ duration: 0.25, ease: "easeIn" }}
+        style={{ y, rotate: rotate }}
+        transition={{ duration: 0.2, ease: "easeIn" }}
       >
         {children}
       </motion.span>

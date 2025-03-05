@@ -4,12 +4,9 @@ import { timelineItems } from "@/libs/data";
 
 const TimelineSection = () => {
   return (
-    <div
-      className="top-element main-section flex flex-col gap-y-8 px-2"
-      id="timeline"
-    >
+    <div className="top-element main-section flex flex-col px-2" id="timeline">
       <SectionHeader title="Timeline" />
-      <div>
+      <div className="sec-inner-y">
         <TimelineComp items={timelineItems} />
       </div>
     </div>
