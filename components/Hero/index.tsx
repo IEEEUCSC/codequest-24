@@ -64,8 +64,8 @@ const Hero = () => {
           <Image
             src={HeroBgImg}
             alt="Hero background"
-            layout="fill"
-            objectFit="cover"
+            fill
+            style={{ objectFit: "cover" }}
             priority={true}
             quality={65}
           />

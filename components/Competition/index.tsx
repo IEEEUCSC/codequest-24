@@ -22,8 +22,8 @@ const Competition = () => {
           <Image
             src={CompetitionBg}
             alt="section title background"
-            layout="fill"
-            objectFit="cover"
+            fill
+            style={{ objectFit: "cover" }}
           />
         </div>
       </div>

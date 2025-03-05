@@ -5,7 +5,6 @@ import Image from "next/image";
 
 import { ContactDataProps } from "@/libs/contactData";
 
-
 interface ProfileCardProps {
   contact: ContactDataProps;
   onMouseEnter: (contact: ContactDataProps) => void;
@@ -30,8 +29,6 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
     onMouseLeave();
   };
 
-
-
   // Skip rendering the data cell position - we'll render that separately
   if (
     contact.position.gridColumn === "1 / span 2" &&
@@ -51,8 +48,8 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
           <Image
             src={contact.image}
             alt={`${contact.name}`}
-            layout="fill"
-            objectFit="cover"
+            fill
+            style={{ objectFit: "cover" }}
             className="h-full w-full object-cover"
           />
 

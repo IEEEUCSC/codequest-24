@@ -23,8 +23,8 @@ const SectionHeader = ({ title, className, ...props }: SectionHeaderProps) => {
         <Image
           src={SectionBg}
           alt="section title background"
-          layout="fill"
-          objectFit="cover"
+          fill
+          style={{ objectFit: "cover" }}
         />
       </div>
     </h1>
