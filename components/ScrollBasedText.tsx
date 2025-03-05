@@ -53,7 +53,7 @@ interface WordProps {
 }
 
 const Word = ({ children, range, value }: WordProps) => {
-  const y = useTransform(value, range, [200, 0]);
+  const y = useTransform(value, range, [100, 0]);
   const rotate = useTransform(value, range, [-20, 0]);
 
   return (

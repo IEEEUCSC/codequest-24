@@ -1,15 +1,5 @@
-import { ReactNode } from "react";
-
 import { cn } from "@/libs/utils";
-
-interface CardProps {
-  position?: "1st" | "2nd" | "3rd";
-  amount?: string;
-  currency?: string;
-  className?: string;
-  children?: ReactNode;
-  contentPosition?: "top" | "bottom";
-}
+import { CardProps } from "@/libs/types";
 
 const Card = ({
   position,
