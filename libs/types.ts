@@ -1,4 +1,5 @@
 import { Variants } from "motion/react";
+import { ReactNode } from "react";
 
 export type PresetType = "slideUp" | "slideDown";
 
@@ -34,4 +35,14 @@ export interface TimelineItem {
   header: string;
   content: string;
   time: string;
+}
+
+
+export interface CardProps {
+  position?: "1st" | "2nd" | "3rd";
+  amount?: string;
+  currency?: string;
+  className?: string;
+  children?: ReactNode;
+  contentPosition?: "top" | "bottom";
 }
