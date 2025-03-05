@@ -6,10 +6,10 @@ import SectionHeader from "../SectionHeader";
 
 const Competition = () => {
   return (
-    <div className="main-section top-element relative">
+    <div className="main-section top-element relative px-1.5 md:px-0">
       <SectionHeader title="Competition" />
-      <div className="border-primary-400 sec-inner-y background-glow bg-dark-300 rounded-2xl border-8 px-4 py-8">
-        <ScrollBaseText className="mx-auto w-full text-2xl text-white">
+      <div className="border-primary-400 sec-inner-y competition-bg-glow bg-dark-300 rounded-2xl border-2 px-4 py-8 lg:border-8">
+        <ScrollBaseText className="mx-auto w-full text-lg text-white lg:max-w-[80%] lg:text-2xl">
           Code Quest is an exciting Capture the Flag (CTF) event where
           participants test their skills in cryptography, ethical hacking, and
           problem-solving. With challenges in web security, reverse engineering,

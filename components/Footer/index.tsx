@@ -24,15 +24,23 @@ const Footer = () => {
         >
           <div className="top-element bg-primary-300 relative z-2 flex h-full min-h-[20vh] w-full flex-col overflow-auto">
             <div className="top-element relative container mx-auto flex h-[300px] flex-grow flex-col justify-between px-4 py-8 text-white">
-              <div className="flex w-full justify-between">
-                <div className="flex flex-col gap-y-2 md:max-w-[480px]">
+              <div className="flex w-full flex-col justify-between">
+                <div className="flex w-full items-center justify-between">
                   <Image
                     src={CQLogo}
                     alt="IntelliHack Logo"
                     width={120}
                     className="h-auto"
                   />
-                  <p className="text-pretty">{FOOTER_DESC}</p>
+                  <Image
+                    src={IEEElogo}
+                    alt="IEEE Logo"
+                    width={desktop ? 200 : 320}
+                    className="h-auto w-auto"
+                  />
+                </div>
+                <div className="flex flex-col gap-y-2">
+                  <p className="text-pretty md:max-w-[480px]">{FOOTER_DESC}</p>
                   <div className="top-element flex gap-x-2 pt-4">
                     {socialMediaLinks.map((link, index) => (
                       <a
@@ -46,14 +54,6 @@ const Footer = () => {
                       </a>
                     ))}
                   </div>
-                </div>
-                <div>
-                  <Image
-                    src={IEEElogo}
-                    alt="IEEE Logo"
-                    width={desktop ? 200 : 320}
-                    className="h-auto w-auto"
-                  />
                 </div>
               </div>
               <div className="mt-4 w-full">
