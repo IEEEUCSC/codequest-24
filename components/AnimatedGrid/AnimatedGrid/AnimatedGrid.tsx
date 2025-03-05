@@ -41,7 +41,7 @@ export function AnimatedGrid({
 
   return (
     <div
-      className="fixed left-0 top-0 z-[1] grid h-screen w-screen overflow-hidden"
+      className="fixed top-0 left-0 z-[1] grid h-screen w-screen overflow-hidden"
       style={{
         gridTemplateColumns: `repeat(auto-fill, minmax(${boxSize}px, 1fr))`,
         gridTemplateRows: `repeat(auto-fill, minmax(${boxSize}px, 1fr))`,
@@ -60,7 +60,7 @@ export function AnimatedGrid({
               borderColor: highlightBorderColor,
               borderWidth: `${intensity * 2}px`,
               filter: `blur(${intensity * 2}px)`,
-              opacity: 0.2 + intensity * 0.8,
+              opacity: 0.4 + intensity * 0.8,
             }}
           />
         );
