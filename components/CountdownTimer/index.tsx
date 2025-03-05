@@ -11,7 +11,7 @@ export function CountdownTimer({ targetDate, title }: CountdownTimerProps) {
   const timeLeft = useCountdown(targetDate);
 
   return (
-    <div className="countdown-timer-bg bg-dark-200 border-primary-400 mx-auto w-full max-w-[300px] rounded-xl border-2 px-6 py-2 text-center sm:max-w-xl">
+    <div className="countdown-timer-bg bg-dark-300 border-primary-400 mx-auto w-full max-w-[300px] rounded-xl border-2 px-6 py-2 text-center sm:max-w-xl">
       <h2 className="font-consola text-primary-50 mb-4 text-lg lg:text-2xl">
         {title}
       </h2>
