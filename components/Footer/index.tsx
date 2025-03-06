@@ -29,14 +29,14 @@ const Footer = () => {
                   <Image
                     src={CQLogo}
                     alt="IntelliHack Logo"
-                    width={120}
+                    width={desktop ? 280 : 320}
                     className="h-auto"
                   />
                   <Image
                     src={IEEElogo}
                     alt="IEEE Logo"
-                    width={desktop ? 200 : 320}
-                    className="h-auto w-auto"
+                    width={desktop ? 350 : 320}
+                    className="h-auto w-auto border"
                   />
                 </div>
                 <div className="flex flex-col gap-y-2">
