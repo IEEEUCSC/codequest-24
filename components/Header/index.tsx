@@ -35,7 +35,7 @@ const Header = () => {
 
   return (
     <motion.header
-      className="fixed z-[999] mt-2 w-full px-2"
+      className="absolute z-[999] mt-2 w-full px-2"
       animate={
         scrollY.get() > 100 && !isOpen
           ? scrollDirection === "down"
@@ -66,7 +66,7 @@ const Header = () => {
             <AnimatedButton
               text="Register Now"
               cloneTextColor="text-[#fff]"
-              textClassName=" text-base cursor-pointer"
+              textClassName=" text-base cursor-pointer text-white"
               className="flex items-center gap-x-2 py-3"
               style={{ paddingInline: HeaderButtonPadding }}
               to="/register"
