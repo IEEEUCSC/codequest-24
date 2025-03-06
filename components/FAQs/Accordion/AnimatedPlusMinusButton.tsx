@@ -12,6 +12,11 @@ const AnimatedPlusMinusButton = ({
   size = 24,
   isOpen = false,
 }: AnimatedPlusMinusButtonProps) => {
+  const spring = {
+    type: "spring",
+    damping: 10,
+    stiffness: 150,
+  };
   return (
     <span
       role="button"
@@ -37,7 +42,7 @@ const AnimatedPlusMinusButton = ({
             closed: { opacity: 1 },
             open: { opacity: 0 },
           }}
-          transition={{ duration: 0.3 }}
+          transition={spring}
         />
 
         {/* Vertical line */}
@@ -52,7 +57,7 @@ const AnimatedPlusMinusButton = ({
             closed: { rotate: 0, opacity: 1 },
             open: { rotate: 90, opacity: 1 },
           }}
-          transition={{ duration: 0.3 }}
+          transition={spring}
         />
       </motion.svg>
     </span>

@@ -68,7 +68,12 @@ const AccordionRoot = ({
   );
 };
 
-const AccordionItem = ({ children, className, style, value }: AccordionItemProps) => {
+const AccordionItem = ({
+  children,
+  className,
+  style,
+  value,
+}: AccordionItemProps) => {
   const context = useContext(AccordionContext);
   if (!context)
     throw new Error("AccordionTrigger must be used within AccordionRoot");
@@ -79,7 +84,11 @@ const AccordionItem = ({ children, className, style, value }: AccordionItemProps
   return (
     <div
       role="presentation"
-      className={cn("relative overflow-hidden rounded-xl bg-white", isOpen && "faq-item-bg-open", className)}
+      className={cn(
+        "relative overflow-hidden rounded-xl bg-white",
+        isOpen && "faq-item-bg-open",
+        className,
+      )}
       style={style}
     >
       <div className="relative">{children}</div>
@@ -162,19 +171,19 @@ const AccordionItemContent = ({
       className={`overflow-hidden px-8 text-sm transition-[height] duration-300`}
       initial={{ height: 0 }}
       animate={{ height: isOpen ? height : 0 }}
-      transition={{ duration: 0.3, ease: "easeIn" }}
+      transition={{ duration: 0.25, ease: "easeIn" }}
     >
       <motion.div
         initial="initial"
         animate={isOpen ? "open" : "exit"}
         transition={{
-          duration: 0.4,
+          duration: 0.25,
           ease: "easeIn",
-          delay: 0.3,
+          delay: 0.25,
           type: "tween",
         }}
         variants={variants}
-        className="pb-2 text-slate-600"
+        className="pb-2 text-slate-300"
         ref={ref}
       >
         {children}
