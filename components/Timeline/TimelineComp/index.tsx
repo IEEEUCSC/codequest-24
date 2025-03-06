@@ -69,7 +69,7 @@ export function TimelineComp({ items }: TimelineProps) {
                 ) : (
                   <>
                     <h3 className="font-semibold">{item.header}</h3>
-                    <p className="text-sm text-gray-600 lg:mb-2 xl:mb-4 xl:text-base">
+                    <p className="text-sm text-gray-400 lg:mb-2 xl:mb-4 xl:text-base">
                       {item.content}
                     </p>
                   </>
@@ -77,7 +77,7 @@ export function TimelineComp({ items }: TimelineProps) {
               </div>
             </div>
 
-            <div className="font-consola mt-auto text-lg text-gray-600 lg:text-2xl">
+            <div className="font-consola mt-auto text-lg text-gray-400 lg:text-2xl">
               {item.time}
             </div>
           </div>

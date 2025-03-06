@@ -10,9 +10,12 @@ import SectionHeader from "../SectionHeader";
 
 const FAQs = () => {
   return (
-    <div className="top-element section-gap-y main-section px-2" id="faqs">
+    <div
+      className="top-element section-gap-y main-section relative px-2"
+      id="faqs"
+    >
       <SectionHeader title="FAQs" />
-      <div className="sec-inner-y will-change-[height]">
+      <div className="sec-inner-y mx-auto max-w-6xl will-change-[height]">
         <AccordionRoot allowMultiple={false} className="flex flex-col gap-y-4">
           {FAQData.map((item) => (
             <AccordionItem

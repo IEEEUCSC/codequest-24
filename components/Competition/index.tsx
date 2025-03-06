@@ -7,7 +7,7 @@ import SectionHeader from "../SectionHeader";
 const Competition = () => {
   return (
     <div
-      className="main-section top-element relative px-1.5 md:px-0"
+      className="main-section top-element 3xl:px-0 relative px-1.5 lg:px-2"
       id="competition"
     >
       <SectionHeader title="Competition" />
