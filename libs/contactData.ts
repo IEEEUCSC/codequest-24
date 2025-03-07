@@ -1,6 +1,6 @@
 import { StaticImageData } from "next/image";
-import likithaImg from "@/assets/contacts/likitha.jpg";
-import NojiImg from "@/assets/contacts/noji.jpg";
+import likithaImg from "@/assets/contacts/likitha_new.jpg";
+import NojiImg from "@/assets/contacts/noji_new.jpg";
 import chamudiImg from "@/assets/contacts/chamudi.jpg";
 import personImg from "@/assets/contacts/person.jpg";
 

@@ -41,39 +41,33 @@ import { TimelineItem } from "./types";
 
 export const timelineItems: TimelineItem[] = [
   {
-    date: { day: "15", month: "FEB" },
+    date: { day: "06", month: "APR" },
     header: "Workshop 01",
-    content: "Demo content for Workshop 01",
-    time: "19:00 IST",
+    content: "Awareness Session + What is CTF",
+    time: "00:00 IST",
   },
   {
-    date: { day: "22", month: "FEB" },
+    date: { day: "20", month: "APR" },
     header: "Workshop 02",
-    content: "Demo content for Workshop 02",
+    content: "Deep Dive into Tools",
     time: "19:00 IST",
   },
   {
-    date: { day: "01", month: "MAR" },
-    header: "Workshop 03",
-    content: "Demo content for Workshop 03",
-    time: "19:00 IST",
-  },
-  {
-    date: { day: "08", month: "MAR" },
-    header: "Initial Round",
-    content: "Demo content for Initial Round",
+    date: { day: "04", month: "MAY" },
+    header: "Registrations for the Initial Round",
+    content: " ",
     time: "00:00 IST",
   },
   {
-    date: { day: "12", month: "MAR" },
+    date: { day: "09", month: "MAY" },
     header: "Final Round Awareness Session",
-    content: "Demo content for Final Round Awareness Session",
+    content: " ",
     time: "00:00 IST",
   },
   {
-    date: { day: "19", month: "APR" },
+    date: { day: "10", month: "MAY" },
     header: "Final Round",
-    content: "Demo content for Final Round",
+    content: "8-hour physical CTF Hackathon",
     time: "00:00 IST",
   },
 ];
@@ -81,38 +75,33 @@ export const timelineItems: TimelineItem[] = [
 export const FAQData = [
   {
     value: "item-1",
-    question: "What is CodeQuest?",
+    question: "Who can join?",
     answer:
-      "CodeQuest is a coding competition designed to challenge and inspire developers.",
+      "Any university student who loves challenges. No specific background is required!",
   },
   {
     value: "item-2",
-    question: "How can I register for CodeQuest?",
+    question: "Do I need prior experience in CTFs?",
     answer:
-      "Visit our website and navigate to the registration page. Fill in the required details to register.",
+      "Not at all! Whether you’re a beginner or a seasoned player, CodeQuest welcomes all skill levels.",
   },
   {
     value: "item-3",
-    question: "Who can participate in CodeQuest?",
+    question: "Can I compete alone, or do I need a team?",
     answer:
-      "CodeQuest is open to all coding enthusiasts, regardless of their experience level.",
+      "You can team up with up to 4 friends (teams can have 3 to 4 members). But members of a team must be undergraduates of the same university.",
   },
   {
     value: "item-4",
-    question: "Do I need a team to participate?",
-    answer: "No, you can participate individually or as part of a team.",
+    question: "What do I need to participate?",
+    answer:
+      "A computer, a stable internet connection, and a passion for cybersecurity! ",
   },
   {
     value: "item-5",
-    question: "What are the prizes for CodeQuest?",
+    question: "Is the entire event online?",
     answer:
-      "Prizes include cash rewards, tech gadgets, and certificates of achievement.",
-  },
-  {
-    value: "item-6",
-    question: "Do I need any prior knowledge in coding?",
-    answer:
-      "Basic knowledge of coding is recommended, but we have resources to help beginners get started.",
+      " The initial round is online, but the final showdown is an intense 8-hour physical CTF hackathon!",
   },
   // Add more FAQs as needed
 ];
@@ -130,4 +119,9 @@ import CompetitionBg from "@/assets/competition-bg.svg";
 export { IEEElogo, CQLogo, SectionBg, CompetitionBg };
 
 // competition section text
-export const COMPETITION_TEXT = `Code Quest is an exciting Capture the Flag (CTF) event where participants test their skills in cryptography, ethical hacking, and problem-solving. With challenges in web security, reverse engineering, and forensics, competitors will race to uncover hidden flags and climb the leaderboard. Whether you're a cybersecurity enthusiast or a beginner, Code Quest offers a thrilling and rewarding challenge to sharpen your skills and think like a hacker!`;
+export const COMPETITION_TEXT = `CodeQuest is an exciting Capture the Flag (CTF) event where participants test their skills in cryptography, ethical hacking, and problem-solving. With challenges in web security, reverse engineering, and forensics, competitors will race to uncover hidden flags and climb the leaderboard. Whether you're a cybersecurity enthusiast or a beginner, Code Quest offers a thrilling and rewarding challenge to sharpen your skills and think like a hacker!`;
+
+// metadata
+export const META_TITLE = "CodeQuest: Vault Edition";
+export const META_DESC =
+  "CodeQuest is a competition designed to challenge and inspire developers. Join us for a chance to win exciting prizes and showcase your coding skills!";
