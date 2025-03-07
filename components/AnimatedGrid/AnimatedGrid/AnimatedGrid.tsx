@@ -52,7 +52,7 @@ export function AnimatedGrid({
         return (
           <div
             key={index}
-            className="transition-all duration-300 ease-in-out"
+            className="transition-all duration-300 ease-in-out select-none"
             style={{
               width: `${boxSize}px`,
               height: `${boxSize}px`,
