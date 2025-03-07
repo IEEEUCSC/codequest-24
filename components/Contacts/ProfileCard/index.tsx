@@ -70,7 +70,7 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
     >
       <div className="md:absolute md:inset-0">
         <div className="xs:grid-cols-2 relative grid h-full w-full md:grid-cols-none">
-          <div className="relative min-h-[240px] md:min-h-0">
+          <div className="relative min-h-[280px] md:min-h-0">
             <Image
               src={contact.image}
               alt={`${contact.name}`}
