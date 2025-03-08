@@ -109,7 +109,7 @@ const AccordionItemHeader = ({
   const isOpen = openItems.has(value);
 
   return (
-    <div className="flex items-center justify-between rounded-xl px-8 py-4 text-balance">
+    <div className="flex items-center justify-between rounded-xl px-8 py-4 text-balance md:text-lg">
       <div className="">{children}</div>
       <AnimatedPlusMinusButton isOpen={isOpen} strokeColor={strokeColor} />
     </div>
@@ -168,18 +168,18 @@ const AccordionItemContent = ({
     <motion.div
       role="region"
       aria-hidden={!isOpen}
-      className={`overflow-hidden px-8 text-sm transition-[height] duration-300`}
+      className={`overflow-hidden px-8 text-sm transition-[height] duration-300 md:text-base`}
       initial={{ height: 0 }}
       animate={{ height: isOpen ? height : 0 }}
-      transition={{ duration: 0.25, ease: "easeIn" }}
+      transition={{ duration: 0.45, ease: "easeIn" }}
     >
       <motion.div
         initial="initial"
         animate={isOpen ? "open" : "exit"}
         transition={{
-          duration: 0.25,
+          duration: 0.35,
           ease: "easeIn",
-          delay: 0.25,
+          delay: 0.15,
           type: "tween",
         }}
         variants={variants}

@@ -75,30 +75,36 @@ export const timelineItems: TimelineItem[] = [
 export const FAQData = [
   {
     value: "item-1",
+    question: "What is CodeQuest: Vault Edition?",
+    answer:
+      "A high-stakes Capture the Flag (CTF) competition that pushes the boundaries of cybersecurity, programming, and problem-solving. Get ready to crack codes, unravel digital mysteries, and outsmart security challenges in: Cryptography, Reverse Engineering, Web Security",
+  },
+  {
+    value: "item-2",
     question: "Who can join?",
     answer:
       "Any university student who loves challenges. No specific background is required!",
   },
   {
-    value: "item-2",
+    value: "item-3",
     question: "Do I need prior experience in CTFs?",
     answer:
       "Not at all! Whether you’re a beginner or a seasoned player, CodeQuest welcomes all skill levels.",
   },
   {
-    value: "item-3",
+    value: "item-4",
     question: "Can I compete alone, or do I need a team?",
     answer:
       "You can team up with up to 4 friends (teams can have 3 to 4 members). But members of a team must be undergraduates of the same university.",
   },
   {
-    value: "item-4",
+    value: "item-5",
     question: "What do I need to participate?",
     answer:
       "A computer, a stable internet connection, and a passion for cybersecurity! ",
   },
   {
-    value: "item-5",
+    value: "item-6",
     question: "Is the entire event online?",
     answer:
       " The initial round is online, but the final showdown is an intense 8-hour physical CTF hackathon!",
