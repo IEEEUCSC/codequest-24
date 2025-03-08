@@ -12,7 +12,7 @@ const Footer = () => {
     <footer
       className="top-element relative"
       style={{
-        height: "300px",
+        height: "330px",
         clipPath: "polygon(0% 0, 100% 0, 100% 100%, 0 100%)",
       }}
     >
@@ -22,7 +22,7 @@ const Footer = () => {
         <div
           className={`sticky top-[calc(100vh-var(--footer-height))] h-[var(--footer-height)]`}
         >
-          <div className="top-element bg-primary-300 relative z-2 flex h-full min-h-[20vh] w-full flex-col overflow-auto">
+          <div className="top-element relative z-2 flex h-full min-h-[20vh] w-full flex-col overflow-auto bg-[#333333] *:text-white">
             <div className="top-element relative container mx-auto flex h-[300px] flex-grow flex-col justify-between px-4 py-8 text-white">
               <div className="flex w-full flex-col justify-between">
                 <div className="flex w-full items-center justify-between">
