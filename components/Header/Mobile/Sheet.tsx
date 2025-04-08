@@ -1,24 +1,17 @@
 import { motion, useScroll, useTransform } from "motion/react";
 import { type RefObject, useRef } from "react";
 
-import MobileNavigationTarget from "./Target";
-
 import { NAV_LINKS, socialMediaLinks } from "@/libs/data";
-import AnimatedButton from "@/components/AnimatedButton";
+import { MENU_SLIDE } from "./anim";
+import MobileNavigationTarget from "./Target";
+import AnimatedCurve from "./Curve";
+import RegButton from "../RegBtn";
 
 type Props = {
   id: string;
   open: (isOpen: boolean) => void;
 };
 
-const SHEET_VARIANTS = {
-  closed: { opacity: 0 },
-  open: {
-    background: "rgba(0, 0, 0, 0.75)",
-    backdropFilter: "blur(24px)",
-    opacity: 1,
-  },
-};
 
 export default function Sheet({ id, open }: Props) {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -28,11 +21,11 @@ export default function Sheet({ id, open }: Props) {
       ref={containerRef}
       id={id}
       role="listbox"
-      initial="closed"
-      animate="open"
-      exit="closed"
-      variants={SHEET_VARIANTS}
-      className="fixed inset-0 flex min-h-[100dvh] flex-col overflow-y-auto pb-12 lg:hidden"
+      initial="initial"
+      animate="enter"
+      exit="exit"
+      variants={MENU_SLIDE}
+      className="fixed inset-0 -top-4 -left-1 flex min-h-[100dvh] flex-col bg-[rgb(30,30,30)]/80 pb-12 backdrop-blur-xl lg:hidden"
     >
       <SheetHeaderCover container={containerRef} />
       <div className="flex flex-col gap-6 px-6 pt-8">
@@ -44,18 +37,16 @@ export default function Sheet({ id, open }: Props) {
             e.stopPropagation();
           }}
         >
-          {NAV_LINKS.map((link) => (
+          {NAV_LINKS.map((link, index) => (
             <MobileNavigationTarget
               key={link.href}
               href={link.href}
               label={link.label}
+              index={index}
             />
           ))}
         </ul>
-        <AnimatedButton
-          className="w-fit px-6 py-2 text-white"
-          text="Register"
-        />
+        <RegButton />
       </div>
 
       <div aria-hidden className="my-6 flex-1" />
@@ -76,6 +67,7 @@ export default function Sheet({ id, open }: Props) {
           </a>
         ))}
       </div>
+      <AnimatedCurve fill="fill-[rgb(30,30,30)]" />
     </motion.div>
   );
 }

@@ -1,24 +1,28 @@
 "use client";
 
 import { useLenis } from "lenis/react";
+import { motion } from "motion/react";
 
 import Link from "next/link";
+import { SLIDE } from "./anim";
 
 interface NavigationTargetProps {
   href: string;
   label: string;
+  index: number,
 }
 
 export default function MobileNavigationTarget({
   href,
   label,
+  index
 }: NavigationTargetProps) {
   const lenis = useLenis();
 
   const local = href.startsWith("#");
 
   return (
-    <li
+    <motion.li
       className="font-dm-sans bg-clip-text pb-1 text-4xl font-semibold text-black transition-colors"
       role="link"
       onClick={() => {
@@ -37,10 +41,15 @@ export default function MobileNavigationTarget({
           }
         }
       }}
+      variants={SLIDE}
+      initial="initial"
+      custom={index}
+      animate="enter"
+      exit="exit"
     >
       <Link href={href} className="">
         {label}
       </Link>
-    </li>
+    </motion.li>
   );
 }
