@@ -21,7 +21,7 @@ export default function NavigationTarget({
   return (
     <li
       className="transition-colors"
-      role="link"
+      role="presentation"
       onClick={(e) => {
         e.preventDefault();
         e.stopPropagation();
@@ -42,7 +42,7 @@ export default function NavigationTarget({
         }
       }}
     >
-      <Link href={href} className="nav-link">
+      <Link href={href} className="nav-link focus-visible:outline-1">
         <StaggerText text={label} As="h3" />
       </Link>
     </li>

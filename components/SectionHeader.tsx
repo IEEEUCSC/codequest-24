@@ -21,13 +21,13 @@ const SectionHeader = ({ title, className, ...props }: SectionHeaderProps) => {
       {title}
       <div
         className="absolute -bottom-3 -left-2 h-[140%] w-[120%] lg:-bottom-4 lg:-left-8 lg:w-[140%]"
-        aria-hidden="true"
       >
         <Image
           src={SectionBg}
           alt="section title background"
           fill
           style={{ objectFit: "cover" }}
+          sizes="(max-width: 1240px) 100vw, 1240px"
         />
       </div>
     </h1>
