@@ -56,7 +56,7 @@ const Header = () => {
           {desktop ? (
             <>
               <div className="px-4 py-1.5">
-                <ul className="flex space-x-4">
+                <ul className="flex space-x-4" aria-label="navigation">
                   {NAV_LINKS.map((link) => (
                     <NavigationTarget key={link.href} {...link} />
                   ))}

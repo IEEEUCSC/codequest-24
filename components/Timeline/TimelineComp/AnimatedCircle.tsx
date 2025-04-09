@@ -16,18 +16,18 @@ export default function AnimatedCircleIcon({
 
   return (
     <motion.svg
-      width="40"
-      height="40"
-      viewBox="0 0 40 40"
+      width="80"
+      height="80"
+      viewBox="0 0 90 90"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       animate={mode}
       {...props}
     >
       <motion.circle
-        cx="20"
-        cy="20"
-        r="10"
+        cx="45"
+        cy="45"
+        r="40"
         stroke="currentColor"
         strokeWidth={strokeWidth}
         variants={variants}

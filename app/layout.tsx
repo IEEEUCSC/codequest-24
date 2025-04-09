@@ -6,6 +6,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import LenisWrapper from "@/components/LenisWrapper";
 import { META_DESC, META_TITLE } from "@/libs/data";
+import { prime } from "@/fonts";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,7 +32,7 @@ export default function RootLayout({
     <html lang="en">
       <LenisWrapper>
         <body
-          className={`${geistSans.variable} ${geistMono.variable} bg-dark-300 relative antialiased`}
+          className={`${geistSans.variable} ${geistMono.variable} ${prime.variable} bg-dark-300 font-prime relative antialiased`}
         >
           <Header />
           {children}

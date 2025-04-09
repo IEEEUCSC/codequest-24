@@ -23,32 +23,29 @@ export default function MilestoneMobile({
   time,
   mode,
 }: Props) {
-  console.log(mode);
-
   return (
     <motion.div className={clsx(styles.card, "flex gap-4")}>
       <AnimatedCircleIcon
         strokeWidth={3}
         data-value="hexagon"
-        className="absolute inset-y-1/2 left-[-2.24rem] size-5"
+        className="absolute inset-y-1/2 left-[-3.24rem] size-5"
         mode={mode}
       />
       <motion.div
         variants={timelineItemVariant}
         initial="initial"
-        animate={mode === "active" || mode === "surpassed" ? "animate" : " "}
+        whileInView={
+          mode === "active" || mode === "surpassed" ? "animate" : " "
+        }
         viewport={{ once: true }}
         className="w-full"
       >
-        <Glassmorphism className="w-full overflow-clip rounded-xl bg-transparent p-4">
+        <Glassmorphism className="w-full overflow-clip rounded-xl border-0 p-4">
           <div className="bg-primary-300/60 absolute top-0 left-0 h-full w-full mask-radial-[100%_100%] mask-radial-from-60% mask-radial-to-100% mask-radial-at-top-left" />
           <div className="relative flex h-full flex-col">
-            <div className="font-generalSans flex flex-col font-bold">
+            <div className="font-generalSans flex font-bold">
               <span className="text-4xl sm:text-5xl md:text-[32px] xl:text-5xl">
-                {date.day}
-              </span>
-              <span className="text-4xl sm:text-5xl md:text-[32px] xl:text-5xl">
-                {date.month}
+                {date.day} {date.month}
               </span>
             </div>
             <div

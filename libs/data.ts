@@ -118,11 +118,11 @@ export const FOOTER_DESC =
 // Images and SVGs
 import IEEElogo from "@/assets/logos/sb_logo.png";
 import CQLogo from "@/assets/logos/cq_logo.png";
+import SectionBg from "@/assets/sec-title-bg.png";
+import HeroBg from "@/assets/hero-bg-img.png";
+import HeroLogo from "@/assets/hero-header.png";
 
-import SectionBg from "@/assets/sec-title-bg.svg";
-import CompetitionBg from "@/assets/competition-bg.svg";
-
-export { IEEElogo, CQLogo, SectionBg, CompetitionBg };
+export { IEEElogo, CQLogo, SectionBg, HeroBg, HeroLogo };
 
 // competition section text
 export const COMPETITION_TEXT = [

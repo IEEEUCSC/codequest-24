@@ -64,7 +64,7 @@ const Word = ({ children, customValue }: WordProps) => {
         initial="initial"
         whileInView="animate"
         custom={customValue}
-        viewport={{ once: false, amount: 0.2 }}
+        viewport={{ once: true, amount: 0.2 }}
       >
         {children}
       </motion.span>

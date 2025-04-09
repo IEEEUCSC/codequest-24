@@ -85,7 +85,7 @@ const AccordionItem = ({
     <div
       role="presentation"
       className={cn(
-        "relative overflow-hidden rounded-xl bg-transparent",
+        "relative overflow-clip rounded-xl bg-transparent",
         isOpen && " ",
         className,
       )}
@@ -168,7 +168,7 @@ const AccordionItemContent = ({
     <motion.div
       role="region"
       aria-hidden={!isOpen}
-      className={`relative overflow-hidden px-8 text-sm transition-[height] duration-300 md:text-base`}
+      className={`relative overflow-hidden px-8 text-sm transition-[height] duration-300 will-change-[height] md:text-base`}
       initial={{ height: 0 }}
       animate={{ height: isOpen ? height : 0 }}
       transition={{ duration: 0.45, ease: "easeIn" }}
