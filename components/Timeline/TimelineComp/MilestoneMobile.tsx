@@ -37,7 +37,7 @@ export default function MilestoneMobile({
         variants={timelineItemVariant}
         initial="initial"
         animate={mode === "active" || mode === "surpassed" ? "animate" : " "}
-        viewport={{ once: true, amount }}
+        viewport={{ once: true }}
         className="w-full"
       >
         <Glassmorphism className="w-full overflow-clip rounded-xl bg-transparent p-4">
