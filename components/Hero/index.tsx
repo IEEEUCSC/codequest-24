@@ -13,7 +13,7 @@ const Hero = () => {
           <Image
             src={HeroLogo}
             alt="CodeQuest: Vault Edition"
-            height={180}
+            height={280}
             className="w-auto"
             priority={true}
           />

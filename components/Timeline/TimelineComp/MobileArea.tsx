@@ -51,7 +51,7 @@ export default function MobileArea({ data }: Props) {
   }, []);
 
   return (
-    <div ref={ref} className="relative grid grid-cols-[1.75rem_1fr] py-16">
+    <div ref={ref} className="relative grid grid-cols-[2.75rem_1fr] py-16">
       <div className="relative flex flex-col justify-start">
         <div
           aria-hidden

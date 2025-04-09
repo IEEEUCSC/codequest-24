@@ -28,7 +28,7 @@ export default function MilestoneMobile({
       <AnimatedCircleIcon
         strokeWidth={3}
         data-value="hexagon"
-        className="absolute inset-y-1/2 left-[-2.24rem] size-5"
+        className="absolute inset-y-1/2 left-[-3.24rem] size-5"
         mode={mode}
       />
       <motion.div
