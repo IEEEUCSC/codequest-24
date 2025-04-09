@@ -70,7 +70,7 @@ export default function MobileArea({ data }: Props) {
         />
       </div>
 
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-8">
         {data.map((item, i) => (
           <MilestoneMobile
             key={i}
