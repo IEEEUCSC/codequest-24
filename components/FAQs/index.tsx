@@ -20,11 +20,12 @@ const FAQs = () => {
           {FAQData.map((item) => (
             <AccordionItem
               key={item.value}
-              className="faq-item-bg top-element border border-gray-600 text-white"
+              className="top-element relative border border-gray-600 text-white"
               value={item.value}
             >
+              <div className="bg-primary-400/40 absolute top-0 left-0 h-full w-full mask-radial-[100%_100%] mask-radial-from-60% mask-radial-to-100% mask-radial-at-top-left" />
               <AccordionItemTrigger value={item.value}>
-                <AccordionItemHeader value={item.value}>
+                <AccordionItemHeader value={item.value} strokeColor="white">
                   <span className="flex-1">{item.question}</span>
                 </AccordionItemHeader>
               </AccordionItemTrigger>

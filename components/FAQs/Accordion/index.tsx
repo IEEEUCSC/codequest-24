@@ -85,8 +85,8 @@ const AccordionItem = ({
     <div
       role="presentation"
       className={cn(
-        "relative overflow-hidden rounded-xl bg-white",
-        isOpen && "faq-item-bg-open",
+        "relative overflow-hidden rounded-xl bg-transparent",
+        isOpen && " ",
         className,
       )}
       style={style}
@@ -109,7 +109,7 @@ const AccordionItemHeader = ({
   const isOpen = openItems.has(value);
 
   return (
-    <div className="flex items-center justify-between rounded-xl px-8 py-4 text-balance md:text-lg">
+    <div className="relative flex items-center justify-between rounded-xl px-8 pt-4 text-balance md:text-lg">
       <div className="">{children}</div>
       <AnimatedPlusMinusButton isOpen={isOpen} strokeColor={strokeColor} />
     </div>
@@ -131,7 +131,7 @@ const AccordionItemTrigger = ({
     <div
       aria-expanded={isOpen}
       onClick={() => toggleItem(value)}
-      className="cursor-pointer"
+      className="relative cursor-pointer"
     >
       {children}
     </div>
@@ -168,7 +168,7 @@ const AccordionItemContent = ({
     <motion.div
       role="region"
       aria-hidden={!isOpen}
-      className={`overflow-hidden px-8 text-sm transition-[height] duration-300 md:text-base`}
+      className={`relative overflow-hidden px-8 text-sm transition-[height] duration-300 md:text-base`}
       initial={{ height: 0 }}
       animate={{ height: isOpen ? height : 0 }}
       transition={{ duration: 0.45, ease: "easeIn" }}
