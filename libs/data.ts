@@ -125,7 +125,11 @@ import CompetitionBg from "@/assets/competition-bg.svg";
 export { IEEElogo, CQLogo, SectionBg, CompetitionBg };
 
 // competition section text
-export const COMPETITION_TEXT = `CodeQuest is an exciting Capture the Flag (CTF) event where participants test their skills in cryptography, ethical hacking, and problem-solving. With challenges in web security, reverse engineering, and forensics, competitors will race to uncover hidden flags and climb the leaderboard. Whether you're a cybersecurity enthusiast or a beginner, Code Quest offers a thrilling and rewarding challenge to sharpen your skills and think like a hacker!`;
+export const COMPETITION_TEXT = [
+  `CodeQuest is an exciting Capture the Flag (CTF) event where participants test their skills in cryptography, ethical hacking, and problem-solving.`,
+  `With challenges in web security, reverse engineering, and forensics, competitors will race to uncover hidden flags and climb the leaderboard.`,
+  `Whether you're a cybersecurity enthusiast or a beginner, Code Quest offers a thrilling and rewarding challenge to sharpen your skills and think like a hacker!`,
+];
 
 // metadata
 export const META_TITLE = "CodeQuest: Vault Edition";
