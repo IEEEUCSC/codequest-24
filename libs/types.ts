@@ -7,6 +7,7 @@ export interface CharacterVariants {
   character: Variants;
 }
 
+
 export interface AnimatedTextProps {
   text: string;
   type?: "characters" | "words";
@@ -18,9 +19,14 @@ export interface AnimatedTextProps {
   style?: React.CSSProperties;
 }
 
+export interface StaggerTextProps {
+  text: string;
+  className?: string;
+  As?: "h1" | "h2" | "h3" | "span" | "p";
+}
+
 export interface AnimatedButtonProps
-  extends React.HTMLAttributes<HTMLButtonElement>,
-    AnimatedTextProps {
+  extends React.HTMLAttributes<HTMLButtonElement>, StaggerTextProps {
   children?: React.ReactNode;
   className?: string;
   style?: React.CSSProperties;
