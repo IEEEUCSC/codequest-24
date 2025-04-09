@@ -12,7 +12,6 @@ type Props = {
   open: (isOpen: boolean) => void;
 };
 
-
 export default function Sheet({ id, open }: Props) {
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -25,7 +24,7 @@ export default function Sheet({ id, open }: Props) {
       animate="enter"
       exit="exit"
       variants={MENU_SLIDE}
-      className="fixed inset-0 -top-4 -left-1 flex min-h-[100dvh] flex-col bg-[rgb(30,30,30)]/80 pb-12 backdrop-blur-xl lg:hidden"
+      className="fixed inset-0 -top-4 -left-[30px] flex min-h-[100dvh] w-[105vw] flex-col bg-[rgb(30,30,30)]/80 pb-12 backdrop-blur-xl lg:hidden"
     >
       <SheetHeaderCover container={containerRef} />
       <div className="flex flex-col gap-6 px-6 pt-8">

@@ -1,41 +1,45 @@
 "use client";
-import { cn } from "@/libs/utils";
-import { motion, MotionValue, useScroll, useTransform } from "motion/react";
-import React, { useRef } from "react";
 
-interface ScrollBaseText {
+import React, { useRef } from "react";
+import { motion } from "motion/react";
+
+import { cn } from "@/libs/utils";
+
+interface ScrollBaseText extends React.HTMLAttributes<HTMLParagraphElement> {
   children: string;
   className?: string;
   startOffset?: number;
-  endOffset?: number;
+  ariaText?: string;
 }
 
 const ScrollBaseText = ({
   children,
   className,
-  startOffset = 0.95,
-  endOffset = 0.85,
+  startOffset = 0,
+  ariaText,
+  ...props
 }: ScrollBaseText) => {
   const ref = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: [`start ${startOffset}`, `end ${endOffset}`],
-  });
 
   const words = children.split(" ");
   return (
     <p
       ref={ref}
       className={cn(
-        "relative flex max-w-[1080px] flex-wrap justify-center text-center",
+        "relative flex max-w-[1080px] flex-wrap justify-start",
         className,
       )}
+      onCopy={(e) => {
+        e.preventDefault();
+        navigator.clipboard.writeText(ariaText as string);
+        e.clipboardData.setData("text/plain", ariaText as string);
+      }}
+      aria-label={ariaText}
+      {...props}
     >
       {words.map((word, i) => {
-        const start = i / words.length;
-        const end = start + 1 / words.length;
         return (
-          <Word key={`word-${i}`} range={[start, end]} value={scrollYProgress}>
+          <Word key={`word-${i}`} customValue={i + startOffset * 8}>
             {word as string}
           </Word>
         );
@@ -48,23 +52,36 @@ export default ScrollBaseText;
 
 interface WordProps {
   children: string;
-  range: number[];
-  value: MotionValue;
+  customValue?: number;
 }
 
-const Word = ({ children, range, value }: WordProps) => {
-  const y = useTransform(value, range, [100, 0]);
-  const rotate = useTransform(value, range, [-20, 0]);
-
+const Word = ({ children, customValue }: WordProps) => {
   return (
-    <span className="overflow-clip">
+    <span className="overflow-clip" aria-hidden="true">
       <motion.span
         className="relative mr-3 inline-block"
-        style={{ y, rotate: rotate }}
-        transition={{ duration: 0.2, ease: "easeIn" }}
+        variants={FadeUpVariant}
+        initial="initial"
+        whileInView="animate"
+        custom={customValue}
+        viewport={{ once: false, amount: 0.2 }}
       >
         {children}
       </motion.span>
     </span>
   );
+};
+
+const FadeUpVariant = {
+  initial: { opacity: 0, y: 20 },
+  animate: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.2,
+      delay: i * 0.01,
+      ease: "easeIn",
+      type: "tween",
+    },
+  }),
 };

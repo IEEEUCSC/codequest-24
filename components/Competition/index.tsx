@@ -1,6 +1,4 @@
-import Image from "next/image";
-
-import { COMPETITION_TEXT, CompetitionBg } from "@/libs/data";
+import { COMPETITION_TEXT } from "@/libs/data";
 import ScrollBaseText from "../ScrollBasedText";
 import SectionHeader from "../SectionHeader";
 
@@ -11,17 +9,18 @@ const Competition = () => {
       id="competition"
     >
       <SectionHeader title="Competition" />
-      <div className="border-primary-400 sec-inner-y competition-bg-glow bg-dark-300 rounded-2xl border-2 px-4 py-8 lg:border-8">
-        <ScrollBaseText className="mx-auto w-full text-lg text-white lg:max-w-[80%] lg:text-2xl">
-          {COMPETITION_TEXT}
-        </ScrollBaseText>
-        <div className="absolute -bottom-2 -left-2 container h-[100%] w-[100%]">
-          <Image
-            src={CompetitionBg}
-            alt="section title background"
-            fill
-            style={{ objectFit: "cover" }}
-          />
+      <div className="border-primary-400 sec-inner-y competition-bg-glow bg-dark-300 _lg:border-8 rounded-2xl border-2 px-4 py-8">
+        <div className="flex flex-col gap-y-4">
+          {COMPETITION_TEXT.map((text, index) => (
+            <ScrollBaseText
+              key={index}
+              className="mx-auto w-full text-center text-lg text-balance text-white lg:max-w-[80%] lg:text-2xl"
+              startOffset={index + 1}
+              ariaText={text}
+            >
+              {text}
+            </ScrollBaseText>
+          ))}
         </div>
       </div>
     </div>
