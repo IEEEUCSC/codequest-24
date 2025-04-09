@@ -1,0 +1,20 @@
+.card {
+	position: relative;
+	box-sizing: border-box;
+	background-clip: padding-box;
+	border: solid 1px transparent;
+}
+.card:before {
+	content: "";
+	inset: 0;
+	z-index: -1;
+	position: absolute;
+	margin: -1px;
+	border-radius: inherit;
+
+	/* webkit-compat */
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
