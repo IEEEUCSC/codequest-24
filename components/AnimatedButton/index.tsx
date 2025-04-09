@@ -1,6 +1,6 @@
 import { cn } from "@/libs/utils";
-import AnimatedText from "../AnimatedText";
 import { AnimatedButtonProps } from "@/libs/types";
+import StaggerText from "../StaggerText";
 
 const AnimatedButton = ({
   className,
@@ -13,7 +13,7 @@ const AnimatedButton = ({
 }: AnimatedButtonProps & { to?: string }) => {
   const content = (
     <>
-      <AnimatedText text={text} {...props} />
+      <StaggerText text={text} {...props} />
       {children}
     </>
   );
