@@ -24,6 +24,8 @@
   --footer-height: 330px;
 
   --breakpoint-xs: 30rem;
+
+  --font-prime: "Prime", sans-serif;
 }
 
 @layer components {
