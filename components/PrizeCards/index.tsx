@@ -6,17 +6,20 @@ const CardsData: CardProps[] = [
   {
     position: "2nd",
     amount: "40,000",
-    className: "card-glow h-[330px] w-[280px] md:translate-y-8",
+    className:
+      "card-glow h-[350px] w-[280px] hover:scale-110 transition-transform duration-300",
   },
   {
     position: "1st",
     amount: "60,000",
-    className: "card-glow z-10 h-[410px] w-[320px]",
+    className:
+      "card-glow z-10 h-[350px] w-[280px] hover:scale-110 transition-transform duration-300",
   },
   {
     position: "3rd",
     amount: "20,000",
-    className: "card-glow h-[330px] w-[280px] md:translate-y-8",
+    className:
+      "card-glow h-[350px] w-[280px] hover:scale-110 transition-transform duration-300",
   },
 ];
 
