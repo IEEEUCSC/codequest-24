@@ -11,11 +11,6 @@ export interface ContactDataProps {
   email: string;
   phone: string;
   image: StaticImageData;
-  isFeature: boolean;
-  position: {
-    gridColumn: string;
-    gridRow: string;
-  };
 }
 
 const contactData: ContactDataProps[] = [
@@ -26,11 +21,6 @@ const contactData: ContactDataProps[] = [
     email: "likithachathu@gmail.com",
     phone: "076 698 8362",
     image: likithaImg,
-    isFeature: false,
-    position: {
-      gridColumn: "1",
-      gridRow: "1",
-    },
   },
   {
     id: 2,
@@ -39,11 +29,6 @@ const contactData: ContactDataProps[] = [
     email: "noji.yu123@gmail.com",
     phone: "070 351 7563",
     image: NojiImg,
-    isFeature: false,
-    position: {
-      gridColumn: "2",
-      gridRow: "1",
-    },
   },
   {
     id: 3,
@@ -52,11 +37,6 @@ const contactData: ContactDataProps[] = [
     email: "chamudiupeka21@gmail.com",
     phone: "076 710 5536",
     image: chamudiImg,
-    isFeature: false,
-    position: {
-      gridColumn: "3",
-      gridRow: "1",
-    },
   },
   {
     id: 4,
@@ -65,11 +45,6 @@ const contactData: ContactDataProps[] = [
     email: "dineththeekshana@gmail.com",
     phone: "077 410 4170",
     image: personImg,
-    isFeature: false,
-    position: {
-      gridColumn: "3",
-      gridRow: "2",
-    },
   },
 ];
 
