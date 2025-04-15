@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion, useMotionValueEvent, useScroll } from "motion/react";
+import { usePathname } from "next/navigation";
 
 import { CQLogo, NAV_LINKS } from "@/libs/data";
 import NavigationTarget from "./NavigationTarget";
@@ -16,6 +17,7 @@ import RegButton from "./RegBtn";
 const Header = () => {
   const desktop = useMediaQuery("(min-width: 1024px)");
   const [isOpen, open] = useLockingBodyScroll();
+  const pathname = usePathname();
 
   const { scrollY } = useScroll();
   const [scrollDirection, setScrollDirection] = useState("down");
@@ -55,13 +57,15 @@ const Header = () => {
           </div>
           {desktop ? (
             <>
-              <div className="px-4 py-1.5">
-                <ul className="flex space-x-4" aria-label="navigation">
-                  {NAV_LINKS.map((link) => (
-                    <NavigationTarget key={link.href} {...link} />
-                  ))}
-                </ul>
-              </div>
+              {pathname === "/" && (
+                <div className="px-4 py-1.5">
+                  <ul className="flex space-x-4" aria-label="navigation">
+                    {NAV_LINKS.map((link) => (
+                      <NavigationTarget key={link.href} {...link} />
+                    ))}
+                  </ul>
+                </div>
+              )}
               <RegButton />
             </>
           ) : (
