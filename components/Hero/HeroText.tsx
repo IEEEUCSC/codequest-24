@@ -3,7 +3,7 @@
 export const HeroSecHeader = () => {
     return (
         <h3
-        className="flex flex-col text-center text-base md:text-lg lg:text-2xl"
+        className="flex flex-col text-white text-center text-base md:text-lg lg:text-2xl"
         onCopy={(e) => {
           e.preventDefault();
           e.clipboardData.setData(

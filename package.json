@@ -9,16 +9,21 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@radix-ui/react-slot": "^1.2.0",
+    "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "codequest-24": "file:",
+    "framer-motion": "^12.7.2",
     "lenis": "^1.1.20",
-    "motion": "^12.2.0",
+    "lucide-react": "^0.488.0",
+    "motion": "^12.6.5",
     "next": "^15.2.1",
     "prettier-plugin-tailwindcss": "^0.6.11",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-icons": "^5.4.0",
-    "tailwind-merge": "^3.0.1"
+    "tailwind-merge": "^3.2.0",
+    "tw-animate-css": "^1.2.5"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

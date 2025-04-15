@@ -14,7 +14,7 @@ const Hero = () => {
             src={HeroLogo}
             alt="CodeQuest: Vault Edition"
             height={280}
-            className="w-auto"
+            className="w-full max-w-[300px] lg:max-w-[700px]"
             priority={true}
           />
           <p className="text-center text-xs text-balance lg:max-w-[65ch] lg:text-base">
