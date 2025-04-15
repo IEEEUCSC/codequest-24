@@ -7,7 +7,7 @@ const RegButton = () => {
     <AnimatedButton
       text="Register Now"
       className="flex w-fit items-center gap-x-2 rounded-full px-4 py-3"
-      to="/register"
+      to="https://tally.so/r/wkrR1o"
       id="register-button"
     >
       <BsArrowUpRightCircle className="text-[20px]" />
