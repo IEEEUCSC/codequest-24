@@ -13,7 +13,7 @@ const AnimatedButton = ({
 }: AnimatedButtonProps & { to?: string }) => {
   const content = (
     <>
-      <StaggerText text={text} {...props} />
+      <StaggerText text={text} {...props} As="h3" />
       {children}
     </>
   );

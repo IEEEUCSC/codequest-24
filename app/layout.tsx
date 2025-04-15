@@ -21,6 +21,24 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: META_TITLE,
   description: META_DESC,
+  openGraph: {
+    title: META_TITLE,
+    description: META_DESC,
+    images: [
+      {
+        url: "/public/og-img.png",
+        width: 1200,
+        height: 630,
+        alt: "Hero Image",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: META_TITLE,
+    description: META_DESC,
+    images: ["/public/og-img.png"],
+  },
 };
 
 export default function RootLayout({

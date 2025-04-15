@@ -1,5 +1,6 @@
 import { motion, useScroll, useTransform } from "motion/react";
 import { type RefObject, useRef } from "react";
+import { usePathname } from "next/navigation";
 
 import { NAV_LINKS, socialMediaLinks } from "@/libs/data";
 import { MENU_SLIDE } from "./anim";
@@ -14,6 +15,7 @@ type Props = {
 
 export default function Sheet({ id, open }: Props) {
   const containerRef = useRef<HTMLDivElement>(null);
+  const pathname = usePathname();
 
   return (
     <motion.div
@@ -28,23 +30,25 @@ export default function Sheet({ id, open }: Props) {
     >
       <SheetHeaderCover container={containerRef} />
       <div className="flex flex-col gap-6 px-6 pt-8">
-        <ul
-          className="flex flex-col gap-4 *:text-white"
-          onClick={(e) => {
-            if ((e.target as HTMLElement).tagName === "A")
-              open.call(null, false);
-            e.stopPropagation();
-          }}
-        >
-          {NAV_LINKS.map((link, index) => (
-            <MobileNavigationTarget
-              key={link.href}
-              href={link.href}
-              label={link.label}
-              index={index}
-            />
-          ))}
-        </ul>
+        {pathname === "/" && (
+          <ul
+            className="flex flex-col gap-4 *:text-white"
+            onClick={(e) => {
+              if ((e.target as HTMLElement).tagName === "A")
+                open.call(null, false);
+              e.stopPropagation();
+            }}
+          >
+            {NAV_LINKS.map((link, index) => (
+              <MobileNavigationTarget
+                key={link.href}
+                href={link.href}
+                label={link.label}
+                index={index}
+              />
+            ))}
+          </ul>
+        )}
         <RegButton />
       </div>
 
