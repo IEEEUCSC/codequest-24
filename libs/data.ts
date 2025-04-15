@@ -135,3 +135,6 @@ export const COMPETITION_TEXT = [
 export const META_TITLE = "CodeQuest: Vault Edition";
 export const META_DESC =
   "CodeQuest is a competition designed to challenge and inspire developers. Join us for a chance to win exciting prizes and showcase your coding skills!";
+
+
+export const SITE_LINK = "https://codequest-25.vercel.app/";
