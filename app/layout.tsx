@@ -5,7 +5,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import LenisWrapper from "@/components/LenisWrapper";
-import { META_DESC, META_TITLE } from "@/libs/data";
+import { META_DESC, META_TITLE, SITE_LINK } from "@/libs/data";
 import { prime } from "@/fonts";
 
 const geistSans = Geist({
@@ -21,20 +21,23 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: META_TITLE,
   description: META_DESC,
+  metadataBase: new URL(SITE_LINK),
+
   openGraph: {
+    type: "website",
+    url: SITE_LINK,
     title: META_TITLE,
     description: META_DESC,
     images: [
       {
         url: "/og-img.png",
-        width: 1200,
-        height: 630,
         alt: "Hero Image",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
+    site: SITE_LINK,
     title: META_TITLE,
     description: META_DESC,
     images: ["/og-img.png"],
