@@ -1,8 +1,8 @@
+import Image from "next/image";
+
 import { cn } from "@/libs/utils";
 import { CardProps } from "@/libs/types";
-import goldMedal from "@/assets/prizes/1st.png";
-import silverMedal from "@/assets/prizes/2nd.png";
-import bronzeMedal from "@/assets/prizes/3rd.png";
+import { bronzeMedal, goldMedal, silverMedal } from "@/libs/data";
 
 const Card = ({
   position,
@@ -28,15 +28,18 @@ const Card = ({
   return (
     <div
       className={cn(
-        `relative flex flex-col justify-center rounded-4xl border-3 p-4 transition-transform duration-300 hover:scale-105 ${getPositionColor()} ${position === "1st" ? "bg-gold/10" : position === "2nd" ? "bg-silver/10" : position === "3rd" ? "bg-bronze/10" : "bg-default/10"}`,
+        `top-element bg-dark-300 relative flex flex-col justify-center rounded-4xl border-3 p-4 transition-transform duration-300 hover:scale-105 ${getPositionColor()}`,
         className,
       )}
     >
+      <div
+        className={`absolute top-0 left-0 h-full w-full ${position === "1st" ? "bg-gold/10" : position === "2nd" ? "bg-silver/10" : position === "3rd" ? "bg-bronze/10" : "bg-default/10"}`}
+      />
       {contentPosition === "top" && children}
 
       {position && (
-        <div className="mb-6 text-center">
-          <img
+        <div className="relative mb-6 text-center">
+          <Image
             src={
               position === "1st"
                 ? goldMedal.src
@@ -46,12 +49,14 @@ const Card = ({
             }
             alt={`${position} place medal`}
             className="mx-auto max-h-36 max-w-36 object-contain"
+            width={144}
+            height={144}
           />
         </div>
       )}
 
       {amount && (
-        <div className="w-full rounded-xl px-6 py-4 text-center">
+        <div className="relative w-full rounded-xl px-6 py-4 text-center">
           <span className="text-3xl font-bold text-white">{amount}</span>
           <br></br>
           <span className="ml-2 text-3xl text-white">{currency}</span>
