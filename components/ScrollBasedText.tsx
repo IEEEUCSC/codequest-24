@@ -34,6 +34,8 @@ const ScrollBaseText = ({
         navigator.clipboard.writeText(ariaText as string);
         e.clipboardData.setData("text/plain", ariaText as string);
       }}
+      aria-description={ariaText}
+      role="text"
       aria-label={ariaText}
       {...props}
     >

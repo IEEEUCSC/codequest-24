@@ -22,6 +22,7 @@ export default function AnimatedCircleIcon({
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       animate={mode}
+      aria-hidden="true"
       {...props}
     >
       <motion.circle
