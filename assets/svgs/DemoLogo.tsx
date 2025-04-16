@@ -6,6 +6,8 @@ export const DemoLogo = () => {
       viewBox="0 0 238 54"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      role="img"
+      aria-label="Demo Logo"
     >
       <g clipPath="url(#clip0_187_197)">
         <path

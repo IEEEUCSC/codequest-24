@@ -2,7 +2,7 @@ import { StaticImageData } from "next/image";
 import likithaImg from "@/assets/contacts/likitha_new.jpg";
 import NojiImg from "@/assets/contacts/noji_new.jpg";
 import chamudiImg from "@/assets/contacts/chamudi.jpg";
-import personImg from "@/assets/contacts/person.jpg";
+import dinethImg from "@/assets/contacts/Dineth_new.jpg";
 
 export interface ContactDataProps {
   id: number;
@@ -44,7 +44,7 @@ const contactData: ContactDataProps[] = [
     role: "Program team Lead",
     email: "dineththeekshana@gmail.com",
     phone: "077 410 4170",
-    image: personImg,
+    image: dinethImg,
   },
 ];
 

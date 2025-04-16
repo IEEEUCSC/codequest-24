@@ -49,6 +49,7 @@ const Footer = () => {
                         target="_blank"
                         rel="noreferrer"
                         className="text-xl hover:cursor-pointer"
+                        aria-label={link.name}
                       >
                         {link.icon}
                       </a>

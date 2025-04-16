@@ -1,7 +1,7 @@
 "use client";
 
 import { useWindowSize } from "@/hooks/useWindowSize";
-import React, { useMemo, useCallback } from "react";
+import React, { useMemo, useCallback, useState, useEffect } from "react";
 
 interface AnimatedGridProps {
   boxSize?: number;
@@ -17,8 +17,23 @@ export function AnimatedGrid({
   highlightRadius = 100,
 }: AnimatedGridProps) {
   const { width, height, mouseX, mouseY } = useWindowSize();
+  const [isMouseMoved, setIsMouseMoved] = useState(false);
+
+  useEffect(() => {
+    const handleMouseMove = () => {
+      setIsMouseMoved(true);
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, []);
 
   const boxes = useMemo(() => {
+    if (!isMouseMoved) return [];
+
     const columns = Math.floor(width / boxSize);
     const rows = Math.floor(height / boxSize);
     return Array.from({ length: columns * rows }).map((_, index) => {
@@ -26,7 +41,7 @@ export function AnimatedGrid({
       const row = Math.floor(index / columns);
       return { x: col * boxSize, y: row * boxSize };
     });
-  }, [width, height, boxSize]);
+  }, [width, height, boxSize, isMouseMoved]);
 
   const getHighlightIntensity = useCallback(
     (boxX: number, boxY: number) => {
@@ -38,6 +53,8 @@ export function AnimatedGrid({
     },
     [mouseX, mouseY, boxSize, highlightRadius],
   );
+
+  if (!isMouseMoved) return null;
 
   return (
     <div
@@ -56,7 +73,7 @@ export function AnimatedGrid({
             className="transition-all duration-300 ease-in-out select-none"
             style={{
               width: `${boxSize}px`,
-              height: `${boxSize}px`,
+              height: `${boxSize}px}`,
               backgroundColor: `rgba(${parseInt(highlightColor.slice(1, 3), 16)}, ${parseInt(highlightColor.slice(3, 5), 16)}, ${parseInt(highlightColor.slice(5, 7), 16)}, ${Math.max(0.15, intensity * 0.5)})`,
               borderColor: highlightBorderColor,
               borderWidth: `${intensity * 2}px`,
