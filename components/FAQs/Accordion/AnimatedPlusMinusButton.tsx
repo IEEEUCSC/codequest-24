@@ -4,7 +4,6 @@ import { motion } from "motion/react";
 
 // import { useContext, useState } from "react";
 
-
 interface AnimatedPlusMinusButtonProps {
   size?: number;
   strokeColor?: string;
@@ -24,6 +23,8 @@ const AnimatedPlusMinusButton = ({
     <span
       role="button"
       aria-pressed="true"
+      tabIndex={0}
+      aria-label="toggle"
       className="flex items-center justify-center"
     >
       <motion.svg
