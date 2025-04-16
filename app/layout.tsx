@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     description: META_DESC,
     images: [
       {
-        url: "/public/og-img.png",
+        url: "/og-img.png",
         width: 1200,
         height: 630,
         alt: "Hero Image",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: META_TITLE,
     description: META_DESC,
-    images: ["/public/og-img.png"],
+    images: ["/og-img.png"],
   },
 };
 
