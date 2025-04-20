@@ -8,7 +8,7 @@ const nextConfig: NextConfig = {
     unoptimized: true, // Disable default image optimization
   },
   assetPrefix: isProd ? "" : "",
-  basePath: isProd ? "/codequest-24" : "",
+  basePath: isProd ? "" : "",
   output: "export",
 };
 
