@@ -19,7 +19,7 @@ const Card = ({
       case "2nd":
         return "text-silver border-silver";
       case "3rd":
-        return "text-bronze border-bronze";
+        return "text-[#de8857] border-[#de8857]";
       default:
         return "text-default border-default";
     }
@@ -33,7 +33,15 @@ const Card = ({
       )}
     >
       <div
-        className={`absolute top-0 left-0 h-full w-full ${position === "1st" ? "bg-gold/10" : position === "2nd" ? "bg-silver/10" : position === "3rd" ? "bg-bronze/10" : "bg-default/10"}`}
+        className={`absolute top-0 left-0 h-full w-full rounded-4xl ${
+          position === "1st"
+            ? "from-gold/50 to-gold/5 bg-gradient-to-tr"
+            : position === "2nd"
+              ? "from-silver/50 to-silver/5 bg-gradient-to-tr"
+              : position === "3rd"
+                ? "bg-gradient-to-tr from-[#de8857]/50 to-[#de8857]/10"
+                : "bg-default/10"
+        }`}
       />
       {contentPosition === "top" && children}
 
