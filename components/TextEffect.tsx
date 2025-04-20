@@ -27,8 +27,8 @@ export const TypewriterEffect = ({
   startAnimationDelay = 0,
   ...props
 }: TypewriterEffectProps) => {
-  const wordsArray = useSplitText(text);
-
+  const wordsArray = useSplitText(text, {splitBy: "words", preserveWhitespace: true});
+  
   const [scope, animate] = useAnimate();
   const isInView = useInView(scope);
 
@@ -58,10 +58,13 @@ export const TypewriterEffect = ({
     return (
       <motion.div ref={scope} className="inline" {...props}>
         {wordsArray.map((word, idx) => (
-          <span key={`word-${idx}`} className="inline-block" aria-hidden="true">
+          <span
+            key={`word-${idx}`}
+            className="inline-block mr-1"
+            aria-hidden="true"
+          >
             {word.split("").map((char, index) => (
               <motion.span
-                initial={{}}
                 key={`char-${index}`}
                 className={cn(
                   `hidden text-black opacity-0 dark:text-white`,
@@ -71,7 +74,6 @@ export const TypewriterEffect = ({
                 {char}
               </motion.span>
             ))}
-            &nbsp;
           </span>
         ))}
       </motion.div>

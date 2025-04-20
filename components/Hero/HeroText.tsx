@@ -15,7 +15,7 @@ export const HeroSecHeader = () => {
         <TypewriterEffect
           key={index}
           text={line}
-          textClassName="text-base md:text-lg lg:text-2xl"
+          textClassName="text-base md:text-lg lg:text-2xl text-balance"
           animationDelay={0.05}
           startAnimationDelay={index * 0.5}
           onCopy={(e) => {
