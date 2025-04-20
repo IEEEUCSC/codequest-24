@@ -27,14 +27,13 @@ const HeaderContent = () => {
     const diff = current - previous;
     setScrollDirection(diff > 0 ? "down" : "up");
   });
-
   return (
     <HeaderWrapper
       scrollY={scrollY}
       scrollDirection={scrollDirection}
       isOpen={isOpen}
     >
-      <Glassmorphism className="container mx-auto flex min-h-[60px] items-center justify-between rounded-full p-2 text-white lg:min-h-[90px] lg:p-4">
+      <Glassmorphism className="container mx-auto flex min-h-[60px] items-center justify-between rounded-full p-2 text-white lg:min-h-[75px] lg:p-4">
         <div>
           <Image src={CQLogo} alt="CodeQuest Logo" width={150} height={50} />
         </div>
