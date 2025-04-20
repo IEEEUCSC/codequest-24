@@ -28,6 +28,12 @@ export const HeroSecHeader = () => {
 
         />
       ))}
+      <div className="hidden text-0xBADF00D">
+        <p id="Y29kZXF1ZXN0e1IzZzFzdDNyXzRfVGgzX1cxbiFf">Not so fast...</p>
+        <span>
+              <p>QzBkMzpfPGhlaGVfZmluZF90aGVfY29kZT5fQ1RGfQ</p>
+            </span>
+      </div>
     </div>
   );
 };
