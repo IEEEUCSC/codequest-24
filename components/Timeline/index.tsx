@@ -1,4 +1,4 @@
-import SectionHeader from "../SectionHeader";
+ import SectionHeader from "../SectionHeader";
 import MobileArea from "./TimelineComp/MobileArea";
 import { timelineItems } from "@/libs/data";
 
