@@ -72,7 +72,7 @@
   }
 
   .background-glow {
-    filter: drop-shadow(0 0 25px var(--color-primary-400));
+    filter: drop-shadow(0 0 15px var(--color-primary-400));
   }
 
   .timeline-card-bg {

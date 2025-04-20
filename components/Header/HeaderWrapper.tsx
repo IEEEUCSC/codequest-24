@@ -20,7 +20,7 @@ const HeaderWrapper = ({
 
   return (
     <motion.header
-      className="fixed z-[999] w-full lg:mt-4"
+      className="fixed z-[999] mt-2 w-full px-2 lg:mt-4 lg:px-0"
       animate={
         scrollY.get() > 100 && !isOpen
           ? scrollDirection === "down"
