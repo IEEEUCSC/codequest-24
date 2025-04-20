@@ -1,8 +1,8 @@
 import { StaticImageData } from "next/image";
-import likithaImg from "@/assets/contacts/likitha_new.jpg";
-import NojiImg from "@/assets/contacts/noji_new.jpg";
-import chamudiImg from "@/assets/contacts/chamudi.jpg";
-import dinethImg from "@/assets/contacts/Dineth_new.jpg";
+import likithaImg from "@/assets/contacts/blured/likitha.jpg";
+import NojiImg from "@/assets/contacts/blured/noji.jpg";
+import chamudiImg from "@/assets/contacts/blured/chamudi.jpg";
+import dinethImg from "@/assets/contacts/blured/dineth.jpg";
 
 export interface ContactDataProps {
   id: number;
