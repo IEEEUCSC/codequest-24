@@ -159,7 +159,7 @@ export const SPONSORS: SponsorLogoProps[] = [
   },
   {
     title: "Zone24x7",
-    type: "Gold Sponsor",
+    type: "Silver Sponsor",
     logo: Zone24x7Logo,
   },
   {
