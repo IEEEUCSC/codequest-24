@@ -25,7 +25,7 @@ const contactData: ContactDataProps[] = [
   {
     id: 2,
     name: "Noji Yudara",
-    role: "Event Co - chair",
+    role: "Event Co Chair",
     email: "noji.yu123@gmail.com",
     phone: "070 351 7563",
     image: NojiImg,
@@ -33,7 +33,7 @@ const contactData: ContactDataProps[] = [
   {
     id: 3,
     name: "Chamudi Upeka",
-    role: "Event Co - chair",
+    role: "Event Co Chair",
     email: "chamudiupeka21@gmail.com",
     phone: "076 710 5536",
     image: chamudiImg,
@@ -41,7 +41,7 @@ const contactData: ContactDataProps[] = [
   {
     id: 4,
     name: "Dineth Theekshana",
-    role: "Program team Lead",
+    role: "Program Team Lead",
     email: "dineththeekshana@gmail.com",
     phone: "077 410 4170",
     image: dinethImg,
