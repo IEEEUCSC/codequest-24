@@ -11,7 +11,7 @@ export default function AnimatedCircleIcon({
   const variants = {
     active: { fill: "#d51414", stroke: "#d51414" },
     surpassed: { fill: "#d51414", stroke: "#d51414" },
-    inactive: { fill: "black", stroke: "#FF7F1E3F" },
+    inactive: { fill: "#000", stroke: "#FF7F1E3F" },
   };
 
   return (
