@@ -9,25 +9,25 @@ const Competition = () => {
       id="competition"
     >
       <SectionHeader title="Competition" />
-      <div className="border-primary-400 sec-inner-y competition-bg-glow bg-dark-300 container mx-auto flex flex-col gap-y-4 rounded-2xl px-4 py-8 text-white">
-        <h3 className="text-lg font-semibold lg:text-2xl">
-          <ScrollBaseText>
+      <div className="border-primary-400 sec-inner-y competition-bg-glow *:justify-center bg-dark-300 container mx-auto flex flex-col gap-y-4 rounded-2xl items-center px-4 py-8 text-white">
+        <h3 className="text-lg font-semibold lg:text-2xl  text-center *:justify-center">
+          <ScrollBaseText className=" lg:w-full lg:max-w-[50vw]">
             Step into the ultimate Capture the Flag (CTF) challenge, where
             cybersecurity meets strategy, skill, and innovation.
           </ScrollBaseText>
         </h3>
-        <div className="flex flex-col gap-y-2 text-lg">
+        <div className="flex flex-col gap-y-2 text-lg *:justify-start lg:grow  lg:*:ml-32 lg:w-full lg:max-w-[50vw]">
           <ScrollBaseText>Decrypt intricate puzzles.</ScrollBaseText>
           <ScrollBaseText>Exploit security vulnerabilities.</ScrollBaseText>
           <ScrollBaseText>
             Master logic-based challenges inspired by real-world cyber threats.
           </ScrollBaseText>
         </div>
-        <h3 className="my-4 text-lg font-semibold lg:text-2xl">
+        <h3 className="my-4 text-lg font-semibold lg:text-2xl *:justify-center lg:max-w-[50vw] w-full">
           <ScrollBaseText>What Awaits You?</ScrollBaseText>
         </h3>
-        <div className="flex flex-col gap-y-2 text-lg">
-          <ScrollBaseText>
+        <div className="flex flex-col gap-y-2 text-lg text-center *:justify-start  lg:*:ml-32 lg:w-full lg:max-w-[50vw] ">
+          <ScrollBaseText className=" ">
             Gain cutting-edge insights from industry experts through exclusive
             workshops.
           </ScrollBaseText>
@@ -39,7 +39,7 @@ const Competition = () => {
           </ScrollBaseText>
         </div>
         <div className=" w-full flex items-center justify-center">
-          <AnimatedButton text="Download Booklet" to="/" />
+          <AnimatedButton text="Download Booklet" to="/CodeQuest.pdf" />
         </div>
       </div>
     </section>
