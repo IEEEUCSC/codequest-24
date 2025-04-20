@@ -1,15 +1,14 @@
+import { SponsorLogoProps } from "@/libs/types";
+import Image from "next/image";
 import React from "react";
 
-interface SponsorsCardProps {
-  children: React.ReactNode;
-  type: "Gold" | "Silver";
-}
-const SponsorsCard = ({ children, type }: SponsorsCardProps) => {
+
+const SponsorsCard = ({ title, logo, type }: SponsorLogoProps) => {
   return (
     <div className="flex flex-col items-center gap-4 p-2" role="contentinfo">
-      {children}
+      <Image src={logo} alt={title} width={200} height={200} className="h-auto" />
       <span className="bg-dark-400 w-fit rounded-2xl px-4 py-1 text-center text-[#F8C660] uppercase">
-        {type} Partner
+        {type}
       </span>
     </div>
   );

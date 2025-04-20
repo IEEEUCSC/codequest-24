@@ -37,11 +37,11 @@ export const socialMediaLinks: SocialMediaLink[] = [
 ];
 
 // timeline data
-import { TimelineItem } from "./types";
+import {  SponsorLogoProps, TimelineItem } from "./types";
 
 export const timelineItems: TimelineItem[] = [
   {
-    date: { day: "06", month: "APR" },
+    date: { day: "11", month: "APR" },
     header: "Workshop 01",
     content: "Awareness Session + What is CTF",
     time: "00:00 IST",
@@ -49,7 +49,7 @@ export const timelineItems: TimelineItem[] = [
   {
     date: { day: "20", month: "APR" },
     header: "Workshop 02",
-    content: "Deep Dive into Tools",
+    content: "Tools deep dive",
     time: "19:00 IST",
   },
   {
@@ -67,7 +67,7 @@ export const timelineItems: TimelineItem[] = [
   {
     date: { day: "10", month: "MAY" },
     header: "Final Round",
-    content: "8-hour physical CTF Hackathon",
+    content: "Physical CTF Hackathon",
     time: "00:00 IST",
   },
 ];
@@ -144,3 +144,27 @@ import silverMedal from "@/assets/prizes/2nd.png";
 import bronzeMedal from "@/assets/prizes/3rd.png";
 
 export { goldMedal, silverMedal, bronzeMedal };
+
+
+// sponsors data
+import HiveionLogo from "@/assets/sponsors/Hiveion_logo.png";
+import Zone24x7Logo from "@/assets/sponsors//zone24x7_logo.png"
+import SperaLogo from "@/assets/sponsors/spera_logo.png"
+
+export const SPONSORS: SponsorLogoProps[] = [
+  {
+    title: "Hiveion",
+    type: "Associate Sponsor",
+    logo: HiveionLogo,
+  },
+  {
+    title: "Zone24x7",
+    type: "Gold Sponsor",
+    logo: Zone24x7Logo,
+  },
+  {
+    title: "Spera",
+    type: "Gold Sponsor",
+    logo: SperaLogo,
+  },
+];

@@ -1,4 +1,5 @@
 import { Variants } from "motion/react";
+import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import { ReactNode } from "react";
 
 export type PresetType = "slideUp" | "slideDown";
@@ -51,4 +52,11 @@ export interface CardProps {
   className?: string;
   children?: ReactNode;
   contentPosition?: "top" | "bottom";
+}
+
+
+export interface SponsorLogoProps {
+  title: string;
+  logo: StaticImport;
+  type: string;
 }
