@@ -26,14 +26,14 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
       <Glassmorphism className="rounded">
         <div className="bg-primary-400/40 absolute top-0 left-0 h-full w-full mask-radial-[100%_100%] mask-radial-from-60% mask-radial-to-100% mask-radial-at-bottom-left" />
         <div className="relative w-full overflow-hidden rounded ease-in-out">
-          <div className="xs:grid-cols-2 relative grid h-full w-full md:grid-cols-1">
+          <div className=" relative grid h-full w-full md:grid-cols-1">
             <div className="relative min-h-[320px]">
               <Image
                 src={image}
                 alt={`${name}`}
                 fill
                 style={{ objectFit: "cover" }}
-                className="h-full w-full object-cover object-center"
+                className="h-full w-full object-cover  object-center"
               />
             </div>
             <div className="flex flex-col gap-y-1 p-4">

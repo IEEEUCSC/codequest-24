@@ -40,7 +40,7 @@ const contactData: ContactDataProps[] = [
   },
   {
     id: 4,
-    name: "Dineth Theekshana",
+    name: "Dineth Palliyaguru",
     role: "Program Team Lead",
     email: "dineththeekshana@gmail.com",
     phone: "077 410 4170",
