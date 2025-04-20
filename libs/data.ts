@@ -119,7 +119,7 @@ export const FOOTER_DESC =
 import IEEElogo from "@/assets/logos/sb_logo.png";
 import CQLogo from "@/assets/logos/cq_logo.png";
 import SectionBg from "@/assets/sec-title-bg.png";
-import HeroBg from "@/assets/hero-bg-img.png";
+import HeroBg from "@/assets/hero-bg-img.webp";
 import HeroLogo from "@/assets/hero-header.png";
 
 export { IEEElogo, CQLogo, SectionBg, HeroBg, HeroLogo };

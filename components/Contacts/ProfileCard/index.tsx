@@ -31,7 +31,8 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
               <Image
                 src={image}
                 alt={`${name}`}
-                fill
+                width={500}
+                height={500}
                 style={{ objectFit: "cover" }}
                 className="h-full w-full object-cover object-center"
               />
