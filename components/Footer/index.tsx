@@ -25,18 +25,18 @@ const Footer = () => {
           <div className="top-element relative z-2 flex h-full min-h-[20vh] w-full flex-col overflow-auto bg-[#333333] *:text-white">
             <div className="top-element relative container mx-auto flex h-[300px] flex-grow flex-col justify-between px-4 py-8 text-white">
               <div className="flex w-full flex-col justify-between">
-                <div className="flex w-full items-center justify-between">
+                <div className="flex flex-col xs:flex-row w-full items-center justify-between">
                   <Image
                     src={CQLogo}
                     alt="IntelliHack Logo"
-                    width={desktop ? 280 : 320}
+                    width={desktop ? 280 : 200}
                     className="h-auto"
                   />
                   <Image
                     src={IEEElogo}
                     alt="IEEE Logo"
-                    width={desktop ? 350 : 320}
-                    className="h-auto w-auto border"
+                    width={desktop ? 280 : 200}
+                    className="h-auto  border"
                   />
                 </div>
                 <div className="flex flex-col gap-y-2">

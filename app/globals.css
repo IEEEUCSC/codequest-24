@@ -26,6 +26,8 @@
   --breakpoint-xs: 30rem;
 
   --font-prime: "Prime", sans-serif;
+
+  --breakpoint-xs: 24rem;
 }
 
 @layer components {
