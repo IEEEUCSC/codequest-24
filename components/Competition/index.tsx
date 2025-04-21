@@ -2,6 +2,8 @@ import ScrollBaseText from "../ScrollBasedText";
 import SectionHeader from "../SectionHeader";
 import AnimatedButton from "../AnimatedButton";
 
+import ECertificate from "../ECertificate";
+
 const Competition = () => {
   return (
     <section
@@ -41,7 +43,9 @@ const Competition = () => {
         <div className=" w-full flex items-center justify-center">
           <AnimatedButton text="Download Booklet" to="/CodeQuest.pdf" />
         </div>
+        <ECertificate/>
       </div>
+      
     </section>
   );
 };
