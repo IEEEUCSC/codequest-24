@@ -5,7 +5,7 @@
   "homepage": "https://ieeeucsc.github.io/codequest-24",
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build && touch out/.nojekyll",
+    "build": "next build && touch out/.nojekyll && touch out/CNAME && echo codequest.ucscieee.lk > out/CNAME",
     "start": "next start",
     "lint": "next lint",
     "deploy": "gh-pages -d out"
