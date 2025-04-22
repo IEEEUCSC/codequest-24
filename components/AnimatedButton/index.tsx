@@ -9,8 +9,9 @@ const AnimatedButton = ({
   style,
   to,
   id,
+  target,
   ...props
-}: AnimatedButtonProps & { to?: string }) => {
+}: AnimatedButtonProps & { to?: string; target?: string }) => {
   const content = (
     <>
       <StaggerText text={text} {...props} As="h3" />
@@ -27,6 +28,7 @@ const AnimatedButton = ({
       )}
       style={style}
       id={id}
+      target={target}
     >
       {content}
     </a>

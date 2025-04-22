@@ -3,17 +3,12 @@ import React from "react";
 import { BsArrowUpRightCircle } from "react-icons/bs";
 const RegButton = () => {
   return (
-    // <AnimatedButton
-    //   text="Register Now"
-    //   className="flex w-fit items-center gap-x-2 rounded-full px-4 py-3"
-    //   id="register-button"
-    //   to=""
-    // >
     <AnimatedButton
-      text="Coming Soon"
-      className="flex w-fit cursor-not-allowed items-center gap-x-2 rounded-full px-4 py-3 opacity-70"
+      text="Register Now"
+      className="flex w-fit items-center gap-x-2 rounded-full px-4 py-3"
       id="register-button"
-      to="#"
+      to="https://tally.so/r/wkrR1o"
+      target="_blank"
     >
       <BsArrowUpRightCircle className="text-[20px]" />
     </AnimatedButton>
