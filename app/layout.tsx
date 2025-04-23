@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   },
 
   other: {
-    flag: "eTB1X2QxZG43X2YxbmRfN2gzX2ZsNDZfN2gzX2ZsNDZfZjB1bmRfeTB1",
+    flag: "Y29kZXF1ZXN0e3kwdV9kMWRuN19mMW5kXzdoM19mbDQ2XzdoM19mbDQ2X2YwdW5kX3kwdX0",
   },
 
 };
