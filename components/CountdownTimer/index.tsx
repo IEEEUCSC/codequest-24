@@ -4,11 +4,16 @@ import { useCountdown } from "@/hooks/useCountDown";
 
 interface CountdownTimerProps {
   targetDate: Date;
+  startDate?: Date;
   title?: string;
 }
 
-export function CountdownTimer({ targetDate, title }: CountdownTimerProps) {
-  const timeLeft = useCountdown(targetDate);
+export function CountdownTimer({
+  targetDate,
+  startDate,
+  title,
+}: CountdownTimerProps) {
+  const timeLeft = useCountdown(targetDate, startDate);
 
   return (
     <div className="countdown-timer-bg bg-dark-300 border-primary-400 mx-auto w-full max-w-[300px] rounded-xl border-2 px-6 py-2 text-center sm:max-w-xl">
@@ -33,10 +38,13 @@ function TimeUnit({ value, label }: { value: number; label: string }) {
 
   return (
     <div className="flex flex-col items-center">
-      <span className="font-consola text-xl font-bold tabular-nums lg:text-4xl">
+      <span
+        className="font-consola text-primary-100 text-xl font-bold tabular-nums lg:text-4xl"
+        style={{ width: "2ch", textAlign: "center" }} // Fixed width for digits
+      >
         {formattedValue}
       </span>
-      <span className="mt-2 text-sm">{label}</span>
+      <span className="text-primary-100 mt-2 text-sm">{label}</span>
     </div>
   );
 }
