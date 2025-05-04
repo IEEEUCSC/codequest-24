@@ -168,3 +168,7 @@ export const SPONSORS: SponsorLogoProps[] = [
     logo: SperaLogo,
   },
 ];
+
+
+export const START_TIME = new Date("2025-05-04T08:00:00Z");
+export const END_TIME = new Date("2025-05-05T09:00:00Z");
