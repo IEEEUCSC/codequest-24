@@ -1,21 +1,11 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Image from "next/image";
 import { CountdownTimer } from "../CountdownTimer";
 import { END_TIME, SectionBg } from "@/libs/data";
 
 const Timer = () => {
-  const [showTimer, setShowTimer] = useState(false);
-
-  useEffect(() => {
-    const now = new Date();
-    const today10AM = new Date();
-    today10AM.setHours(10, 0, 0, 0);
-
-    if (now >= today10AM) {
-      setShowTimer(true);
-    }
-  }, []);
+  const showTimer = false;
 
   return (
     <section
@@ -25,7 +15,7 @@ const Timer = () => {
       <div className="sec-inner-y pb-8">
         <h1 className="top-element section-title relative mx-auto w-fit px-4 py-2 text-xl text-white select-none lg:text-4xl">
           Countdown Timer
-          <div className="absolute -bottom-3 -left-4 h-[140%] w-[120%] lg:w-[140%] lg:-bottom-2 lg:-left-12">
+          <div className="absolute -bottom-3 -left-4 h-[140%] w-[120%] lg:-bottom-2 lg:-left-12 lg:w-[140%]">
             <Image
               src={SectionBg}
               alt="section title background"
@@ -44,7 +34,7 @@ const Timer = () => {
           />
         ) : (
           <p className="text-primary-100 text-center text-lg font-semibold lg:text-2xl">
-            It starts ticking at 10:00 AM today!
+            Time’s up — the initial round is now closed.
           </p>
         )}
       </div>
