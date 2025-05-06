@@ -44,7 +44,7 @@ const ECertificateForm: React.FC = () => {
       <Glassmorphism className="w-full rounded-2xl">
         <form
           onSubmit={handleSubmit}
-          className="flex w-full flex-col gap-4 rounded-2xl p-6 shadow-md lg:gap-6 lg:p-8"
+          className="flex w-full flex-col gap-4 rounded-2xl p-6 shadow-md lg:gap-6 lg:p-10"
         >
           <h2 className="text-center text-xl font-bold text-slate-200 lg:text-5xl">
             Get Your E-Certificate
