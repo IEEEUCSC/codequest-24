@@ -2,7 +2,7 @@ import ScrollBaseText from "../ScrollBasedText";
 import SectionHeader from "../SectionHeader";
 import AnimatedButton from "../AnimatedButton";
 
-import ECertificate from "../ECertificate";
+import ECertificateButton from "../ECertificate/ECertificateButton";
 
 const Competition = () => {
   return (
@@ -42,7 +42,7 @@ const Competition = () => {
         </div>
         <div className="flex w-full items-center justify-between gap-x-6">
           <AnimatedButton text="Download Booklet" to="/CodeQuest.pdf" />
-          <ECertificate/>
+          <ECertificateButton/>
         </div>
         
       </div>
