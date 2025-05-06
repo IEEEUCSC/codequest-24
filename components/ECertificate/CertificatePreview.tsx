@@ -25,7 +25,7 @@ const CertificatePreview = ({ data }: { data: CertificateData }) => {
   };
 
   return (
-    <div className="mt-6 flex flex-col items-center justify-center gap-y-4 py-16 text-center">
+    <div className="lg:mt-6 flex flex-col items-center justify-center lg:gap-y-4 py-4 lg:py-16 text-center">
       <div
         ref={certificateRef}
         className="relative flex h-[675px] w-[1000px] scale-55 lg:scale-none flex-row items-center justify-center"
@@ -45,7 +45,7 @@ const CertificatePreview = ({ data }: { data: CertificateData }) => {
           className="absolute text-center text-4xl font-semibold text-white"
           style={{
             fontFamily: rusticRoadway.style.fontFamily,
-            top: "55%",
+            top: "57%",
             left: "50%",
             transform: "translate(-50%, -50%)",
             whiteSpace: "nowrap",
@@ -58,7 +58,7 @@ const CertificatePreview = ({ data }: { data: CertificateData }) => {
       <AnimatedButton
         text="Download Certificate"
         onClick={() => handleDownload()}
-        className="bg-primary-400 background-glow inline-block cursor-pointer rounded-2xl px-4 py-2 text-white"
+        className="bg-primary-400 background-glow -translate-y-[100px] inline-block cursor-pointer rounded-2xl px-4 py-2 text-white"
       />
     </div>
   );

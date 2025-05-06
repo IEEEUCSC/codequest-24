@@ -40,7 +40,7 @@ const ECertificateForm: React.FC = () => {
   }
 
   return (
-    <div className="absolute z-10 flex min-w-[300px] flex-col items-center justify-center p-4">
+    <div className="absolute z-10 flex min-w-[300px] flex-col items-center justify-center md:p-4">
       <Glassmorphism className="w-full rounded-2xl">
         <form
           onSubmit={handleSubmit}
