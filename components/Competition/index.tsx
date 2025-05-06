@@ -11,24 +11,24 @@ const Competition = () => {
       id="competition"
     >
       <SectionHeader title="Competition" />
-      <div className="border-primary-400 sec-inner-y competition-bg-glow *:justify-center bg-dark-300 container mx-auto flex flex-col gap-y-4 rounded-2xl items-center px-4 py-8 text-white">
-        <h3 className="text-lg font-semibold lg:text-2xl  text-center *:justify-center">
-          <ScrollBaseText className=" lg:w-full lg:max-w-[50vw]">
+      <div className="border-primary-400 sec-inner-y competition-bg-glow bg-dark-300 container mx-auto flex flex-col items-center gap-y-4 rounded-2xl px-4 py-8 text-white *:justify-center">
+        <h3 className="text-center text-lg font-semibold *:justify-center lg:text-2xl">
+          <ScrollBaseText className="lg:w-full lg:max-w-[50vw]">
             Step into the ultimate Capture the Flag (CTF) challenge, where
             cybersecurity meets strategy, skill, and innovation.
           </ScrollBaseText>
         </h3>
-        <div className="flex flex-col gap-y-2 text-lg *:justify-start lg:grow  lg:*:ml-32 lg:w-full lg:max-w-[50vw]">
+        <div className="flex flex-col gap-y-2 text-lg *:justify-start lg:w-full lg:max-w-[50vw] lg:grow lg:*:ml-32">
           <ScrollBaseText>Decrypt intricate puzzles.</ScrollBaseText>
           <ScrollBaseText>Exploit security vulnerabilities.</ScrollBaseText>
           <ScrollBaseText>
             Master logic-based challenges inspired by real-world cyber threats.
           </ScrollBaseText>
         </div>
-        <h3 className="my-4 text-lg font-semibold lg:text-2xl *:justify-center lg:max-w-[50vw] w-full">
+        <h3 className="my-4 w-full text-lg font-semibold *:justify-center lg:max-w-[50vw] lg:text-2xl">
           <ScrollBaseText>What Awaits You?</ScrollBaseText>
         </h3>
-        <div className="flex flex-col gap-y-2 text-lg text-center *:justify-start  lg:*:ml-32 lg:w-full lg:max-w-[50vw] ">
+        <div className="flex flex-col gap-y-2 text-center text-lg *:justify-start lg:w-full lg:max-w-[50vw] lg:*:ml-32">
           <ScrollBaseText className=" ">
             Gain cutting-edge insights from industry experts through exclusive
             workshops.
@@ -40,7 +40,7 @@ const Competition = () => {
             Claim prestigious prizes and connect with top professionals.
           </ScrollBaseText>
         </div>
-        <div className=" w-full flex items-center justify-center">
+        <div className="flex w-full items-center justify-center">
           <AnimatedButton text="Download Booklet" to="/CodeQuest.pdf" />
         </div>
         <ECertificate/>

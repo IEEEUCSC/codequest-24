@@ -37,7 +37,7 @@ export const socialMediaLinks: SocialMediaLink[] = [
 ];
 
 // timeline data
-import {  SponsorLogoProps, TimelineItem } from "./types";
+import { SponsorLogoProps, TimelineItem } from "./types";
 
 export const timelineItems: TimelineItem[] = [
   {
@@ -145,11 +145,10 @@ import bronzeMedal from "@/assets/prizes/3rd.png";
 
 export { goldMedal, silverMedal, bronzeMedal };
 
-
 // sponsors data
 import HiveionLogo from "@/assets/sponsors/Hiveion_logo.png";
-import Zone24x7Logo from "@/assets/sponsors//zone24x7_logo.png"
-import SperaLogo from "@/assets/sponsors/spera_logo.png"
+import Zone24x7Logo from "@/assets/sponsors//zone24x7_logo.png";
+import SperaLogo from "@/assets/sponsors/spera_logo.png";
 
 export const SPONSORS: SponsorLogoProps[] = [
   {
@@ -168,3 +167,6 @@ export const SPONSORS: SponsorLogoProps[] = [
     logo: SperaLogo,
   },
 ];
+
+export const START_TIME = new Date("2025-05-04T08:00:00Z");
+export const END_TIME = new Date("2025-05-04T16:30:00Z");

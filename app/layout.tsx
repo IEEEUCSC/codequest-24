@@ -42,6 +42,11 @@ export const metadata: Metadata = {
     description: META_DESC,
     images: ["/og-img.png"],
   },
+
+  other: {
+    flag: "Y29kZXF1ZXN0e3kwdV9kMWRuN19mMW5kXzdoM19mbDQ2XzdoM19mbDQ2X2YwdW5kX3kwdX0",
+  },
+
 };
 
 export default function RootLayout({
