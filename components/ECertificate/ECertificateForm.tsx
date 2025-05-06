@@ -33,7 +33,7 @@ const ECertificateForm: React.FC = () => {
 
   if (certificateData) {
     return (
-      <div className="z-10 flex min-h-screen flex-col items-center justify-center bg-black p-4">
+      <div className="z-10 flex min-h-screen flex-col items-center justify-center p-4">
         <CertificatePreview data={certificateData} />
       </div>
     );
@@ -44,32 +44,34 @@ const ECertificateForm: React.FC = () => {
       <Glassmorphism className="w-full rounded-2xl">
         <form
           onSubmit={handleSubmit}
-          className="flex w-full flex-col gap-4 rounded-2xl p-6 shadow-md"
+          className="flex w-full flex-col gap-4 rounded-2xl p-6 shadow-md lg:gap-6 lg:p-8"
         >
-          <h2 className="text-center text-xl font-bold text-slate-200">
+          <h2 className="text-center text-xl font-bold text-slate-200 lg:text-5xl">
             Get Your E-Certificate
           </h2>
-          <input
-            type="email"
-            placeholder="Enter your email"
-            required
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            className="rounded border border-gray-300 bg-slate-200/60 px-3 py-2"
-          />
-          <input
-            type="text"
-            placeholder="Enter your contact number"
-            required
-            value={contactNumber}
-            onChange={(e) => setContactNumber(e.target.value)}
-            className="rounded border border-gray-300 bg-slate-200/60 px-3 py-2"
-          />
+          <div className="flex flex-col gap-y-4">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="rounded border border-gray-300 bg-slate-200/60 px-3 py-2 lg:text-lg"
+            />
+            <input
+              type="text"
+              placeholder="Enter your contact number"
+              required
+              value={contactNumber}
+              onChange={(e) => setContactNumber(e.target.value)}
+              className="rounded border border-gray-300 bg-slate-200/60 px-3 py-2 lg:text-lg"
+            />
+          </div>
           <button
             type="submit"
-            className="bg-primary-400 inline-block rounded-2xl px-4 py-2 text-white cursor-pointer"
+            className="bg-primary-400 inline-block cursor-pointer rounded-2xl px-4 py-2 text-white lg:text-xl"
           >
-            Enter
+            <span className=" leading-[1]">Enter</span>
           </button>
         </form>
       </Glassmorphism>
