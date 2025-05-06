@@ -11,8 +11,9 @@ import { useMediaQuery } from "@/hooks/useMediaQuery";
 import { useLockingBodyScroll } from "@/hooks/useLockingBodyScroll";
 import MobileNavigation from "./Mobile";
 import Image from "next/image";
-import RegButton from "./RegBtn";
 import HeaderWrapper from "./HeaderWrapper";
+import ECertificateButton from "../ECertificate/ECertificateButton";
+import AnimatedButton from "../AnimatedButton";
 
 const HeaderContent = () => {
   const desktop = useMediaQuery("(min-width: 1024px)");
@@ -48,7 +49,11 @@ const HeaderContent = () => {
                 </ul>
               </div>
             )}
-            <RegButton />
+            {pathname === "/ECertificate" ? (
+              <AnimatedButton text="Back to Home" to="/" />
+            ) : (
+              <ECertificateButton />
+            )}
           </>
         ) : (
           <MobileNavigation isOpen={isOpen} open={open} />

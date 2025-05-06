@@ -1,6 +1,4 @@
 import AnimatedButton from "@/components/AnimatedButton";
-import React from "react";
-
 const RegButton = () => {
   return (
     <AnimatedButton
