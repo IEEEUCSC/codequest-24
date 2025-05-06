@@ -40,13 +40,13 @@ const ECertificateForm: React.FC = () => {
   }
 
   return (
-    <div className="absolute z-10 flex min-w-[300px] flex-col items-center justify-center p-4 ">
-      <Glassmorphism className="w-full">
+    <div className="absolute z-10 flex min-w-[300px] flex-col items-center justify-center p-4">
+      <Glassmorphism className="w-full rounded-2xl">
         <form
           onSubmit={handleSubmit}
-          className="flex w-full flex-col gap-4 rounded bg-white/70 p-6 shadow-md"
+          className="flex w-full flex-col gap-4 rounded-2xl p-6 shadow-md"
         >
-          <h2 className="text-center text-xl font-bold text-gray-800">
+          <h2 className="text-center text-xl font-bold text-slate-200">
             Get Your E-Certificate
           </h2>
           <input
@@ -55,7 +55,7 @@ const ECertificateForm: React.FC = () => {
             required
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="rounded border border-gray-300 px-3 py-2"
+            className="rounded border border-gray-300 bg-slate-200/60 px-3 py-2"
           />
           <input
             type="text"
@@ -63,11 +63,11 @@ const ECertificateForm: React.FC = () => {
             required
             value={contactNumber}
             onChange={(e) => setContactNumber(e.target.value)}
-            className="rounded border border-gray-300 px-3 py-2"
+            className="rounded border border-gray-300 bg-slate-200/60 px-3 py-2"
           />
           <button
             type="submit"
-            className="bg-primary-400 inline-block rounded-2xl px-4 py-2 text-white"
+            className="bg-primary-400 inline-block rounded-2xl px-4 py-2 text-white cursor-pointer"
           >
             Enter
           </button>
