@@ -1,5 +1,4 @@
 import AnimatedButton from "@/components/AnimatedButton";
-import { BsArrowUpRightCircle } from "react-icons/bs";
 const RegButton = () => {
   return (
     <AnimatedButton
