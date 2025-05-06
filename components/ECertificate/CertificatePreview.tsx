@@ -3,6 +3,7 @@ import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
 import { CertificateData } from "@/libs/validateEmail";
 import { rusticRoadway } from "@/fonts";
+import AnimatedButton from "../AnimatedButton";
 
 const CertificatePreview = ({ data }: { data: CertificateData }) => {
   const certificateRef = useRef<HTMLDivElement>(null);
@@ -24,11 +25,10 @@ const CertificatePreview = ({ data }: { data: CertificateData }) => {
   };
 
   return (
-    <div className="mt-25 text-center">
+    <div className="mt-6 flex flex-col items-center justify-center gap-y-4 py-16 text-center">
       <div
         ref={certificateRef}
-        className="relative flex flex-row justify-center items-center"
-        style={{ width: "1000px", height: "700px" }}
+        className="relative flex h-[675px] w-[1000px] scale-55 lg:scale-none flex-row items-center justify-center"
       >
         <img
           src="/ecertificate/CERTIFICATE.png"
@@ -42,7 +42,7 @@ const CertificatePreview = ({ data }: { data: CertificateData }) => {
           }}
         />
         <div
-          className="absolute text-4xl font-semibold text-center text-white"
+          className="absolute text-center text-4xl font-semibold text-white"
           style={{
             fontFamily: rusticRoadway.style.fontFamily,
             top: "55%",
@@ -55,12 +55,11 @@ const CertificatePreview = ({ data }: { data: CertificateData }) => {
         </div>
       </div>
 
-      <button
-        onClick={handleDownload}
-        className="bg-primary-400 background-glow inline-block rounded-2xl px-4 py-2"
-      >
-        Download Certificate
-      </button>
+      <AnimatedButton
+        text="Download Certificate"
+        onClick={() => handleDownload()}
+        className="bg-primary-400 background-glow inline-block cursor-pointer rounded-2xl px-4 py-2 text-white"
+      />
     </div>
   );
 };
