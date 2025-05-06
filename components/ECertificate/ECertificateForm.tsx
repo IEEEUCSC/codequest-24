@@ -8,7 +8,8 @@ import ErrorMessage from "./ErrorMessage";
 const ECertificateForm: React.FC = () => {
   const [email, setEmail] = useState("");
   const [contactNumber, setContactNumber] = useState("");
-  const [certificateData, setCertificateData] = useState<CertificateData | null>(null);
+  const [certificateData, setCertificateData] =
+    useState<CertificateData | null>(null);
   const [error, setError] = useState("");
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -16,29 +17,36 @@ const ECertificateForm: React.FC = () => {
     setError("");
     setCertificateData(null);
 
-    const result = await validateEmailAndContact(email.trim(), contactNumber.trim());
+    const result = await validateEmailAndContact(
+      email.trim(),
+      contactNumber.trim(),
+    );
     if (result) {
       setCertificateData(result);
     } else {
-      setError("No certificate found for the provided email and contact number.");
+      setError(
+        "No certificate found for the provided email and contact number.",
+      );
     }
   };
 
   if (certificateData) {
     return (
-      <div className="flex flex-col items-center justify-center min-h-screen p-4 bg-black z-10">
-      <CertificatePreview data={certificateData} />
+      <div className="z-10 flex min-h-screen flex-col items-center justify-center bg-black p-4">
+        <CertificatePreview data={certificateData} />
       </div>
     );
   }
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-4 bg-black z-10">
+    <div className="z-10 flex min-h-screen flex-col items-center justify-center bg-black p-4">
       <form
         onSubmit={handleSubmit}
-        className="w-full max-w-md bg-white p-6 rounded shadow-md flex flex-col gap-4"
+        className="flex w-full max-w-md flex-col gap-4 rounded bg-white p-6 shadow-md"
       >
-        <h2 className="text-xl font-bold text-center text-gray-800">Get Your E-Certificate</h2>
+        <h2 className="text-center text-xl font-bold text-gray-800">
+          Get Your E-Certificate
+        </h2>
 
         <input
           type="email"
@@ -46,7 +54,7 @@ const ECertificateForm: React.FC = () => {
           required
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="border border-gray-300 rounded px-3 py-2"
+          className="rounded border border-gray-300 px-3 py-2"
         />
 
         <input
@@ -55,12 +63,12 @@ const ECertificateForm: React.FC = () => {
           required
           value={contactNumber}
           onChange={(e) => setContactNumber(e.target.value)}
-          className="border border-gray-300 rounded px-3 py-2"
+          className="rounded border border-gray-300 px-3 py-2"
         />
 
         <button
           type="submit"
-          className="bg-primary-400 inline-block rounded-2xl px-4 py-2"
+          className="bg-primary-400 inline-block rounded-2xl px-4 py-2 text-white"
         >
           Enter
         </button>
