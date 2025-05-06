@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { CertificateData, validateEmailAndContact } from "@/libs/validateEmail";
 import CertificatePreview from "./CertificatePreview";
 import ErrorMessage from "./ErrorMessage";
+import Glassmorphism from "../Glassmorphism";
 
 const ECertificateForm: React.FC = () => {
   const [email, setEmail] = useState("");
@@ -39,40 +40,39 @@ const ECertificateForm: React.FC = () => {
   }
 
   return (
-    <div className="z-10 flex min-h-screen flex-col items-center justify-center bg-black p-4">
-      <form
-        onSubmit={handleSubmit}
-        className="flex w-full max-w-md flex-col gap-4 rounded bg-white p-6 shadow-md"
-      >
-        <h2 className="text-center text-xl font-bold text-gray-800">
-          Get Your E-Certificate
-        </h2>
-
-        <input
-          type="email"
-          placeholder="Enter your email"
-          required
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          className="rounded border border-gray-300 px-3 py-2"
-        />
-
-        <input
-          type="text"
-          placeholder="Enter your contact number"
-          required
-          value={contactNumber}
-          onChange={(e) => setContactNumber(e.target.value)}
-          className="rounded border border-gray-300 px-3 py-2"
-        />
-
-        <button
-          type="submit"
-          className="bg-primary-400 inline-block rounded-2xl px-4 py-2 text-white"
+    <div className="absolute z-10 flex min-w-[300px] flex-col items-center justify-center p-4 ">
+      <Glassmorphism className="w-full">
+        <form
+          onSubmit={handleSubmit}
+          className="flex w-full flex-col gap-4 rounded bg-white/70 p-6 shadow-md"
         >
-          Enter
-        </button>
-      </form>
+          <h2 className="text-center text-xl font-bold text-gray-800">
+            Get Your E-Certificate
+          </h2>
+          <input
+            type="email"
+            placeholder="Enter your email"
+            required
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            className="rounded border border-gray-300 px-3 py-2"
+          />
+          <input
+            type="text"
+            placeholder="Enter your contact number"
+            required
+            value={contactNumber}
+            onChange={(e) => setContactNumber(e.target.value)}
+            className="rounded border border-gray-300 px-3 py-2"
+          />
+          <button
+            type="submit"
+            className="bg-primary-400 inline-block rounded-2xl px-4 py-2 text-white"
+          >
+            Enter
+          </button>
+        </form>
+      </Glassmorphism>
 
       {error && <ErrorMessage message={error} />}
     </div>
