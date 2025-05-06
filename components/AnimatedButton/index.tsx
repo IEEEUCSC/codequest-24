@@ -40,6 +40,7 @@ const AnimatedButton = ({
       )}
       style={style}
       id={id}
+      {...props}
     >
       {content}
     </button>
