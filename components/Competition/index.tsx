@@ -40,10 +40,11 @@ const Competition = () => {
             Claim prestigious prizes and connect with top professionals.
           </ScrollBaseText>
         </div>
-        <div className="flex w-full items-center justify-center">
+        <div className="flex w-full items-center justify-between gap-x-6">
           <AnimatedButton text="Download Booklet" to="/CodeQuest.pdf" />
+          <ECertificate/>
         </div>
-        <ECertificate/>
+        
       </div>
       
     </section>

@@ -4,7 +4,7 @@ const ECertificate = () => {
   return(
     <AnimatedButton
       text="Get Your E-Certificate"
-      className="flex w-fit items-center gap-x-2 rounded-full px-4 py-3"
+      className="bg-primary-400 background-glow inline-block rounded-2xl px-4 py-2"
       id="register-button"
       to="/ECertificate"
     >

@@ -1,29 +1,41 @@
+import rawData from "../data/Both-Workshop-Participation.json";
+
 export interface CertificateData {
   name: string;
   email: string;
-  event: string;
-  date: string;
+  contactNumber: string;
+  university: string;
 }
 
-export const validateEmail = async (email: string): Promise<CertificateData | null> => {
+interface RawEntry {
+  "Name (First and Last)": string;
+  "Email": string;
+  "Contact Number (WhatsApp number)": string;
+  "University / Institute": string;
+}
+
+export const validateEmailAndContact = async (
+  email: string,
+  contactNumber: string
+): Promise<CertificateData | null> => {
   try {
-    const response = await fetch("https://sheets.googleapis.com/v4/spreadsheets/YOUR_SHEET_ID/values/Sheet1?key=YOUR_API_KEY");
-    const data = await response.json();
+    const data: RawEntry[] = rawData;
 
-    const rows = data.values;
-    if (!rows) return null;
+    for (const entry of data) {
+      if (
+        entry.Email.trim().toLowerCase() === email.trim().toLowerCase() &&
+        entry["Contact Number (WhatsApp number)"].trim() === contactNumber.trim()
+      ) {
+        return {
+          name: entry["Name (First and Last)"].trim(),
+          email: entry.Email.trim(),
+          contactNumber: entry["Contact Number (WhatsApp number)"].trim(),
+          university: entry["University / Institute"].trim(),
+        };
+      }
+    }
 
-    // Assuming header row and email in 2nd column
-    const matchingRow = rows.find((row: string[]) => row[1] === email);
-
-    if (!matchingRow) return null;
-
-    return {
-      name: matchingRow[0],
-      email: matchingRow[1],
-      event: matchingRow[2],
-      date: matchingRow[3],
-    };
+    return null;
   } catch (error) {
     console.error("Validation Error:", error);
     return null;

@@ -1,37 +1,63 @@
-import React from "react";
+import React, { useRef } from "react";
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
+import { CertificateData } from "@/libs/validateEmail";
+import { rusticRoadway } from "@/fonts";
 
-const CertificatePreview = ({ data }: { data: any }) => {
-  const handleDownload = () => {
-    const input = document.getElementById("certificate");
-    if (!input) return;
+const CertificatePreview = ({ data }: { data: CertificateData }) => {
+  const certificateRef = useRef<HTMLDivElement>(null);
 
-    html2canvas(input).then((canvas) => {
-      const imgData = canvas.toDataURL("image/png");
-      const pdf = new jsPDF("landscape");
-      pdf.addImage(imgData, "PNG", 10, 10);
-      pdf.save(`${data.name}_certificate.pdf`);
+  const handleDownload = async () => {
+    if (!certificateRef.current) return;
+
+    const canvas = await html2canvas(certificateRef.current);
+    const imgData = canvas.toDataURL("image/png");
+
+    const pdf = new jsPDF({
+      orientation: "landscape",
+      unit: "px",
+      format: [canvas.width, canvas.height],
     });
+
+    pdf.addImage(imgData, "PNG", 0, 0, canvas.width, canvas.height);
+    pdf.save(`${data.name}_certificate.pdf`);
   };
 
   return (
-    <div className="mt-8 text-center">
+    <div className="mt-25 text-center">
       <div
-        id="certificate"
-        className="bg-white border border-gray-300 p-8 rounded shadow-lg inline-block text-left"
+        ref={certificateRef}
+        className="relative flex flex-row justify-center items-center"
+        style={{ width: "1000px", height: "700px" }}
       >
-        <h3 className="text-2xl font-bold mb-2">Certificate of Participation</h3>
-        <p>This is to certify that</p>
-        <p className="text-xl font-semibold">{data.name}</p>
-        <p>participated in the event</p>
-        <p className="font-semibold">{data.event}</p>
-        <p>on {data.date}</p>
+        <img
+          src="/ecertificate/CERTIFICATE.png"
+          alt="Certificate"
+          style={{
+            width: "100%",
+            objectFit: "cover",
+            position: "absolute",
+            top: 0,
+            left: 0,
+          }}
+        />
+        <div
+          className="absolute text-4xl font-semibold text-center text-white"
+          style={{
+            fontFamily: rusticRoadway.style.fontFamily,
+            top: "55%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            whiteSpace: "nowrap",
+          }}
+        >
+          {data.name}
+        </div>
       </div>
 
       <button
         onClick={handleDownload}
-        className="mt-4 bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700"
+        className="bg-primary-400 background-glow inline-block rounded-2xl px-4 py-2"
       >
         Download Certificate
       </button>
