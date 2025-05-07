@@ -14,6 +14,9 @@ const CertificatePreview = ({ data }: { data: CertificateData }) => {
     const canvas = await html2canvas(certificateRef.current);
     const imgData = canvas.toDataURL("image/png");
 
+    canvas.width = 2000;
+    canvas.height = 1350;
+
     const pdf = new jsPDF({
       orientation: "landscape",
       unit: "px",
@@ -25,10 +28,10 @@ const CertificatePreview = ({ data }: { data: CertificateData }) => {
   };
 
   return (
-    <div className="lg:mt-6 flex flex-col items-center justify-center lg:gap-y-4 py-4 lg:py-16 text-center">
+    <div className="flex flex-col items-center justify-center py-4 text-center lg:mt-6 lg:gap-y-4 lg:py-16">
       <div
         ref={certificateRef}
-        className="relative flex h-[675px] w-[1000px] scale-55 lg:scale-none flex-row items-center justify-center"
+        className="relative flex w-[375px] h-[253.125px] md:h-[675px] md:w-[1000px]  flex-row items-center justify-center lg:scale-none"
       >
         <img
           src="/ecertificate/CERTIFICATE.png"
@@ -42,7 +45,7 @@ const CertificatePreview = ({ data }: { data: CertificateData }) => {
           }}
         />
         <div
-          className="absolute text-center text-4xl font-semibold text-white"
+          className="absolute text-center text-base md:text-4xl font-semibold text-white"
           style={{
             fontFamily: rusticRoadway.style.fontFamily,
             top: "57%",
@@ -58,7 +61,7 @@ const CertificatePreview = ({ data }: { data: CertificateData }) => {
       <AnimatedButton
         text="Download Certificate"
         onClick={() => handleDownload()}
-        className="bg-primary-400 background-glow -translate-y-[100px] inline-block cursor-pointer rounded-2xl px-4 py-2 text-white"
+        className="bg-primary-400 background-glow inline-block translate-y-[50px] cursor-pointer rounded-2xl px-4 py-2 text-white"
       />
     </div>
   );
