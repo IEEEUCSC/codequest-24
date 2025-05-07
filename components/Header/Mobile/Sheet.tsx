@@ -6,7 +6,8 @@ import { NAV_LINKS, socialMediaLinks } from "@/libs/data";
 import { MENU_SLIDE } from "./anim";
 import MobileNavigationTarget from "./Target";
 import AnimatedCurve from "./Curve";
-import RegButton from "../RegBtn";
+import ECertificateButton from "@/components/ECertificate/ECertificateButton";
+import AnimatedButton from "@/components/AnimatedButton";
 
 type Props = {
   id: string;
@@ -49,7 +50,11 @@ export default function Sheet({ id, open }: Props) {
             ))}
           </ul>
         )}
-        <RegButton />
+        {pathname === "/ECertificate" ? (
+          <AnimatedButton text="Back to Home" to="/" className="w-fit" />
+        ) : (
+          <ECertificateButton />
+        )}
       </div>
 
       <div aria-hidden className="my-6 flex-1" />
@@ -70,7 +75,7 @@ export default function Sheet({ id, open }: Props) {
           </a>
         ))}
       </div>
-      <AnimatedCurve fill="fill-[rgb(30,30,30)]" />
+      <AnimatedCurve fill="fill-[#1e1e1ecc]" />
     </motion.div>
   );
 }
