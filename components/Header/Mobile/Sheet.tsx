@@ -6,7 +6,6 @@ import { NAV_LINKS, socialMediaLinks } from "@/libs/data";
 import { MENU_SLIDE } from "./anim";
 import MobileNavigationTarget from "./Target";
 import AnimatedCurve from "./Curve";
-import ECertificateButton from "@/components/ECertificate/ECertificateButton";
 import AnimatedButton from "@/components/AnimatedButton";
 
 type Props = {
@@ -50,10 +49,10 @@ export default function Sheet({ id, open }: Props) {
             ))}
           </ul>
         )}
-        {pathname === "/ECertificate" ? (
+        {pathname === "/timer" ? (
           <AnimatedButton text="Back to Home" to="/" className="w-fit" />
         ) : (
-          <ECertificateButton />
+          <AnimatedButton text="Final's Countdown" to="/timer" className="w-fit"/>
         )}
       </div>
 
