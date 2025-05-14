@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import { useMotionValueEvent, useScroll } from "motion/react";
 import { usePathname } from "next/navigation";
@@ -12,7 +13,6 @@ import { useLockingBodyScroll } from "@/hooks/useLockingBodyScroll";
 import MobileNavigation from "./Mobile";
 import Image from "next/image";
 import HeaderWrapper from "./HeaderWrapper";
-import ECertificateButton from "../ECertificate/ECertificateButton";
 import AnimatedButton from "../AnimatedButton";
 
 const HeaderContent = () => {
@@ -36,7 +36,9 @@ const HeaderContent = () => {
     >
       <Glassmorphism className="container mx-auto flex min-h-[60px] items-center justify-between rounded-full p-2 text-white lg:min-h-[75px] lg:p-4">
         <div>
-          <Image src={CQLogo} alt="CodeQuest Logo" width={150} height={50} />
+          <Link href="/" className="flex items-center">
+            <Image src={CQLogo} alt="CodeQuest Logo" width={150} height={50} />
+          </Link>
         </div>
         {desktop ? (
           <>
@@ -49,10 +51,10 @@ const HeaderContent = () => {
                 </ul>
               </div>
             )}
-            {pathname === "/ECertificate" ? (
+            {pathname === "/timer" ? (
               <AnimatedButton text="Back to Home" to="/" />
             ) : (
-              <ECertificateButton />
+              <AnimatedButton text="Final's Countdown" to="/timer" />
             )}
           </>
         ) : (
