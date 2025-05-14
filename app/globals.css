@@ -26,8 +26,16 @@
   --breakpoint-xs: 30rem;
 
   --font-prime: "Prime", sans-serif;
+  --font-bpmono: "BPMono", monospace;
 
   --breakpoint-xs: 24rem;
+
+  @keyframes ping {
+    75%,
+    100% {
+      transform: scale(1.15);
+    }
+  }
 }
 
 @layer components {
