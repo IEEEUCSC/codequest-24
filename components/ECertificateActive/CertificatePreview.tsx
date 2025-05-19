@@ -1,11 +1,11 @@
 import React, { useRef } from "react";
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
-import { CertificateData } from "@/libs/validateEmail";
+import { CertificateDataActive } from "@/libs/validateEmail";
 import { rusticRoadway } from "@/fonts";
 import AnimatedButton from "../AnimatedButton";
 
-const CertificatePreview = ({ data }: { data: CertificateData }) => {
+const CertificatePreview = ({ data }: { data: CertificateDataActive }) => {
   const certificateRef = useRef<HTMLDivElement>(null);
 
   const handleDownload = async () => {
