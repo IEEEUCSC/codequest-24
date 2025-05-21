@@ -1,40 +1,40 @@
 "use client";
 
 import React, { useState } from "react";
-import { CertificateData, validateEmailAndContact } from "@/libs/validateEmail";
+import { CertificateDataActive, validateEmailAndTeamName } from "@/libs/validateEmail";
 import CertificatePreview from "./CertificatePreview";
 import ErrorMessage from "./ErrorMessage";
 import Glassmorphism from "../Glassmorphism";
 
 const ECertificateForm: React.FC = () => {
   const [email, setEmail] = useState("");
-  const [contactNumber, setContactNumber] = useState("");
-  const [certificateData, setCertificateData] =
-    useState<CertificateData | null>(null);
+  const [teamName, setTeamName] = useState("");
+  const [certificateDataActive, setCertificateDataActive] =
+    useState<CertificateDataActive | null>(null);
   const [error, setError] = useState("");
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setError("");
-    setCertificateData(null);
+    setCertificateDataActive(null);
 
-    const result = await validateEmailAndContact(
+    const result = await validateEmailAndTeamName(
       email.trim(),
-      contactNumber.trim(),
+      teamName.trim(),
     );
     if (result) {
-      setCertificateData(result);
+      setCertificateDataActive(result);
     } else {
       setError(
-        "No certificate found for the provided email and contact number.",
+        "No certificate found for the provided email and team name.",
       );
     }
   };
 
-  if (certificateData) {
+  if (certificateDataActive) {
     return (
       <div className="z-10 flex min-h-screen flex-col items-center justify-center p-4">
-        <CertificatePreview data={certificateData} />
+        <CertificatePreview data={certificateDataActive} />
       </div>
     );
   }
@@ -51,19 +51,19 @@ const ECertificateForm: React.FC = () => {
           </h2>
           <div className="flex flex-col gap-y-4">
             <input
+              type="text"
+              placeholder="Enter your team name"
+              required
+              value={teamName}
+              onChange={(e) => setTeamName(e.target.value)}
+              className="rounded border border-gray-300 bg-slate-200/60 px-3 py-2 lg:text-lg"
+            />
+            <input
               type="email"
               placeholder="Enter your email"
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="rounded border border-gray-300 bg-slate-200/60 px-3 py-2 lg:text-lg"
-            />
-            <input
-              type="text"
-              placeholder="Enter your contact number"
-              required
-              value={contactNumber}
-              onChange={(e) => setContactNumber(e.target.value)}
               className="rounded border border-gray-300 bg-slate-200/60 px-3 py-2 lg:text-lg"
             />
           </div>
@@ -73,12 +73,6 @@ const ECertificateForm: React.FC = () => {
           >
             <span className=" leading-[1]">Enter</span>
           </button>
-          <div className="flex flex-col items-center justify-center gap-y-2">
-            <div className="text-slate-200">Participated in the initial rounds of the hackathon?</div>
-            <a href="/ECertificate/active" className="text-slate-200 underline">
-              Get Your Certificate
-            </a>
-          </div>
         </form>
       </Glassmorphism>
 
