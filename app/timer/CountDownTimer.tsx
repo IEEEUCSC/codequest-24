@@ -77,7 +77,11 @@ export default function CountdownTimer({
           value={parseInt(formatTime(hours))}
           format={{ minimumIntegerDigits: 2 }}
         />
-        <NumberFlow value={parseInt(formatTime(minutes))} prefix=":" />
+        <NumberFlow
+          value={parseInt(formatTime(minutes))}
+          prefix=":"
+          format={{ minimumIntegerDigits: 2 }}
+        />
         <NumberFlow
           value={parseInt(formatTime(seconds))}
           format={{ minimumIntegerDigits: 2 }}
