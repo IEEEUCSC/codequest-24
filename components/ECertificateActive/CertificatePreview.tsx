@@ -29,12 +29,12 @@ const CertificatePreview = ({ data }: { data: CertificateDataActive }) => {
       ctx.drawImage(canvas, 0, 0, a4WidthPx, a4HeightPx);
     }
 
-    const imgData = outputCanvas.toDataURL("image/png", 1.0); 
+    const imgData = outputCanvas.toDataURL("image/png", 1.0);
 
     const pdf = new jsPDF({
       orientation: "landscape",
       unit: "mm",
-      format: "a4", 
+      format: "a4",
     });
 
     pdf.addImage(imgData, "PNG", 0, 0, 297, 210);
@@ -45,7 +45,7 @@ const CertificatePreview = ({ data }: { data: CertificateDataActive }) => {
     <div className="flex flex-col items-center justify-center py-4 text-center lg:mt-6 lg:gap-y-4 lg:py-16">
       <div
         ref={certificateRef}
-        className="relative flex w-[375px] h-[253.125px] md:w-[1000px] md:h-[675px] flex-row items-center justify-center lg:scale-100"
+        className="relative flex h-[253.125px] w-[375px] flex-row items-center justify-center md:h-[675px] md:w-[1000px] lg:scale-100"
       >
         <img
           src="/ecertificate/CERTIFICATE_FINAL.png"
@@ -60,7 +60,7 @@ const CertificatePreview = ({ data }: { data: CertificateDataActive }) => {
           }}
         />
         <div
-          className="absolute text-center text-base md:text-4xl font-semibold text-white"
+          className="absolute text-center text-sm font-semibold text-white md:text-4xl"
           style={{
             fontFamily: rusticRoadway.style.fontFamily,
             top: "50%",
@@ -72,9 +72,8 @@ const CertificatePreview = ({ data }: { data: CertificateDataActive }) => {
           {data.name}
         </div>
         <div
-          className="absolute text-center text-base md:text-xl font-semibold text-white"
+          className="absolute top-[60%] text-center text-xs font-semibold text-white md:top-[62%] md:text-xl"
           style={{
-            top: "64%",
             left: "50%",
             transform: "translate(-50%, -50%)",
             whiteSpace: "nowrap",
