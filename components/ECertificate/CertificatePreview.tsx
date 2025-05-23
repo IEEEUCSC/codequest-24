@@ -11,19 +11,33 @@ const CertificatePreview = ({ data }: { data: CertificateData }) => {
   const handleDownload = async () => {
     if (!certificateRef.current) return;
 
-    const canvas = await html2canvas(certificateRef.current);
-    const imgData = canvas.toDataURL("image/png");
+    const canvas = await html2canvas(certificateRef.current, {
+      scale: 3,
+      useCORS: true,
+      backgroundColor: null,
+    });
 
-    canvas.width = 2000;
-    canvas.height = 1350;
+    const a4WidthPx = 3508;
+    const a4HeightPx = 2480;
+
+    const outputCanvas = document.createElement("canvas");
+    outputCanvas.width = a4WidthPx;
+    outputCanvas.height = a4HeightPx;
+    const ctx = outputCanvas.getContext("2d");
+
+    if (ctx) {
+      ctx.drawImage(canvas, 0, 0, a4WidthPx, a4HeightPx);
+    }
+
+    const imgData = outputCanvas.toDataURL("image/png", 1.0); 
 
     const pdf = new jsPDF({
       orientation: "landscape",
-      unit: "px",
-      format: [canvas.width, canvas.height],
+      unit: "mm",
+      format: "a4", 
     });
 
-    pdf.addImage(imgData, "PNG", 0, 0, canvas.width, canvas.height);
+    pdf.addImage(imgData, "PNG", 0, 0, 297, 210);
     pdf.save(`${data.name}_certificate.pdf`);
   };
 
@@ -31,13 +45,14 @@ const CertificatePreview = ({ data }: { data: CertificateData }) => {
     <div className="flex flex-col items-center justify-center py-4 text-center lg:mt-6 lg:gap-y-4 lg:py-16">
       <div
         ref={certificateRef}
-        className="relative flex w-[375px] h-[253.125px] md:h-[675px] md:w-[1000px]  flex-row items-center justify-center lg:scale-none"
+        className="relative flex w-[375px] h-[253.125px] md:w-[1000px] md:h-[675px] flex-row items-center justify-center lg:scale-100"
       >
         <img
           src="/ecertificate/CERTIFICATE.png"
           alt="Certificate"
           style={{
             width: "100%",
+            height: "100%",
             objectFit: "cover",
             position: "absolute",
             top: 0,
@@ -60,7 +75,7 @@ const CertificatePreview = ({ data }: { data: CertificateData }) => {
 
       <AnimatedButton
         text="Download Certificate"
-        onClick={() => handleDownload()}
+        onClick={handleDownload}
         className="bg-primary-400 background-glow inline-block translate-y-[50px] cursor-pointer rounded-2xl px-4 py-2 text-white"
       />
     </div>

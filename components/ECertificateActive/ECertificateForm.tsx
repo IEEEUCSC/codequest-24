@@ -47,7 +47,7 @@ const ECertificateForm: React.FC = () => {
           className="flex w-full flex-col gap-4 rounded-2xl p-6 shadow-md lg:gap-6 lg:p-10"
         >
           <h2 className="text-center text-xl font-bold text-slate-200 lg:text-5xl">
-            Get Your E-Certificate
+            Get Your Initial Round <br/>E-Certificate
           </h2>
           <div className="flex flex-col gap-y-4">
             <input
@@ -73,6 +73,12 @@ const ECertificateForm: React.FC = () => {
           >
             <span className=" leading-[1]">Enter</span>
           </button>
+          <div className="flex flex-col items-center justify-center gap-y-2">
+            <div className="text-slate-200">Participated in both workshops?</div>
+            <a href="/ECertificate" className="text-slate-200 underline">
+              Get Your Certificate
+            </a>
+          </div>
         </form>
       </Glassmorphism>
 
