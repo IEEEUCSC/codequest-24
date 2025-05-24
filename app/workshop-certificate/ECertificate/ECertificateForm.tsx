@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { CertificateData, validateEmailAndContact } from "@/libs/validateEmail";
 import CertificatePreview from "./CertificatePreview";
 import ErrorMessage from "./ErrorMessage";
-import Glassmorphism from "../Glassmorphism";
+import Glassmorphism from "../../../components/Glassmorphism";
 
 const ECertificateForm: React.FC = () => {
   const [email, setEmail] = useState("");
@@ -40,14 +40,14 @@ const ECertificateForm: React.FC = () => {
   }
 
   return (
-    <div className="absolute z-10 flex min-w-[300px] flex-col items-center justify-center md:p-4">
+    <div className="absolute z-10 flex min-w-[300px] flex-col items-center justify-center px-2 md:p-4">
       <Glassmorphism className="w-full rounded-2xl">
         <form
           onSubmit={handleSubmit}
           className="flex w-full flex-col gap-4 rounded-2xl p-6 shadow-md lg:gap-6 lg:p-10"
         >
-          <h2 className="text-center text-xl font-bold text-slate-200 lg:text-5xl">
-            Get Your E-Certificate
+          <h2 className="text-center text-xl font-bold text-balance text-slate-200 lg:text-4xl">
+            Get Your Workshop Participation E-Certificate
           </h2>
           <div className="flex flex-col gap-y-4">
             <input
@@ -71,11 +71,13 @@ const ECertificateForm: React.FC = () => {
             type="submit"
             className="bg-primary-400 inline-block cursor-pointer rounded-2xl px-4 py-2 text-white lg:text-xl"
           >
-            <span className=" leading-[1]">Enter</span>
+            <span className="leading-[1]">Enter</span>
           </button>
           <div className="flex flex-col items-center justify-center gap-y-2">
-            <div className="text-slate-200">Participated in the initial rounds of the hackathon?</div>
-            <a href="/ECertificate/active" className="text-slate-200 underline">
+            <div className="text-slate-200">
+              Participated in the initial rounds of the hackathon?
+            </div>
+            <a href="/initialround-certificate" className="text-slate-200 underline">
               Get Your Certificate
             </a>
           </div>
