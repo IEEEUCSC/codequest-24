@@ -2,7 +2,7 @@ import ScrollBaseText from "../ScrollBasedText";
 import SectionHeader from "../SectionHeader";
 import AnimatedButton from "../AnimatedButton";
 
-import ECertificateButton from "../ECertificate/ECertificateButton";
+import ECertificateButton from "../../app/workshop-certificate/ECertificate/ECertificateButton";
 
 const Competition = () => {
   return (
