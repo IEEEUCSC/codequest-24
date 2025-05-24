@@ -3,7 +3,7 @@ import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
 import { CertificateDataActive } from "@/libs/validateEmail";
 import { rusticRoadway } from "@/fonts";
-import AnimatedButton from "../AnimatedButton";
+import AnimatedButton from "../../../components/AnimatedButton";
 
 const CertificatePreview = ({ data }: { data: CertificateDataActive }) => {
   const certificateRef = useRef<HTMLDivElement>(null);
@@ -72,7 +72,7 @@ const CertificatePreview = ({ data }: { data: CertificateDataActive }) => {
           {data.name}
         </div>
         <div
-          className="absolute top-[60%] text-center text-xs font-semibold text-white md:top-[62%] md:text-xl"
+          className="absolute top-[60%] text-center text-xs font-semibold text-white md:top-[62%] md:text-lg"
           style={{
             left: "50%",
             transform: "translate(-50%, -50%)",

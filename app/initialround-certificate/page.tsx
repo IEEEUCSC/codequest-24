@@ -1,5 +1,5 @@
 import AnimatedGridWrapper from "@/components/AnimatedGrid/AnimatedGridWrapper";
-import ECertificateForm from "@/components/ECertificateActive/ECertificateForm";
+import ECertificateForm from "@/app/initialround-certificate/ECertificateActive/ECertificateForm";
 import HeroBgImage from "@/components/Hero/HeroBg";
 
 const ECertificatePage = () => {
