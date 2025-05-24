@@ -63,7 +63,7 @@ const CertificatePreview = ({ data }: { data: CertificateDataActive }) => {
           className="absolute text-center text-sm font-semibold text-white md:text-4xl"
           style={{
             fontFamily: rusticRoadway.style.fontFamily,
-            top: "50%",
+            top: "49%",
             left: "50%",
             transform: "translate(-50%, -50%)",
             whiteSpace: "nowrap",
