@@ -51,10 +51,10 @@ const HeaderContent = () => {
                 </ul>
               </div>
             )}
-            {pathname === "/timer" ? (
+            {pathname === "/initialround-certificate" ? (
               <AnimatedButton text="Back to Home" to="/" />
             ) : (
-              <AnimatedButton text="Final's Countdown" to="/timer" />
+              <AnimatedButton text="Initial Round Certificate" to="/initialround-certificate" />
             )}
           </>
         ) : (
