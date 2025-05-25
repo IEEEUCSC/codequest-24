@@ -59,13 +59,13 @@ export const timelineItems: TimelineItem[] = [
     time: "00:00 IST",
   },
   {
-    date: { day: "TBA", month: "" },
+    date: { day: "08", month: "June" },
     header: "Final Round Awareness Session",
     content: " ",
     time: "00:00 IST",
   },
   {
-    date: { day: "TBA", month: "" },
+    date: { day: "09", month: "June" },
     header: "Final Round",
     content: "Physical CTF Hackathon",
     time: "00:00 IST",
