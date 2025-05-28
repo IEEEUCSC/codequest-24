@@ -72,7 +72,7 @@ const CertificatePreview = ({ data }: { data: CertificateDataActive }) => {
           {data.name}
         </div>
         <div
-          className="absolute top-[60%] text-center text-xs font-semibold text-white md:top-[62%] md:text-lg"
+          className="absolute top-[62%] text-center text-xs font-semibold text-white md:top-[62%] md:text-lg"
           style={{
             left: "50%",
             transform: "translate(-50%, -50%)",
