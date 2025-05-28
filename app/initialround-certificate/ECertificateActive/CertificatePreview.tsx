@@ -48,7 +48,7 @@ const CertificatePreview = ({ data }: { data: CertificateDataActive }) => {
         className="relative flex h-[253.125px] w-[375px] flex-row items-center justify-center md:h-[675px] md:w-[1000px] lg:scale-100"
       >
         <img
-          src="/ecertificate/CERTIFICATE_FINAL.png"
+          src="/ecertificate/CERTIFICATE_new.jpg"
           alt="Certificate"
           style={{
             width: "100%",
@@ -72,7 +72,7 @@ const CertificatePreview = ({ data }: { data: CertificateDataActive }) => {
           {data.name}
         </div>
         <div
-          className="absolute top-[60%] text-center text-xs font-semibold text-white md:top-[62%] md:text-lg"
+          className="absolute top-[62%] text-center text-xs font-semibold text-white md:top-[62%] md:text-lg"
           style={{
             left: "50%",
             transform: "translate(-50%, -50%)",
