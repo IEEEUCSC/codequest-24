@@ -1,5 +1,6 @@
 "use client";
 
+import { START_TIME } from "@/libs/data";
 import { cn } from "@/libs/utils";
 import NumberFlow, { NumberFlowGroup } from "@number-flow/react";
 import { useEffect, useState } from "react";
@@ -19,24 +20,38 @@ export default function CountdownTimer({
 }: CountdownTimerProps) {
   const [timeRemaining, setTimeRemaining] = useState<number>(0);
   const [isCritical, setIsCritical] = useState<boolean>(false);
-  const [isActive, setIsActive] = useState(true);
+  const [isActive, setIsActive] = useState<boolean>(true);
+  const [statusMessage, setStatusMessage] = useState<string>("");
 
   useEffect(() => {
     const calculateTimeRemaining = () => {
-      const now = new Date().getTime();
+      const current = new Date().getTime();
+      const start = START_TIME.getTime();
       const end = typeof endTime === "number" ? endTime : endTime.getTime();
-      const remaining = Math.max(0, end - now);
 
+      if (current < start) {
+        // If current time is before the start time, set remaining to 0
+        setTimeRemaining(0);
+        setIsActive(false);
+        setStatusMessage("Countdown initiates soon.");
+        return;
+      }
+
+      // Calculate remaining time
+      const remaining = Math.max(0, end - current);
       setTimeRemaining(remaining);
 
       // Check if we're in the critical period
       const criticalTimeInMs = criticalHours * 60 * 60 * 1000;
       setIsCritical(remaining > 0 && remaining <= criticalTimeInMs);
 
-      // If countdown is finished, clear the interval
+      // If countdown is over
       if (remaining <= 0) {
         setIsActive(false);
-        // setTimeRemaining(0); // Reset to 0 when countdown is finished
+        setStatusMessage("Time’s up — the countdown has reached zero.");
+      } else {
+        setIsActive(true);
+        setStatusMessage("");
       }
     };
 
@@ -58,7 +73,7 @@ export default function CountdownTimer({
   // Format time values to always have two digits
   const formatTime = (value: number) => value.toString().padStart(2, "0");
 
-  return isActive ? (
+  return isActive === true ? (
     <NumberFlowGroup>
       <div
         className={cn(
@@ -93,8 +108,8 @@ export default function CountdownTimer({
     </NumberFlowGroup>
   ) : (
     <h1>
-      <span className="text-primary-100 text-xl font-bold lg:text-6xl">
-        Countdown Finished
+      <span className="text-primary-100 text-xl font-bold lg:text-3xl xl:text-5xl">
+        {statusMessage || "Countdown has ended"}
       </span>
     </h1>
   );
