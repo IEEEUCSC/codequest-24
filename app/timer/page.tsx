@@ -16,7 +16,7 @@ export default function Page() {
       <HeroBgImage />
 
       <Glassmorphism className="container mx-auto flex flex-col items-center justify-center rounded-2xl px-4 py-8 lg:gap-y-8 lg:p-16">
-        <h1 className="text-center text-lg font-bold text-slate-100 lg:text-3xl xl:text-5xl 2xl:text-7xl">
+        <h1 className="text-center text-lg font-bold text-slate-100 lg:text-3xl xl:text-5xl 2xl:text-5xl">
           Final Countdown: The Race to Patch Begins
         </h1>
         <CountdownTimer

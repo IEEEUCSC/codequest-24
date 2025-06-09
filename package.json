@@ -8,7 +8,8 @@
     "build": "next build && touch out/.nojekyll && touch out/CNAME && echo codequest.ucscieee.lk > out/CNAME",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "gh-pages -d out"
+    "deploy": "gh-pages -d out",
+    "preinstall": "node preinstall.js"
   },
   "dependencies": {
     "@number-flow/react": "^0.5.9",

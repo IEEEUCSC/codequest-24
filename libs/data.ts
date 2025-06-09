@@ -169,5 +169,5 @@ export const SPONSORS: SponsorLogoProps[] = [
 ];
 
 export const START_TIME = new Date("2025-06-09T09:15:00");
-export const END_TIME = new Date("2025-06-09T17:00:00"); // Final round end time
+export const END_TIME = new Date("2025-06-09T17:15:00"); // Final round end time
 export const CRITICAL_HOURS = 1; // Critical period in hours (e.g., 3 hours before the end)
