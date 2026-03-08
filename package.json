@@ -9,7 +9,6 @@
     "start": "next start",
     "lint": "next lint",
     "deploy": "gh-pages -d out",
-    "preinstall": "node preinstall.js"
   },
   "dependencies": {
     "@number-flow/react": "^0.5.9",
